@@ -1,0 +1,15 @@
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<!-- Auth sayfaları için özel layout - Header/Footer yok -->
+@RenderBody()
+
+@section Styles {
+    @await RenderSectionAsync("Styles", required: false)
+}
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+}
+

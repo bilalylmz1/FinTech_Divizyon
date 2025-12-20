@@ -1,1 +1,79 @@
-// Reset stilleri burada tanımlanacak
+// ============================================
+// CSS RESET
+// ============================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Focus visible için accessibility
+:focus-visible {
+    outline: 2px solid $brand_primary;
+    outline-offset: 2px;
+}
+
+// Placeholder stilleri
+::placeholder {
+    color: $text_label;
+    opacity: 1;
+}
+
+// Selection stilleri
+::selection {
+    background-color: $brand_primary;
+    color: $color_white;
+}

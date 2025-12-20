@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\bilal\\.nuget\\packages\\": {}
+    "/home/ryuzaki/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech\\FinTech.csproj",
+      "projectUniqueName": "/home/ryuzaki/Desktop/FinTech/FinTech/FinTech.csproj",
       "projectName": "FinTech",
-      "projectPath": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech\\FinTech.csproj",
-      "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech\\obj\\",
+      "projectPath": "/home/ryuzaki/Desktop/FinTech/FinTech/FinTech.csproj",
+      "packagesPath": "/home/ryuzaki/.nuget/packages/",
+      "outputPath": "/home/ryuzaki/Desktop/FinTech/FinTech/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ryuzaki/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -40,13 +38,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -70,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

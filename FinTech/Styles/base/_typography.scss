@@ -1,1 +1,124 @@
-// Tipografi stilleri burada tanımlanacak
+// ============================================
+// FONT FACE - Poppins Lokal Yükleme
+// ============================================
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins/poppins-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// ============================================
+// TYPOGRAPHY AYARLARI
+// ============================================
+
+body {
+    font-family: $font_family_primary;
+    font-size: $font_size_base;
+    font-weight: $font_weight_regular;
+    color: $text_dark;
+    background-color: $bg_light;
+}
+
+// Başlıklar
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font_weight_semibold;
+    line-height: $line_height_tight;
+    color: $brand_primary;
+}
+
+h1 {
+    font-size: $font_size_xl;
+}
+
+h2 {
+    font-size: $font_size_lg;
+}
+
+// Paragraflar
+p {
+    margin-bottom: $spacing_md;
+    line-height: $line_height_relaxed;
+}
+
+// Linkler
+a {
+    color: $brand_link;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: $brand_primary;
+    }
+}
+
+// Küçük metin
+small {
+    font-size: $font_size_sm;
+}
+
+// Bold
+strong {
+    font-weight: $font_weight_bold;
+}
+
+// Label metin stili
+.text_label {
+    font-size: $font_size_xs;
+    font-weight: $font_weight_medium;
+    color: $text_label;
+    letter-spacing: -0.03em;
+}
+
+// Error metin stili
+.text_error {
+    font-size: $font_size_xs;
+    font-weight: $font_weight_light;
+    color: $color_error;
+}
+
+// Link stili
+.text_link {
+    font-size: $font_size_base;
+    font-weight: $font_weight_bold;
+    color: $brand_link;
+    text-decoration: underline;
+    cursor: pointer;
+    
+    &:hover {
+        color: $brand_primary;
+    }
+}

@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css",
+      "PackagePath": "staticwebassets/FinTech.bundle.scp.css"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/css/site.css.map",
+      "PackagePath": "staticwebassets/css/site.css.map"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-bold.woff2",
+      "PackagePath": "staticwebassets/fonts/poppins/poppins-bold.woff2"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-light.woff2",
+      "PackagePath": "staticwebassets/fonts/poppins/poppins-light.woff2"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-medium.woff2",
+      "PackagePath": "staticwebassets/fonts/poppins/poppins-medium.woff2"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-regular.woff2",
+      "PackagePath": "staticwebassets/fonts/poppins/poppins-regular.woff2"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-semibold.woff2",
+      "PackagePath": "staticwebassets/fonts/poppins/poppins-semibold.woff2"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/.gitkeep",
+      "PackagePath": "staticwebassets/img/.gitkeep"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/js/pages/login.js",
+      "PackagePath": "staticwebassets/js/pages/login.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.FinTech.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.FinTech.props",
+      "PackagePath": "build\\FinTech.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.FinTech.props",
+      "PackagePath": "buildMultiTargeting\\FinTech.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.FinTech.props",
+      "PackagePath": "buildTransitive\\FinTech.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

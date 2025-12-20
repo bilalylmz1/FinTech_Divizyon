@@ -1,1 +1,83 @@
-// Mixin'ler burada tanımlanacak
+// ============================================
+// SCSS MİXİNLER
+// ============================================
+
+// Responsive breakpoint mixin
+@mixin respond_to($breakpoint) {
+    @if $breakpoint == 'sm' {
+        @media (max-width: $breakpoint_sm) { @content; }
+    }
+    @else if $breakpoint == 'md' {
+        @media (max-width: $breakpoint_md) { @content; }
+    }
+    @else if $breakpoint == 'lg' {
+        @media (max-width: $breakpoint_lg) { @content; }
+    }
+    @else if $breakpoint == 'xl' {
+        @media (max-width: $breakpoint_xl) { @content; }
+    }
+}
+
+// Flexbox center
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Flexbox column
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Absolute center
+@mixin absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Text truncate
+@mixin text_truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Visually hidden (accessibility)
+@mixin visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// Focus ring
+@mixin focus_ring {
+    &:focus-visible {
+        outline: 2px solid $brand_primary;
+        outline-offset: 2px;
+    }
+}
+
+// Smooth transition
+@mixin transition($property: all, $duration: 0.2s, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Box shadow
+@mixin shadow($level: 'sm') {
+    @if $level == 'sm' {
+        box-shadow: $shadow_sm;
+    }
+    @else if $level == 'md' {
+        box-shadow: $shadow_md;
+    }
+}

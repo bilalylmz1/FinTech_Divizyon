@@ -1,1 +1,106 @@
-// Değişkenler burada tanımlanacak
+// ============================================
+// RENK DEĞİŞKENLERİ (Color Variables)
+// ============================================
+
+// Ana Marka Renkleri
+$brand_primary: #0056B3;
+$brand_primary_dark: #003F75;
+$brand_primary_light: rgba(0, 86, 179, 0.2);
+$brand_link: #2E6DF8;
+
+// Durum Renkleri
+$color_error: #DC3545;
+$color_success: #28A745;
+$color_warning: #FFC107;
+
+// Nötr Renkler
+$color_white: #FFFFFF;
+$color_black: #000000;
+$bg_light: #FCFCFC;
+$bg_overlay: rgba(221, 227, 236, 0.75);
+
+// Metin Renkleri
+$text_dark: #222854;
+$text_label: #739FCC;
+$text_muted: #6C757D;
+
+// Border Renkleri
+$border_gray: #CCCCCC;
+$border_input: #0056B3;
+$border_error: #DC3545;
+
+// Google Button Renkleri
+$google_blue: #4285F4;
+$google_green: #34A853;
+$google_yellow: #FBBC05;
+$google_red: #EA4335;
+
+// ============================================
+// FONT DEĞİŞKENLERİ (Font Variables)
+// ============================================
+
+$font_family_primary: 'Poppins', sans-serif;
+
+// Font Ağırlıkları
+$font_weight_light: 300;
+$font_weight_regular: 400;
+$font_weight_medium: 500;
+$font_weight_semibold: 600;
+$font_weight_bold: 700;
+
+// Font Boyutları
+$font_size_xs: 10px;
+$font_size_sm: 12px;
+$font_size_base: 16px;
+$font_size_lg: 24px;
+$font_size_xl: 32px;
+
+// Line Heights
+$line_height_tight: 1.2;
+$line_height_normal: 1.4;
+$line_height_relaxed: 1.5;
+
+// ============================================
+// SPACING DEĞİŞKENLERİ
+// ============================================
+
+$spacing_xs: 5px;
+$spacing_sm: 10px;
+$spacing_md: 15px;
+$spacing_lg: 24px;
+$spacing_xl: 30px;
+
+// ============================================
+// BORDER RADIUS
+// ============================================
+
+$radius_sm: 5px;
+$radius_md: 8px;
+$radius_lg: 16px;
+$radius_full: 40px;
+$radius_circle: 999px;
+
+// ============================================
+// SHADOW
+// ============================================
+
+$shadow_sm: 0px 4px 6px rgba(0, 0, 0, 0.1);
+$shadow_md: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+
+$breakpoint_sm: 576px;
+$breakpoint_md: 768px;
+$breakpoint_lg: 992px;
+$breakpoint_xl: 1200px;
+$breakpoint_xxl: 1440px;
+
+// ============================================
+// Z-INDEX
+// ============================================
+
+$z_index_dropdown: 100;
+$z_index_modal_backdrop: 200;
+$z_index_modal: 300;

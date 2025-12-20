@@ -1,0 +1,198 @@
+@page
+@model FinTech.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "Giriş Yap";
+    Layout = "~/Pages/Auth/_AuthLayout.cshtml";
+}
+
+<div class="login_page">
+    <!-- Sol Panel - Hero Görsel -->
+    <div class="login_hero">
+        <div class="login_hero__slogan">
+            <span class="login_hero__text">SEN GEL,</span>
+            <br />
+            <span class="login_hero__text">
+                GERİSİNİ
+                <!-- Checkmark SVG Icon -->
+                <svg class="login_hero__icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="28" fill="#FFFFFF"/>
+                    <path d="M18 30L26 38L42 22" stroke="#0056B3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <br />
+            <span class="login_hero__text">BİZ HALLEDERİZ</span>
+        </div>
+    </div>
+
+    <!-- Sağ Panel - Form Alanı -->
+    <div class="login_content">
+        <!-- Logo -->
+        <div class="login_logo">
+            <img src="~/img/ik_logo.png" alt="İnteraktif Kredi Logo" class="login_logo__image" />
+        </div>
+
+        <!-- Başlık -->
+        <div class="login_header">
+            <p class="login_header__subtitle">Bireysel</p>
+            <h1 class="login_header__title">İnteraktif Şube Girişi</h1>
+        </div>
+
+        <!-- Form Container -->
+        <div class="login_form_container">
+            <form id="login_form" class="login_form" method="post" novalidate>
+                <!-- GSM Input -->
+                <div class="form_group">
+                    <div class="input_box" id="gsm_input_box">
+                        <label class="input_box__label" for="gsm_input">GSM</label>
+                        <input 
+                            type="tel" 
+                            id="gsm_input" 
+                            name="PhoneNumber"
+                            class="input_box__input" 
+                            placeholder="5XX XXX XX XX"
+                            maxlength="13"
+                            autocomplete="tel"
+                            required
+                        />
+                    </div>
+                    <span class="input_error" id="gsm_error" style="display: none;">
+                        *GSM numarasını yanlış veya hatalı girdiniz
+                    </span>
+                </div>
+
+                <!-- Giriş Yap Butonu -->
+                <button type="submit" class="btn_primary" id="submit_btn">
+                    <span class="btn_primary__text">Giriş Yap</span>
+                </button>
+
+                <!-- Beni Hatırla & Parolamı Unuttum -->
+                <div class="login_options">
+                    <div class="checkbox_group">
+                        <input type="checkbox" id="remember_me" name="RememberMe" />
+                        <div class="checkbox_box" id="remember_checkbox">
+                            <svg class="checkbox_box__icon" viewBox="0 0 15 15" fill="none">
+                                <path d="M3 7.5L6 10.5L12 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <label class="checkbox_label" for="remember_me">Beni Hatırla!</label>
+                    </div>
+                    <a href="#" class="btn_link">Parolamı unuttum</a>
+                </div>
+
+                <!-- Divider -->
+                <div class="form_divider"></div>
+
+                <!-- Google ile Giriş -->
+                <button type="button" class="btn_google" id="google_login_btn">
+                    <svg class="btn_google__icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <span class="btn_google__text">Google ile Giriş Yap</span>
+                </button>
+
+                <!-- Kayıt Ol Linki -->
+                <div class="login_register">
+                    <a href="/Auth/Register" class="btn_link">Henüz üye değil misin?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- OTP Modal -->
+<div class="modal_backdrop" id="otp_modal_backdrop">
+    <div class="modal otp_modal">
+        <!-- Telefon Görseli -->
+        <div class="otp_modal__phone_image">
+            <img src="~/img/sms_phone.png" alt="SMS Doğrulama" />
+        </div>
+        
+        <h2 class="otp_modal__title">SMS onayı</h2>
+        <p class="otp_modal__description">
+            Giriş yapmak için lütfen <span class="phone_masked" id="masked_phone">0 (5XX) XXX XX XX</span> nolu cep telefonuna gönderdiğimiz şifreyi yazın.
+        </p>
+        
+        <div class="otp_modal__input_wrapper">
+            <div class="otp_input">
+                <label class="otp_input__label">SMS Şifresini Girin</label>
+                <input 
+                    type="text" 
+                    id="otp_input" 
+                    class="otp_input__field" 
+                    maxlength="6" 
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                />
+            </div>
+        </div>
+        
+        <p class="otp_modal__timer">
+            SMS giriş süresi : <span class="timer_value" id="otp_timer">180</span> saniye
+        </p>
+        
+        <div class="otp_modal__actions">
+            <button type="button" class="btn_primary" id="otp_submit_btn">
+                <span>Devam Et</span>
+            </button>
+        </div>
+        
+        <span class="otp_modal__resend" id="otp_resend">SMS yeniden gönder</span>
+    </div>
+</div>
+
+<!-- KVKK Modal -->
+<div class="modal_backdrop" id="kvkk_modal_backdrop">
+    <div class="modal kvkk_modal">
+        <h2 class="kvkk_modal__title">KVKK Aydınlatma Metni</h2>
+        
+        <div class="kvkk_modal__content">
+            <p>
+                6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz 
+                İnteraktif Kredi tarafından aşağıda açıklanan kapsamda işlenebilecektir.
+            </p>
+            <h3>1. Veri Sorumlusu</h3>
+            <p>
+                Kişisel verileriniz, veri sorumlusu sıfatıyla İnteraktif Kredi A.Ş. tarafından işlenmektedir.
+            </p>
+            <h3>2. Kişisel Verilerin İşlenme Amaçları</h3>
+            <p>
+                Toplanan kişisel verileriniz; kimlik doğrulama, müşteri ilişkileri yönetimi, 
+                finansal hizmetlerin sunulması ve yasal yükümlülüklerin yerine getirilmesi 
+                amaçlarıyla işlenecektir.
+            </p>
+            <h3>3. Kişisel Verilerin Aktarılması</h3>
+            <p>
+                Kişisel verileriniz, yasal zorunluluklar ve hizmet gereksinimleri doğrultusunda 
+                yetkili kamu kurum ve kuruluşlarına aktarılabilecektir.
+            </p>
+        </div>
+        
+        <div class="kvkk_modal__checkbox">
+            <div class="checkbox_group">
+                <input type="checkbox" id="kvkk_consent" name="KvkkConsent" />
+                <div class="checkbox_box checkbox_box--large" id="kvkk_checkbox">
+                    <svg class="checkbox_box__icon" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8L6 11L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <label class="checkbox_label checkbox_label--large" for="kvkk_consent">
+                    KVKK Aydınlatma Metni'ni okudum ve onaylıyorum.
+                </label>
+            </div>
+        </div>
+        
+        <div class="kvkk_modal__actions">
+            <button type="button" class="btn_primary" id="kvkk_accept_btn" disabled>
+                <span>Onayla ve Devam Et</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pages/login.js" asp-append-version="true"></script>
+}
+
