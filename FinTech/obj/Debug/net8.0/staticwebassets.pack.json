@@ -41,6 +41,46 @@
       "PackagePath": "staticwebassets/img/.gitkeep"
     },
     {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/1. Light Mode - Desktop - Login Page.svg",
+      "PackagePath": "staticwebassets/img/1. Light Mode - Desktop - Login Page.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/banner.svg",
+      "PackagePath": "staticwebassets/img/banner.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/finans_okulu.svg",
+      "PackagePath": "staticwebassets/img/finans_okulu.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/ik_logo.svg",
+      "PackagePath": "staticwebassets/img/ik_logo.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/login_header.svg",
+      "PackagePath": "staticwebassets/img/login_header.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/login_hero.svg",
+      "PackagePath": "staticwebassets/img/login_hero.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/real_sms.svg",
+      "PackagePath": "staticwebassets/img/real_sms.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/register_header.svg",
+      "PackagePath": "staticwebassets/img/register_header.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/sms_phone.svg",
+      "PackagePath": "staticwebassets/img/sms_phone.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/statik_slogan2 1.svg",
+      "PackagePath": "staticwebassets/img/statik_slogan2 1.svg"
+    },
+    {
       "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/js/pages/login.js",
       "PackagePath": "staticwebassets/js/pages/login.js"
     },

@@ -6,76 +6,66 @@
 .login_page {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    align-items: stretch;
     background: $bg_light;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     
+    // Tablet ve altı - dikey layout
     @media (max-width: $breakpoint_lg) {
         flex-direction: column;
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
     }
 }
 
 // ============================================
-// SOL PANEL - Görsel Alanı
+// SOL PANEL - Görsel Alanı (805/1440 = %55.9)
 // ============================================
 
 .login_hero {
     position: relative;
-    width: 56%;
+    width: 38%; // 805px / 1440px
+    height: auto;
+    top: -17%;
+    left: -4%;
     min-height: 100vh;
-    background-color: #1a4a7a;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 60px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     
+    // Tablet - yatay
     @media (max-width: $breakpoint_lg) {
         width: 100%;
-        min-height: 300px;
-        padding: 40px;
+        min-height: 45vh;
     }
     
+    // Tablet - dikey
     @media (max-width: $breakpoint_md) {
-        min-height: 250px;
-        padding: 30px;
+        min-height: 35vh;
     }
     
-    // Slogan Container
-    &__slogan {
-        max-width: 500px;
+    // Mobil
+    @media (max-width: $breakpoint_sm) {
+        min-height: 30vh;
     }
     
-    // Slogan metni
-    &__text {
-        font-family: $font_family_primary;
-        font-weight: $font_weight_bold;
-        font-size: 48px;
-        line-height: 1.1;
-        color: $color_white;
-        
-        @media (max-width: $breakpoint_lg) {
-            font-size: 36px;
-        }
-        
-        @media (max-width: $breakpoint_md) {
-            font-size: 28px;
-        }
-    }
-    
-    // Checkmark ikonu
-    &__icon {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        margin-left: 10px;
-        vertical-align: middle;
-        
-        @media (max-width: $breakpoint_md) {
-            width: 40px;
-            height: 40px;
-        }
+    // Hero görseli
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none; // Reset'teki max-width: 100%'ü override et
+        object-fit: cover;
+        object-position: left top;
+        transform: none;
     }
 }
 
@@ -84,7 +74,8 @@
 // ============================================
 
 .login_content {
-    width: 44%;
+    position: relative;
+    width: 44.1%; // 635px / 1440px
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -92,11 +83,24 @@
     align-items: center;
     padding: 40px;
     background: $bg_light;
+    overflow-y: auto;
     
+    // Tablet - yatay
     @media (max-width: $breakpoint_lg) {
         width: 100%;
         min-height: auto;
-        padding: 40px 20px;
+        padding: 40px 30px;
+        flex-grow: 1;
+    }
+    
+    // Tablet - dikey
+    @media (max-width: $breakpoint_md) {
+        padding: 30px 20px;
+    }
+    
+    // Mobil
+    @media (max-width: $breakpoint_sm) {
+        padding: 24px 16px;
     }
 }
 
@@ -108,44 +112,49 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12.8px;
-    margin-bottom: 30px;
+    justify-content: center;
+    margin-bottom: 24px;
     
     &__image {
         height: 85px;
         width: auto;
+        max-width: 100%;
         
+        // Tablet
+        @media (max-width: $breakpoint_lg) {
+            height: 75px;
+        }
+        
+        // Mobil
         @media (max-width: $breakpoint_md) {
-            height: 60px;
+            height: 65px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            height: 55px;
         }
     }
 }
 
 // ============================================
-// BAŞLIK
+// BAŞLIK (SVG)
 // ============================================
 
 .login_header {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     
-    &__subtitle {
-        font-family: $font_family_primary;
-        font-weight: $font_weight_light;
-        font-size: 16px;
-        color: $text_label;
-        margin-bottom: 5px;
-    }
-    
-    &__title {
-        font-family: $font_family_primary;
-        font-weight: $font_weight_light;
-        font-size: 24px;
-        line-height: 125%;
-        color: $brand_primary;
+    &__image {
+        width: auto;
+        height: 67px;
+        max-width: 100%;
         
         @media (max-width: $breakpoint_md) {
-            font-size: 20px;
+            height: 55px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            height: 45px;
         }
     }
 }
@@ -165,6 +174,12 @@
     background: $color_white;
     backdrop-filter: blur(12px);
     border-radius: $radius_lg;
+    
+    // Mobil - tam genişlik
+    @media (max-width: $breakpoint_sm) {
+        padding: 20px 16px;
+        border-radius: $radius_md;
+    }
 }
 
 // Form içeriği
@@ -174,6 +189,10 @@
     align-items: flex-start;
     gap: 15px;
     width: 100%;
+    
+    @media (max-width: $breakpoint_sm) {
+        gap: 12px;
+    }
 }
 
 // ============================================
@@ -186,6 +205,14 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    // Çok küçük ekranlarda dikey
+    @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 // ============================================
@@ -252,7 +279,11 @@
         color: $brand_primary;
         
         @media (max-width: $breakpoint_md) {
-            font-size: 24px;
+            font-size: 26px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            font-size: 22px;
         }
     }
     
@@ -261,6 +292,10 @@
         font-weight: $font_weight_light;
         font-size: 16px;
         color: $text_label;
+        
+        @media (max-width: $breakpoint_sm) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -286,6 +321,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
     
     &__text {
         font-family: $font_family_primary;
