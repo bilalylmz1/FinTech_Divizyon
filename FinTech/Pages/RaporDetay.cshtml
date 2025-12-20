@@ -1,0 +1,104 @@
+@page "/RaporDetay/{id:int}"
+@model FinTech.Pages.RaporDetayModel
+@{
+    ViewData["Title"] = "Rapor Detayı";
+}
+
+<div class="rapor_detay">
+    <div class="rapor_detay__container">
+        
+        <!-- Back Button & Header -->
+        <header class="rapor_detay__header">
+            <a href="/Raporlar" class="rapor_detay__back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Raporlara Dön
+            </a>
+            <div class="rapor_detay__header_actions">
+                <button class="btn btn_secondary btn--small" id="print_report_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    Yazdır
+                </button>
+                <button class="btn btn_primary btn--small" id="download_report_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    İndir
+                </button>
+            </div>
+        </header>
+        
+        <!-- Report Title Card -->
+        <div class="rapor_detay__title_card">
+            <div class="rapor_detay__title_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+            </div>
+            <div class="rapor_detay__title_content">
+                <h1 class="rapor_detay__title">Kredi Güven Raporu</h1>
+                <p class="rapor_detay__subtitle">Rapor #@Model.ReportId</p>
+            </div>
+        </div>
+        
+        <!-- Loading State -->
+        <div class="rapor_detay__loading" id="report_loading">
+            <div class="loading_spinner loading_spinner--large"></div>
+            <p>Rapor detayları yükleniyor...</p>
+        </div>
+        
+        <!-- Report Content -->
+        <div class="rapor_detay__content" id="report_content" style="display: none;">
+            
+            <!-- Summary Cards -->
+            <div class="rapor_detay__summary" id="report_summary">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+            
+            <!-- Credit Details Table -->
+            <div class="rapor_detay__section">
+                <div class="rapor_detay__section_header">
+                    <h2 class="rapor_detay__section_title">Kredi Detayları</h2>
+                </div>
+                <div class="rapor_detay__table_wrapper" id="credit_details_table">
+                    <!-- JavaScript ile doldurulacak -->
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Error State -->
+        <div class="rapor_detay__error" id="report_error" style="display: none;">
+            <div class="error_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <p class="error_message" id="report_error_message">Rapor detayları yüklenirken bir hata oluştu.</p>
+            <button class="btn btn_secondary btn--small" id="retry_report_btn">Tekrar Dene</button>
+        </div>
+        
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/helpers/api_client.js" asp-append-version="true"></script>
+    <script>
+        var report_id = @Model.ReportId;
+    </script>
+    <script src="~/js/rapor_detay.js" asp-append-version="true"></script>
+}
+
