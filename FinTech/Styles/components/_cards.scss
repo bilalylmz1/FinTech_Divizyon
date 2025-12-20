@@ -1,1 +1,414 @@
-// Kart stilleri burada tanımlanacak
+// ============================================
+// Card Stilleri - Web Şube 2.0 İnteraktif Kredi
+// BEM Metodolojisi ile snake_case
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------
+// Base Card
+// --------------------------------------------
+
+.card {
+  @include card_base;
+  padding: $spacing_6;
+  
+  @include respond_down('md') {
+    padding: $spacing_4;
+  }
+}
+
+// Card Header
+.card__header {
+  @include flex_between;
+  margin-bottom: $spacing_4;
+  padding-bottom: $spacing_4;
+  border-bottom: 1px solid $border_color;
+}
+
+.card__title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.card__subtitle {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+  margin-top: $spacing_1;
+}
+
+// Card Body
+.card__body {
+  flex: 1;
+}
+
+// Card Footer
+.card__footer {
+  @include flex_between;
+  margin-top: $spacing_4;
+  padding-top: $spacing_4;
+  border-top: 1px solid $border_color;
+}
+
+// --------------------------------------------
+// Credit Report Card (Kredi Güven Raporu)
+// --------------------------------------------
+
+.credit_report_card {
+  @include card_base;
+  padding: $spacing_6;
+  background: linear-gradient(135deg, $primary_blue 0%, $primary_blue_dark 100%);
+  color: $white;
+  overflow: hidden;
+  position: relative;
+  
+  // Dekoratif daire
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba($white, 0.1);
+    border-radius: 50%;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba($white, 0.05);
+    border-radius: 50%;
+  }
+}
+
+.credit_report_card__header {
+  @include flex_between;
+  position: relative;
+  z-index: 1;
+  margin-bottom: $spacing_4;
+}
+
+.credit_report_card__title {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_bold;
+}
+
+.credit_report_card__date {
+  font-size: $font_size_sm;
+  opacity: 0.8;
+}
+
+.credit_report_card__user {
+  font-size: $font_size_sm;
+  opacity: 0.9;
+}
+
+// Progress Bar Container
+.credit_report_card__progress {
+  position: relative;
+  z-index: 1;
+  margin: $spacing_6 0;
+}
+
+.credit_progress {
+  @include flex(row, space-between, center);
+  margin-bottom: $spacing_2;
+}
+
+.credit_progress__labels {
+  @include flex(row, space-between, center);
+  width: 100%;
+  font-size: $font_size_xs;
+  opacity: 0.8;
+}
+
+.credit_progress__bar {
+  height: 8px;
+  background: rgba($white, 0.2);
+  border-radius: $radius_full;
+  overflow: hidden;
+  position: relative;
+  margin: $spacing_3 0;
+}
+
+.credit_progress__fill {
+  height: 100%;
+  border-radius: $radius_full;
+  transition: width 1s ease-out;
+  background: linear-gradient(90deg, 
+    $credit_zayif 0%, 
+    $credit_riskli 25%, 
+    $credit_kritik 50%, 
+    $credit_hassas 75%, 
+    $credit_guvenli 100%
+  );
+}
+
+.credit_progress__indicator {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  @include flex_center;
+  
+  svg {
+    width: 14px;
+    height: 14px;
+    color: $primary_blue;
+  }
+}
+
+// Status
+.credit_report_card__status {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.credit_status__label {
+  font-size: $font_size_sm;
+  opacity: 0.8;
+}
+
+.credit_status__value {
+  font-size: $font_size_2xl;
+  font-weight: $font_weight_bold;
+  
+  &--hassas { color: #60A5FA; }
+  &--guvenli { color: $success_green; }
+  &--riskli { color: $warning_orange; }
+  &--zayif { color: $error_red; }
+}
+
+.credit_report_card__description {
+  text-align: center;
+  font-size: $font_size_sm;
+  line-height: $line_height_relaxed;
+  margin: $spacing_4 0;
+  position: relative;
+  z-index: 1;
+}
+
+.credit_report_card__action {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  
+  .btn {
+    background-color: $white;
+    color: $primary_blue;
+    
+    &:hover {
+      background-color: rgba($white, 0.9);
+    }
+  }
+}
+
+.credit_report_card__link {
+  display: block;
+  text-align: center;
+  margin-top: $spacing_3;
+  font-size: $font_size_sm;
+  color: rgba($white, 0.8);
+  text-decoration: underline;
+  
+  &:hover {
+    color: $white;
+  }
+}
+
+// --------------------------------------------
+// Profile Card (Genel Kredi Profili Yorumu)
+// --------------------------------------------
+
+.profile_card {
+  @include card_base;
+  padding: $spacing_6;
+  border: 2px solid $border_color;
+  
+  &:hover {
+    border-color: $primary_blue_light;
+  }
+}
+
+.profile_card__header {
+  margin-bottom: $spacing_4;
+}
+
+.profile_card__title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.profile_card__content {
+  color: $text_secondary;
+  font-size: $font_size_sm;
+  line-height: $line_height_relaxed;
+  
+  .text_highlight {
+    color: $success_green;
+    font-weight: $font_weight_semibold;
+    text-decoration: underline;
+  }
+}
+
+.profile_card__action {
+  margin-top: $spacing_5;
+}
+
+// --------------------------------------------
+// Quick Action Card (Hızlı Erişim Kartları)
+// --------------------------------------------
+
+.action_card {
+  @include card_base;
+  @include flex_column;
+  align-items: center;
+  text-align: center;
+  padding: $spacing_6;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all $transition_normal;
+  
+  &:hover {
+    border-color: $primary_blue;
+    transform: translateY(-4px);
+    
+    .action_card__icon {
+      background-color: $primary_blue;
+      color: $white;
+    }
+  }
+}
+
+.action_card__icon {
+  @include flex_center;
+  width: 64px;
+  height: 64px;
+  background-color: $primary_blue_light;
+  color: $primary_blue;
+  border-radius: $radius_xl;
+  margin-bottom: $spacing_4;
+  transition: all $transition_normal;
+  
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.action_card__title {
+  font-size: $font_size_base;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+  margin-bottom: $spacing_1;
+}
+
+.action_card__description {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+}
+
+// --------------------------------------------
+// Campaign Card (Kampanya Kartları)
+// --------------------------------------------
+
+.campaign_card {
+  @include card_base;
+  padding: $spacing_5;
+  background-color: $primary_blue;
+  color: $white;
+  
+  &--light {
+    background-color: $white;
+    color: $text_primary;
+    border: 1px solid $border_color;
+  }
+}
+
+.campaign_card__title {
+  font-size: $font_size_base;
+  font-weight: $font_weight_semibold;
+  margin-bottom: $spacing_3;
+  line-height: $line_height_tight;
+}
+
+.campaign_card__description {
+  font-size: $font_size_sm;
+  opacity: 0.9;
+  line-height: $line_height_relaxed;
+  margin-bottom: $spacing_4;
+  
+  .campaign_card--light & {
+    color: $text_secondary;
+    opacity: 1;
+  }
+}
+
+.campaign_card__action {
+  .btn {
+    background-color: $white;
+    color: $primary_blue;
+    padding: $spacing_2 $spacing_4;
+    font-size: $font_size_sm;
+    min-height: 40px;
+    
+    &:hover {
+      background-color: rgba($white, 0.9);
+    }
+  }
+  
+  .campaign_card--light & .btn {
+    background-color: $primary_blue;
+    color: $white;
+  }
+}
+
+// --------------------------------------------
+// Stat Card (İstatistik Kartları)
+// --------------------------------------------
+
+.stat_card {
+  @include card_base;
+  padding: $spacing_5;
+  text-align: center;
+}
+
+.stat_card__value {
+  font-size: $font_size_3xl;
+  font-weight: $font_weight_bold;
+  color: $primary_blue;
+  margin-bottom: $spacing_1;
+}
+
+.stat_card__label {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+}
+
+.stat_card__trend {
+  @include flex_center;
+  gap: $spacing_1;
+  font-size: $font_size_xs;
+  margin-top: $spacing_2;
+  
+  &--up {
+    color: $success_green;
+  }
+  
+  &--down {
+    color: $error_red;
+  }
+}

@@ -1,2 +1,501 @@
-// Dashboard sayfası stilleri burada tanımlanacak
+// ============================================
+// Dashboard Stilleri - Web Şube 2.0 İnteraktif Kredi
+// BEM Metodolojisi ile snake_case
+// ============================================
 
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------
+// Dashboard Container
+// --------------------------------------------
+
+.dashboard {
+  min-height: calc(100vh - 72px); // Nav height çıkarılmış
+  background-color: $background_light;
+  padding-bottom: $spacing_10;
+}
+
+.dashboard__container {
+  max-width: $container_max_width;
+  margin: 0 auto;
+  padding: 0 $spacing_6;
+  
+  @include respond_down('md') {
+    padding: 0 $spacing_4;
+  }
+}
+
+// --------------------------------------------
+// Dashboard Header (Welcome Section)
+// --------------------------------------------
+
+.dashboard__header {
+  @include flex_between;
+  padding: $spacing_8 0 $spacing_6;
+  
+  @include respond_down('md') {
+    @include flex_column;
+    align-items: flex-start;
+    gap: $spacing_3;
+    padding: $spacing_6 0 $spacing_5;
+  }
+}
+
+.dashboard__welcome {
+  @include flex_column;
+}
+
+.dashboard__greeting {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+  margin-bottom: $spacing_1;
+}
+
+.dashboard__title {
+  font-size: $font_size_2xl;
+  font-weight: $font_weight_bold;
+  color: $text_dark;
+  
+  @include respond_down('md') {
+    font-size: $font_size_xl;
+  }
+}
+
+.dashboard__date {
+  font-size: $font_size_sm;
+  color: $text_muted;
+  
+  @include respond_down('md') {
+    margin-top: $spacing_2;
+  }
+}
+
+// --------------------------------------------
+// Dashboard Main Grid
+// --------------------------------------------
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing_6;
+  margin-bottom: $spacing_8;
+  
+  @include respond_down('lg') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard__grid--full {
+  grid-template-columns: 1fr;
+}
+
+// --------------------------------------------
+// Quick Actions Section
+// --------------------------------------------
+
+.dashboard__section {
+  margin-bottom: $spacing_8;
+}
+
+.dashboard__section_header {
+  @include flex_between;
+  margin-bottom: $spacing_5;
+}
+
+.dashboard__section_title {
+  font-size: $font_size_xl;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.dashboard__section_link {
+  font-size: $font_size_sm;
+  color: $primary_blue;
+  font-weight: $font_weight_medium;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Quick Actions Grid
+.dashboard__actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing_5;
+  
+  @include respond_down('md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing_4;
+  }
+  
+  @include respond_down('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// --------------------------------------------
+// Campaigns Section
+// --------------------------------------------
+
+.dashboard__campaigns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing_5;
+  
+  @include respond_down('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// --------------------------------------------
+// Stats Row
+// --------------------------------------------
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing_5;
+  margin-bottom: $spacing_8;
+  
+  @include respond_down('lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond_down('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// --------------------------------------------
+// Credit Overview (Kredi Genel Bakış)
+// --------------------------------------------
+
+.credit_overview {
+  @include card_base;
+  padding: $spacing_6;
+}
+
+.credit_overview__header {
+  @include flex_between;
+  margin-bottom: $spacing_5;
+}
+
+.credit_overview__title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.credit_overview__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing_2;
+  padding: $spacing_1 $spacing_3;
+  font-size: $font_size_xs;
+  font-weight: $font_weight_medium;
+  border-radius: $radius_full;
+  
+  &--success {
+    background-color: $success_green_light;
+    color: $success_green;
+  }
+  
+  &--warning {
+    background-color: $warning_orange_light;
+    color: $warning_orange;
+  }
+  
+  &--error {
+    background-color: $error_red_light;
+    color: $error_red;
+  }
+}
+
+.credit_overview__items {
+  @include flex_column;
+  gap: $spacing_4;
+}
+
+.credit_overview__item {
+  @include flex_between;
+  padding: $spacing_4;
+  background-color: $background_light;
+  border-radius: $radius_lg;
+}
+
+.credit_overview__item_label {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+}
+
+.credit_overview__item_value {
+  font-size: $font_size_base;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+// --------------------------------------------
+// Recent Activity (Son Aktiviteler)
+// --------------------------------------------
+
+.recent_activity {
+  @include card_base;
+  padding: $spacing_6;
+}
+
+.recent_activity__header {
+  @include flex_between;
+  margin-bottom: $spacing_5;
+}
+
+.recent_activity__title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.recent_activity__list {
+  @include flex_column;
+  gap: $spacing_3;
+}
+
+.activity_item {
+  @include flex(row, flex-start, flex-start);
+  gap: $spacing_4;
+  padding: $spacing_4;
+  border-radius: $radius_lg;
+  transition: background-color $transition_fast;
+  
+  &:hover {
+    background-color: $background_light;
+  }
+}
+
+.activity_item__icon {
+  @include flex_center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $primary_blue_light;
+  color: $primary_blue;
+  border-radius: $radius_lg;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  &--success {
+    background-color: $success_green_light;
+    color: $success_green;
+  }
+  
+  &--warning {
+    background-color: $warning_orange_light;
+    color: $warning_orange;
+  }
+}
+
+.activity_item__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity_item__title {
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  color: $text_primary;
+  margin-bottom: $spacing_1;
+}
+
+.activity_item__description {
+  font-size: $font_size_xs;
+  color: $text_secondary;
+  @include line_clamp(2);
+}
+
+.activity_item__time {
+  font-size: $font_size_xs;
+  color: $text_muted;
+  white-space: nowrap;
+}
+
+// --------------------------------------------
+// Empty State
+// --------------------------------------------
+
+.dashboard__empty {
+  @include flex_column;
+  align-items: center;
+  text-align: center;
+  padding: $spacing_12 $spacing_6;
+}
+
+.dashboard__empty_icon {
+  @include flex_center;
+  width: 80px;
+  height: 80px;
+  background-color: $primary_blue_light;
+  color: $primary_blue;
+  border-radius: $radius_full;
+  margin-bottom: $spacing_5;
+  
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.dashboard__empty_title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+  margin-bottom: $spacing_2;
+}
+
+.dashboard__empty_description {
+  font-size: $font_size_sm;
+  color: $text_secondary;
+  max-width: 320px;
+  margin-bottom: $spacing_5;
+}
+
+// --------------------------------------------
+// Notification Banner
+// --------------------------------------------
+
+.notification_banner {
+  @include flex(row, flex-start, center);
+  gap: $spacing_4;
+  padding: $spacing_4 $spacing_5;
+  background-color: $info_blue_light;
+  border-radius: $radius_lg;
+  margin-bottom: $spacing_6;
+  
+  &--success {
+    background-color: $success_green_light;
+  }
+  
+  &--warning {
+    background-color: $warning_orange_light;
+  }
+  
+  &--error {
+    background-color: $error_red_light;
+  }
+}
+
+.notification_banner__icon {
+  @include flex_center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: $info_blue;
+  color: $white;
+  border-radius: $radius_full;
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .notification_banner--success & {
+    background-color: $success_green;
+  }
+  
+  .notification_banner--warning & {
+    background-color: $warning_orange;
+  }
+  
+  .notification_banner--error & {
+    background-color: $error_red;
+  }
+}
+
+.notification_banner__content {
+  flex: 1;
+}
+
+.notification_banner__title {
+  font-size: $font_size_sm;
+  font-weight: $font_weight_semibold;
+  color: $text_dark;
+}
+
+.notification_banner__text {
+  font-size: $font_size_xs;
+  color: $text_secondary;
+}
+
+.notification_banner__close {
+  @include flex_center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: $text_secondary;
+  cursor: pointer;
+  border-radius: $radius_sm;
+  
+  &:hover {
+    background-color: rgba($black, 0.05);
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// --------------------------------------------
+// Skeleton Loading
+// --------------------------------------------
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    $background_gray 25%,
+    $border_color 50%,
+    $background_gray 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton_loading 1.5s infinite;
+  border-radius: $radius_md;
+}
+
+.skeleton--text {
+  height: 16px;
+  margin-bottom: $spacing_2;
+  
+  &:last-child {
+    width: 60%;
+  }
+}
+
+.skeleton--title {
+  height: 24px;
+  width: 50%;
+  margin-bottom: $spacing_3;
+}
+
+.skeleton--card {
+  height: 200px;
+}
+
+.skeleton--avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius_full;
+}
+
+@keyframes skeleton_loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

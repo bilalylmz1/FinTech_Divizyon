@@ -1,1 +1,492 @@
-// Navigasyon stilleri burada tanımlanacak
+// ============================================
+// Navigation Stilleri - Web Şube 2.0 İnteraktif Kredi
+// Sidebar + Top Header Layout
+// BEM Metodolojisi ile snake_case
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------
+// Sidebar Variables
+// --------------------------------------------
+
+$sidebar_width: 260px;
+$sidebar_collapsed_width: 0px;
+$top_header_height: 64px;
+
+// --------------------------------------------
+// Sidebar
+// --------------------------------------------
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar_width;
+  height: 100vh;
+  background-color: $white;
+  border-right: 1px solid $border_color;
+  z-index: $z_fixed;
+  display: flex;
+  flex-direction: column;
+  transition: transform $transition_normal;
+  
+  @include respond_down('lg') {
+    transform: translateX(-100%);
+    box-shadow: $shadow_xl;
+    
+    &.sidebar--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+// Sidebar Overlay (Mobile)
+.sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: $z_modal_backdrop;
+  transition: all $transition_normal;
+  
+  &.sidebar__overlay--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Sidebar Header
+.sidebar__header {
+  @include flex_between;
+  padding: $spacing_5;
+  border-bottom: 1px solid $border_color;
+  min-height: $top_header_height;
+}
+
+.sidebar__brand {
+  @include flex(row, flex-start, center);
+  gap: $spacing_3;
+  text-decoration: none;
+}
+
+.sidebar__logo_icon {
+  @include flex_center;
+  width: 36px;
+  height: 36px;
+  background-color: $primary_blue;
+  border-radius: $radius_full;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    color: $white;
+  }
+}
+
+.sidebar__logo_text {
+  @include flex_column;
+  line-height: 1.2;
+}
+
+.sidebar__logo_title {
+  font-size: $font_size_lg;
+  font-weight: $font_weight_bold;
+  color: $primary_blue;
+}
+
+.sidebar__logo_subtitle {
+  font-size: $font_size_xs;
+  color: $text_secondary;
+}
+
+.sidebar__close {
+  @include flex_center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: $text_secondary;
+  cursor: pointer;
+  border-radius: $radius_lg;
+  display: none;
+  
+  @include respond_down('lg') {
+    display: flex;
+  }
+  
+  &:hover {
+    background-color: $background_gray;
+    color: $text_primary;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Sidebar Navigation
+.sidebar__nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing_4 0;
+  
+  @include custom_scrollbar;
+}
+
+.sidebar__menu {
+  padding: 0 $spacing_3;
+}
+
+.sidebar__menu--secondary {
+  margin-top: $spacing_2;
+}
+
+.sidebar__item {
+  margin-bottom: $spacing_1;
+}
+
+.sidebar__link {
+  @include flex(row, flex-start, center);
+  gap: $spacing_3;
+  width: 100%;
+  padding: $spacing_3 $spacing_4;
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  color: $text_secondary;
+  text-decoration: none;
+  border-radius: $radius_lg;
+  transition: all $transition_fast;
+  
+  &:hover {
+    background-color: $primary_blue_light;
+    color: $primary_blue;
+    
+    .sidebar__link_icon {
+      color: $primary_blue;
+    }
+  }
+}
+
+.sidebar__link--active {
+  background-color: $primary_blue_light;
+  color: $primary_blue;
+  font-weight: $font_weight_semibold;
+  
+  .sidebar__link_icon {
+    color: $primary_blue;
+  }
+}
+
+.sidebar__link_icon {
+  @include flex_center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: $text_muted;
+  transition: color $transition_fast;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sidebar__link_text {
+  white-space: nowrap;
+}
+
+// Sidebar Divider
+.sidebar__divider {
+  height: 1px;
+  background-color: $border_color;
+  margin: $spacing_4 $spacing_5;
+}
+
+// Sidebar Footer
+.sidebar__footer {
+  padding: $spacing_4 $spacing_3;
+  border-top: 1px solid $border_color;
+}
+
+.sidebar__logout {
+  @include flex(row, flex-start, center);
+  gap: $spacing_3;
+  width: 100%;
+  padding: $spacing_3 $spacing_4;
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  color: $error_red;
+  text-decoration: none;
+  border-radius: $radius_lg;
+  transition: all $transition_fast;
+  
+  &:hover {
+    background-color: $error_red_light;
+  }
+  
+  .sidebar__link_icon {
+    color: $error_red;
+  }
+}
+
+// --------------------------------------------
+// Main Wrapper (Content Area)
+// --------------------------------------------
+
+.main_wrapper {
+  margin-left: $sidebar_width;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left $transition_normal;
+  
+  @include respond_down('lg') {
+    margin-left: 0;
+  }
+}
+
+// --------------------------------------------
+// Top Header
+// --------------------------------------------
+
+.top_header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $top_header_height;
+  background-color: $white;
+  border-bottom: 1px solid $border_color;
+  z-index: $z_sticky;
+  @include flex_between;
+  padding: 0 $spacing_6;
+  
+  @include respond_down('md') {
+    padding: 0 $spacing_4;
+  }
+}
+
+.top_header__left {
+  @include flex(row, flex-start, center);
+  gap: $spacing_4;
+}
+
+.top_header__right {
+  @include flex(row, flex-end, center);
+  gap: $spacing_4;
+}
+
+// Sidebar Toggle Button
+.sidebar_toggle {
+  @include flex_center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: $text_secondary;
+  cursor: pointer;
+  border-radius: $radius_lg;
+  transition: all $transition_fast;
+  display: none;
+  
+  @include respond_down('lg') {
+    display: flex;
+  }
+  
+  &:hover {
+    background-color: $background_gray;
+    color: $text_primary;
+  }
+  
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// Mobile Logo (Header'da)
+.top_header__brand {
+  @include flex(row, flex-start, center);
+  gap: $spacing_2;
+  text-decoration: none;
+  display: none;
+  
+  @include respond_down('lg') {
+    display: flex;
+  }
+}
+
+.top_header__logo_icon {
+  @include flex_center;
+  width: 32px;
+  height: 32px;
+  background-color: $primary_blue;
+  border-radius: $radius_full;
+  
+  svg {
+    width: 18px;
+    height: 18px;
+    color: $white;
+  }
+}
+
+.top_header__logo_text {
+  @include flex_column;
+  line-height: 1.1;
+  
+  @include respond_down('sm') {
+    display: none;
+  }
+}
+
+.top_header__logo_title {
+  font-size: $font_size_base;
+  font-weight: $font_weight_bold;
+  color: $primary_blue;
+}
+
+.top_header__logo_subtitle {
+  font-size: 0.625rem;
+  color: $text_secondary;
+}
+
+// Icon Buttons
+.top_header__icon_btn {
+  @include flex_center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: $text_secondary;
+  cursor: pointer;
+  border-radius: $radius_lg;
+  transition: all $transition_fast;
+  
+  &:hover {
+    background-color: $background_gray;
+    color: $text_primary;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.top_header__badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 0.625rem;
+  font-weight: $font_weight_bold;
+  color: $white;
+  background-color: $error_red;
+  border-radius: $radius_full;
+  @include flex_center;
+}
+
+// User Dropdown
+.top_header__user {
+  @include flex(row, flex-end, center);
+  gap: $spacing_3;
+  padding: $spacing_2 $spacing_3;
+  border-radius: $radius_lg;
+  cursor: pointer;
+  transition: background-color $transition_fast;
+  
+  &:hover {
+    background-color: $background_gray;
+  }
+}
+
+.top_header__user_info {
+  @include flex_column;
+  text-align: right;
+  
+  @include respond_down('md') {
+    display: none;
+  }
+}
+
+.top_header__user_name {
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  color: $text_primary;
+}
+
+.top_header__user_role {
+  font-size: $font_size_xs;
+  color: $text_muted;
+}
+
+.top_header__avatar {
+  @include flex_center;
+  width: 40px;
+  height: 40px;
+  background-color: $primary_blue_light;
+  color: $primary_blue;
+  border-radius: $radius_full;
+  font-weight: $font_weight_semibold;
+  font-size: $font_size_sm;
+}
+
+.top_header__dropdown_icon {
+  width: 16px;
+  height: 16px;
+  color: $text_muted;
+  
+  @include respond_down('md') {
+    display: none;
+  }
+}
+
+// --------------------------------------------
+// Breadcrumb Navigation
+// --------------------------------------------
+
+.breadcrumb {
+  @include flex(row, flex-start, center);
+  gap: $spacing_2;
+  padding: $spacing_3 0;
+}
+
+.breadcrumb__item {
+  @include flex(row, flex-start, center);
+  gap: $spacing_2;
+  font-size: $font_size_sm;
+  color: $text_secondary;
+  
+  &:last-child {
+    color: $text_primary;
+    font-weight: $font_weight_medium;
+  }
+}
+
+.breadcrumb__link {
+  color: $text_secondary;
+  text-decoration: none;
+  
+  &:hover {
+    color: $primary_blue;
+  }
+}
+
+.breadcrumb__separator {
+  color: $text_muted;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

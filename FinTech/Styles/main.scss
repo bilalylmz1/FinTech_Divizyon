@@ -1,2 +1,182 @@
-// Ana SCSS dosyası - Tüm importlar burada yapılacak
+// ============================================
+// Main SCSS - Web Şube 2.0 İnteraktif Kredi
+// Ana import dosyası - Tüm stiller burada birleşir
+// ============================================
 
+// --------------------------------------------
+// 1. Abstracts (Değişkenler, Mixinler)
+// Compile edilmez, sadece diğer dosyalarda kullanılır
+// --------------------------------------------
+
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// --------------------------------------------
+// 2. Base (Reset, Typography)
+// Temel HTML element stilleri
+// --------------------------------------------
+
+@use 'base/reset';
+@use 'base/typography';
+
+// --------------------------------------------
+// 3. Components (Tekrar kullanılabilir bileşenler)
+// Butonlar, kartlar, formlar vb.
+// --------------------------------------------
+
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/modals';
+@use 'components/navigation';
+
+// --------------------------------------------
+// 4. Pages (Sayfaya özel stiller)
+// Her sayfa için ayrı dosya
+// --------------------------------------------
+
+@use 'pages/dashboard';
+@use 'pages/login';
+@use 'pages/kredi_basvuru';
+@use 'pages/profil';
+
+// --------------------------------------------
+// 5. Utility Classes
+// Yardımcı sınıflar
+// --------------------------------------------
+
+// Display
+.d_none { display: none; }
+.d_block { display: block; }
+.d_flex { display: flex; }
+.d_grid { display: grid; }
+
+// Flexbox utilities
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_1 { flex: 1; }
+.flex_shrink_0 { flex-shrink: 0; }
+
+// Gap utilities
+.gap_1 { gap: $spacing_1; }
+.gap_2 { gap: $spacing_2; }
+.gap_3 { gap: $spacing_3; }
+.gap_4 { gap: $spacing_4; }
+.gap_5 { gap: $spacing_5; }
+.gap_6 { gap: $spacing_6; }
+
+// Margin utilities
+.m_0 { margin: 0; }
+.mt_0 { margin-top: 0; }
+.mb_0 { margin-bottom: 0; }
+
+.mt_2 { margin-top: $spacing_2; }
+.mt_3 { margin-top: $spacing_3; }
+.mt_4 { margin-top: $spacing_4; }
+.mt_5 { margin-top: $spacing_5; }
+.mt_6 { margin-top: $spacing_6; }
+
+.mb_2 { margin-bottom: $spacing_2; }
+.mb_3 { margin-bottom: $spacing_3; }
+.mb_4 { margin-bottom: $spacing_4; }
+.mb_5 { margin-bottom: $spacing_5; }
+.mb_6 { margin-bottom: $spacing_6; }
+
+// Padding utilities
+.p_0 { padding: 0; }
+.p_4 { padding: $spacing_4; }
+.p_5 { padding: $spacing_5; }
+.p_6 { padding: $spacing_6; }
+
+// Width utilities
+.w_full { width: 100%; }
+.w_auto { width: auto; }
+
+// Text utilities (typography.scss'de tanımlılar ama burada da olsun)
+.text_center { text-align: center; }
+.text_left { text-align: left; }
+.text_right { text-align: right; }
+
+// Visibility
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+// Overflow
+.overflow_hidden { overflow: hidden; }
+.overflow_auto { overflow: auto; }
+
+// Position
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+// Cursor
+.cursor_pointer { cursor: pointer; }
+.cursor_not_allowed { cursor: not-allowed; }
+
+// User select
+.select_none { user-select: none; }
+.select_all { user-select: all; }
+
+// --------------------------------------------
+// 6. Responsive utilities
+// --------------------------------------------
+
+// Hide on mobile
+@include respond_down('md') {
+  .hide_mobile { display: none; }
+}
+
+// Hide on desktop
+@include respond_to('md') {
+  .hide_desktop { display: none; }
+}
+
+// --------------------------------------------
+// 7. Container
+// --------------------------------------------
+
+.container {
+  width: 100%;
+  max-width: $container_max_width;
+  margin: 0 auto;
+  padding: 0 $container_padding;
+  
+  @include respond_down('md') {
+    padding: 0 $spacing_4;
+  }
+}
+
+.container--fluid {
+  max-width: none;
+}
+
+// --------------------------------------------
+// 8. Page Wrapper
+// --------------------------------------------
+
+.page_wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page_content {
+  flex: 1;
+}
