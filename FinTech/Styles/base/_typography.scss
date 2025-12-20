@@ -1,1 +1,223 @@
-// Tipografi stilleri burada tanımlanacak
+// ============================================
+// Typography - Web Şube 2.0 İnteraktif Kredi
+// Font: Poppins
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------
+// Google Fonts Import
+// --------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// --------------------------------------------
+// Heading Stilleri
+// --------------------------------------------
+
+// Display - Ana Başlıklar (28-32px)
+.heading_display {
+  @include heading($font_size_4xl, $font_weight_bold);
+  letter-spacing: -0.02em;
+  
+  @include respond_down('md') {
+    font-size: $font_size_3xl;
+  }
+}
+
+// H1 - Sayfa Başlıkları (24-28px)
+.heading_h1 {
+  @include heading($font_size_3xl, $font_weight_bold);
+  
+  @include respond_down('md') {
+    font-size: $font_size_2xl;
+  }
+}
+
+// H2 - Bölüm Başlıkları (20-24px)
+.heading_h2 {
+  @include heading($font_size_2xl, $font_weight_semibold);
+  
+  @include respond_down('md') {
+    font-size: $font_size_xl;
+  }
+}
+
+// H3 - Kart Başlıkları (16-18px)
+.heading_h3 {
+  @include heading($font_size_xl, $font_weight_semibold);
+  
+  @include respond_down('md') {
+    font-size: $font_size_lg;
+  }
+}
+
+// H4 - Alt Başlıklar
+.heading_h4 {
+  @include heading($font_size_lg, $font_weight_medium);
+}
+
+// --------------------------------------------
+// Body Text Stilleri
+// --------------------------------------------
+
+// Body Regular (14-16px)
+.text_body {
+  @include body_text($font_size_base, $text_primary);
+}
+
+// Body Large
+.text_body_lg {
+  @include body_text($font_size_lg, $text_primary);
+}
+
+// Body Small
+.text_body_sm {
+  @include body_text($font_size_sm, $text_secondary);
+}
+
+// Caption / Small Text (12px)
+.text_caption {
+  font-family: $font_family_primary;
+  font-size: $font_size_xs;
+  font-weight: $font_weight_regular;
+  line-height: $line_height_relaxed;
+  color: $text_muted;
+}
+
+// --------------------------------------------
+// Label & Button Text
+// --------------------------------------------
+
+// Label Text
+.text_label {
+  font-family: $font_family_primary;
+  font-size: $font_size_sm;
+  font-weight: $font_weight_medium;
+  line-height: $line_height_normal;
+  color: $text_secondary;
+  text-transform: none;
+}
+
+// Button Text
+.text_button {
+  font-family: $font_family_primary;
+  font-size: $font_size_base;
+  font-weight: $font_weight_semibold;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+// --------------------------------------------
+// Link Stilleri
+// --------------------------------------------
+
+.text_link {
+  color: $primary_blue;
+  font-weight: $font_weight_medium;
+  text-decoration: none;
+  transition: color $transition_fast;
+  cursor: pointer;
+  
+  &:hover {
+    color: $primary_blue_dark;
+    text-decoration: underline;
+  }
+}
+
+.text_link--underline {
+  text-decoration: underline;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// --------------------------------------------
+// Renk Varyasyonları
+// --------------------------------------------
+
+.text_primary {
+  color: $text_primary;
+}
+
+.text_secondary {
+  color: $text_secondary;
+}
+
+.text_muted {
+  color: $text_muted;
+}
+
+.text_white {
+  color: $white;
+}
+
+.text_success {
+  color: $success_green;
+}
+
+.text_error {
+  color: $error_red;
+}
+
+.text_warning {
+  color: $warning_orange;
+}
+
+.text_info {
+  color: $info_blue;
+}
+
+// --------------------------------------------
+// Text Alignment
+// --------------------------------------------
+
+.text_left {
+  text-align: left;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+// --------------------------------------------
+// Font Weight Utilities
+// --------------------------------------------
+
+.font_regular {
+  font-weight: $font_weight_regular;
+}
+
+.font_medium {
+  font-weight: $font_weight_medium;
+}
+
+.font_semibold {
+  font-weight: $font_weight_semibold;
+}
+
+.font_bold {
+  font-weight: $font_weight_bold;
+}
+
+// --------------------------------------------
+// Text Truncation
+// --------------------------------------------
+
+.text_truncate {
+  @include text_truncate;
+}
+
+.text_clamp_2 {
+  @include line_clamp(2);
+}
+
+.text_clamp_3 {
+  @include line_clamp(3);
+}

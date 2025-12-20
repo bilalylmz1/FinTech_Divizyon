@@ -1,1 +1,252 @@
-// Buton stilleri burada tanımlanacak
+// ============================================
+// Button Stilleri - Web Şube 2.0 İnteraktif Kredi
+// BEM Metodolojisi ile snake_case
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------
+// Base Button
+// --------------------------------------------
+
+.btn {
+  @include button_base;
+  @include button_size($spacing_3, $spacing_6, $font_size_base);
+  min-height: 48px;
+  
+  // Spinner for loading state
+  .btn__spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+// --------------------------------------------
+// Button Variants
+// --------------------------------------------
+
+// Primary Button (Mavi)
+.btn_primary {
+  @extend .btn;
+  background-color: $primary_blue;
+  color: $white;
+  
+  &:hover:not(:disabled) {
+    background-color: $primary_blue_hover;
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  @include focus_ring($primary_blue);
+}
+
+// Secondary Button (Outline)
+.btn_secondary {
+  @extend .btn;
+  background-color: transparent;
+  color: $primary_blue;
+  border: 2px solid $primary_blue;
+  
+  &:hover:not(:disabled) {
+    background-color: $primary_blue_light;
+  }
+  
+  @include focus_ring($primary_blue);
+}
+
+// Outline Button (Gri border)
+.btn_outline {
+  @extend .btn;
+  background-color: $white;
+  color: $text_primary;
+  border: 2px solid $border_color;
+  
+  &:hover:not(:disabled) {
+    border-color: $primary_blue;
+    color: $primary_blue;
+  }
+  
+  @include focus_ring($primary_blue);
+}
+
+// Ghost Button (Sadece text)
+.btn_ghost {
+  @extend .btn;
+  background-color: transparent;
+  color: $primary_blue;
+  padding: $spacing_2 $spacing_4;
+  min-height: auto;
+  
+  &:hover:not(:disabled) {
+    background-color: $primary_blue_light;
+  }
+}
+
+// Danger Button (Kırmızı)
+.btn_danger {
+  @extend .btn;
+  background-color: $error_red;
+  color: $white;
+  
+  &:hover:not(:disabled) {
+    background-color: darken($error_red, 10%);
+  }
+  
+  @include focus_ring($error_red);
+}
+
+// Success Button (Yeşil)
+.btn_success {
+  @extend .btn;
+  background-color: $success_green;
+  color: $white;
+  
+  &:hover:not(:disabled) {
+    background-color: darken($success_green, 10%);
+  }
+  
+  @include focus_ring($success_green);
+}
+
+// --------------------------------------------
+// Button Sizes
+// --------------------------------------------
+
+// Small Button
+.btn--small {
+  @include button_size($spacing_2, $spacing_4, $font_size_sm);
+  min-height: 36px;
+}
+
+// Large Button
+.btn--large {
+  @include button_size($spacing_4, $spacing_8, $font_size_lg);
+  min-height: 56px;
+}
+
+// Full Width
+.btn--full {
+  width: 100%;
+}
+
+// --------------------------------------------
+// Button States
+// --------------------------------------------
+
+// Loading State
+.btn--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+  
+  .btn__spinner {
+    @include absolute_center;
+    color: $white;
+  }
+}
+
+// Disabled State (otomatik olarak :disabled ile gelir)
+.btn--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+// --------------------------------------------
+// Icon Button
+// --------------------------------------------
+
+.btn_icon {
+  @include button_base;
+  @include flex_center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: $radius_lg;
+  background-color: transparent;
+  color: $text_secondary;
+  
+  &:hover {
+    background-color: $background_gray;
+    color: $text_primary;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.btn_icon--primary {
+  color: $primary_blue;
+  
+  &:hover {
+    background-color: $primary_blue_light;
+  }
+}
+
+// --------------------------------------------
+// Button Group
+// --------------------------------------------
+
+.btn_group {
+  @include flex(row, flex-start, center, nowrap);
+  gap: $spacing_2;
+  
+  .btn {
+    flex-shrink: 0;
+  }
+}
+
+.btn_group--full {
+  .btn {
+    flex: 1;
+  }
+}
+
+// --------------------------------------------
+// Floating Action Button
+// --------------------------------------------
+
+.btn_fab {
+  @include flex_center;
+  position: fixed;
+  bottom: $spacing_6;
+  right: $spacing_6;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius_full;
+  background-color: $primary_blue;
+  color: $white;
+  box-shadow: $shadow_lg;
+  transition: all $transition_normal;
+  z-index: $z_fixed;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $shadow_xl;
+  }
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// --------------------------------------------
+// Animation
+// --------------------------------------------
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

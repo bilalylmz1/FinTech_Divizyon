@@ -1,1 +1,284 @@
-// Mixin'ler burada tanımlanacak
+// ============================================
+// SCSS Mixinler - Web Şube 2.0 İnteraktif Kredi
+// ============================================
+
+@use 'variables' as *;
+
+// --------------------------------------------
+// Responsive Breakpoints
+// --------------------------------------------
+
+/// Mobile first breakpoint mixin
+/// @param {String} $breakpoint - Breakpoint adı (sm, md, lg, xl, 2xl)
+@mixin respond_to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (min-width: $breakpoint_sm) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: $breakpoint_md) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: $breakpoint_lg) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (min-width: $breakpoint_xl) { @content; }
+  } @else if $breakpoint == '2xl' {
+    @media (min-width: $breakpoint_2xl) { @content; }
+  }
+}
+
+/// Max-width breakpoint (desktop first)
+@mixin respond_down($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: ($breakpoint_sm - 1px)) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: ($breakpoint_md - 1px)) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: ($breakpoint_lg - 1px)) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (max-width: ($breakpoint_xl - 1px)) { @content; }
+  }
+}
+
+// --------------------------------------------
+// Flexbox Mixins
+// --------------------------------------------
+
+/// Flex container
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+/// Flex center (hem yatay hem dikey)
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/// Flex between
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/// Flex column
+@mixin flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+// --------------------------------------------
+// Grid Mixins
+// --------------------------------------------
+
+/// CSS Grid container
+@mixin grid($columns: 1, $gap: $spacing_4) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+/// Responsive grid
+@mixin responsive_grid($min_width: 280px, $gap: $spacing_4) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min_width, 1fr));
+  gap: $gap;
+}
+
+// --------------------------------------------
+// Typography Mixins
+// --------------------------------------------
+
+/// Heading stilleri
+@mixin heading($size, $weight: $font_weight_bold) {
+  font-family: $font_family_primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line_height_tight;
+  color: $text_dark;
+}
+
+/// Body text
+@mixin body_text($size: $font_size_base, $color: $text_primary) {
+  font-family: $font_family_primary;
+  font-size: $size;
+  font-weight: $font_weight_regular;
+  line-height: $line_height_normal;
+  color: $color;
+}
+
+/// Text truncate (tek satır)
+@mixin text_truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/// Multi-line truncate
+@mixin line_clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// --------------------------------------------
+// Button Mixins
+// --------------------------------------------
+
+/// Base button stilleri
+@mixin button_base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing_2;
+  font-family: $font_family_primary;
+  font-weight: $font_weight_semibold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: $radius_lg;
+  transition: all $transition_normal;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/// Button size
+@mixin button_size($padding_y, $padding_x, $font_size) {
+  padding: $padding_y $padding_x;
+  font-size: $font_size;
+}
+
+// --------------------------------------------
+// Card Mixins
+// --------------------------------------------
+
+/// Card base stilleri
+@mixin card_base {
+  background-color: $white;
+  border-radius: $radius_xl;
+  box-shadow: $shadow_card;
+  transition: box-shadow $transition_normal;
+  
+  &:hover {
+    box-shadow: $shadow_card_hover;
+  }
+}
+
+// --------------------------------------------
+// Form Mixins
+// --------------------------------------------
+
+/// Input base stilleri
+@mixin input_base {
+  width: 100%;
+  padding: $spacing_3 $spacing_4;
+  font-family: $font_family_primary;
+  font-size: $font_size_base;
+  color: $text_primary;
+  background-color: $white;
+  border: 2px solid $border_color;
+  border-radius: $radius_lg;
+  transition: border-color $transition_fast, box-shadow $transition_fast;
+  
+  &::placeholder {
+    color: $text_muted;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $primary_blue;
+    box-shadow: 0 0 0 3px rgba($primary_blue, 0.1);
+  }
+  
+  &:disabled {
+    background-color: $background_gray;
+    cursor: not-allowed;
+  }
+}
+
+/// Input error state
+@mixin input_error {
+  border-color: $error_red;
+  
+  &:focus {
+    border-color: $error_red;
+    box-shadow: 0 0 0 3px rgba($error_red, 0.1);
+  }
+}
+
+// --------------------------------------------
+// Utility Mixins
+// --------------------------------------------
+
+/// Absolute center
+@mixin absolute_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/// Cover (tam kaplama)
+@mixin cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/// Aspect ratio
+@mixin aspect_ratio($width, $height) {
+  aspect-ratio: $width / $height;
+}
+
+/// Visually hidden (erişilebilirlik için)
+@mixin visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/// Focus ring (erişilebilirlik)
+@mixin focus_ring($color: $primary_blue) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+  }
+}
+
+/// Scrollbar stilleri
+@mixin custom_scrollbar($width: 6px, $track: $background_gray, $thumb: $border_color_dark) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $track;
+    border-radius: $radius_full;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border-radius: $radius_full;
+    
+    &:hover {
+      background: darken($thumb, 10%);
+    }
+  }
+}

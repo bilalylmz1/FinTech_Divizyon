@@ -1,1 +1,189 @@
-// Reset stilleri burada tanımlanacak
+// ============================================
+// CSS Reset - Web Şube 2.0 İnteraktif Kredi
+// Modern CSS Reset (Josh Comeau inspired)
+// ============================================
+
+@use '../abstracts/variables' as *;
+
+// --------------------------------------------
+// Box Sizing
+// --------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// --------------------------------------------
+// Margin/Padding Reset
+// --------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// --------------------------------------------
+// HTML & Body
+// --------------------------------------------
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font_family_primary;
+  font-size: $font_size_base;
+  font-weight: $font_weight_regular;
+  line-height: $line_height_normal;
+  color: $text_primary;
+  background-color: $background_light;
+}
+
+// --------------------------------------------
+// Typography Reset
+// --------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font_weight_bold;
+  line-height: $line_height_tight;
+  color: $text_dark;
+}
+
+p {
+  line-height: $line_height_normal;
+}
+
+// --------------------------------------------
+// Links
+// --------------------------------------------
+
+a {
+  color: $primary_blue;
+  text-decoration: none;
+  transition: color $transition_fast;
+  
+  &:hover {
+    color: $primary_blue_dark;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid $primary_blue;
+    outline-offset: 2px;
+  }
+}
+
+// --------------------------------------------
+// Lists
+// --------------------------------------------
+
+ul, ol {
+  list-style: none;
+}
+
+// --------------------------------------------
+// Images & Media
+// --------------------------------------------
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// --------------------------------------------
+// Form Elements
+// --------------------------------------------
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+input,
+textarea {
+  &::placeholder {
+    color: $text_muted;
+  }
+}
+
+// Autofill stilleri
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $text_primary;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// Number input ok butonlarını kaldır
+input[type="number"] {
+  -moz-appearance: textfield;
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+// --------------------------------------------
+// Tables
+// --------------------------------------------
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// --------------------------------------------
+// Misc
+// --------------------------------------------
+
+// Gizli elementler
+[hidden] {
+  display: none;
+}
+
+// Selection rengi
+::selection {
+  background-color: rgba($primary_blue, 0.2);
+  color: $text_dark;
+}
+
+// Focus outline (erişilebilirlik)
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}

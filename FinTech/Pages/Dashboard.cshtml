@@ -1,0 +1,284 @@
+@page
+@model FinTech.Pages.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+    <div class="dashboard__container">
+        
+        <!-- Header / Welcome Section -->
+        <header class="dashboard__header">
+            <div class="dashboard__welcome">
+                <span class="dashboard__greeting">Hoş Geldiniz,</span>
+                <h1 class="dashboard__title">Mustafa Gümüş</h1>
+            </div>
+            <div class="dashboard__date">
+                <span id="current_date">@DateTime.Now.ToString("dd.MM.yyyy")</span>
+            </div>
+        </header>
+        
+        <!-- Notification Banner (Optional) -->
+        <div class="notification_banner notification_banner--success" id="welcome_banner">
+            <div class="notification_banner__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <div class="notification_banner__content">
+                <span class="notification_banner__title">Profiliniz güncellendi!</span>
+                <span class="notification_banner__text">Son kredi güven raporunuz hazır. Hemen inceleyin.</span>
+            </div>
+            <button class="notification_banner__close" id="close_banner" aria-label="Kapat">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Main Grid: Credit Report + Profile Card -->
+        <div class="dashboard__grid">
+            
+            <!-- Kredi Güven Raporu Kartı -->
+            <div class="credit_report_card">
+                <div class="credit_report_card__header">
+                    <div>
+                        <h2 class="credit_report_card__title">Kredi Güven Raporu</h2>
+                        <span class="credit_report_card__user">Mustafa Gümüş</span>
+                    </div>
+                    <span class="credit_report_card__date">@DateTime.Now.ToString("dd.MM.yyyy")</span>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="credit_report_card__progress">
+                    <div class="credit_progress__labels">
+                        <span>zayıf</span>
+                        <span>riskli</span>
+                        <span>kritik</span>
+                        <span class="font_bold">Hassas</span>
+                        <span>güvenli</span>
+                        <span>mükemmel</span>
+                    </div>
+                    <div class="credit_progress__bar">
+                        <div class="credit_progress__fill" style="width: 65%;"></div>
+                        <div class="credit_progress__indicator" style="left: 65%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Status -->
+                <div class="credit_report_card__status">
+                    <span class="credit_status__label">Mevcut Durumun :</span>
+                    <span class="credit_status__value credit_status__value--hassas">Hassas</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="credit_report_card__description">
+                    Onay şansın sınıra yakın; iki hızlı adımla profilini güçlendir, sonra sana uygun tekliflere bak.
+                </p>
+                
+                <!-- Action Button -->
+                <div class="credit_report_card__action">
+                    <button class="btn btn_primary btn--full" id="btn_view_offers">
+                        Teklifleri Gör
+                    </button>
+                    <a href="#" class="credit_report_card__link">aksiyon planı</a>
+                </div>
+            </div>
+            
+            <!-- Genel Kredi Profili Yorumu -->
+            <div class="profile_card">
+                <div class="profile_card__header">
+                    <h3 class="profile_card__title">Genel Kredi Profili Yorumu</h3>
+                </div>
+                <div class="profile_card__content">
+                    <p>
+                        Genel olarak durumun <span class="text_highlight">güvenli</span>. Ödemelerini çoğunlukla zamanında yapıyorsun ve gelirine oranla borçlanma limitlerin dengeli. Hemen bir kredi uzmanı ile çalışarak istediğin krediye ulaşabilirsin.
+                    </p>
+                </div>
+                <div class="profile_card__action">
+                    <button class="btn btn_primary" id="btn_expert_chat">
+                        Kredi Uzmanı ile Görüş
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Quick Actions Section -->
+        <section class="dashboard__section">
+            <div class="dashboard__section_header">
+                <h2 class="dashboard__section_title">Hızlı İşlemler</h2>
+                <a href="#" class="dashboard__section_link">Tümünü Gör →</a>
+            </div>
+            <div class="dashboard__actions">
+                
+                <!-- Rapor Listesi -->
+                <div class="action_card" data-action="reports">
+                    <div class="action_card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h4 class="action_card__title">Rapor Listesi</h4>
+                    <p class="action_card__description">Tüm raporlarınızı görüntüleyin</p>
+                </div>
+                
+                <!-- Kredi Teklifleri -->
+                <div class="action_card" data-action="offers">
+                    <div class="action_card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="action_card__title">Kredi Teklifleri</h4>
+                    <p class="action_card__description">Size özel kredi fırsatları</p>
+                </div>
+                
+                <!-- Profil Bilgileri -->
+                <div class="action_card" data-action="profile">
+                    <div class="action_card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h4 class="action_card__title">Profil Bilgileri</h4>
+                    <p class="action_card__description">Kişisel bilgilerinizi yönetin</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Campaigns Section -->
+        <section class="dashboard__section">
+            <div class="dashboard__section_header">
+                <h2 class="dashboard__section_title">Kampanyalar</h2>
+            </div>
+            <div class="dashboard__campaigns">
+                
+                <!-- Campaign 1 -->
+                <div class="campaign_card">
+                    <h4 class="campaign_card__title">
+                        Fibabanka'dan 1.000.000TL'ye kadar kredi kampanyası
+                    </h4>
+                    <p class="campaign_card__description">
+                        Kredi Güven Raporu güvenli olan vergi levhalı müşterilere özel Fibabanka'dan 2,99'dan başlayan faizlerle 1 milyon TL'ye kadar kredi kampanyası!
+                    </p>
+                    <div class="campaign_card__action">
+                        <button class="btn" id="btn_campaign_apply">Başvur</button>
+                    </div>
+                </div>
+                
+                <!-- Campaign 2 -->
+                <div class="campaign_card campaign_card--light">
+                    <h4 class="campaign_card__title">
+                        Bir sonraki Kredi Güven Raporun %20 indirimli!
+                    </h4>
+                    <p class="campaign_card__description">
+                        Sadece sana özel, bir sonraki kredi güven raporun %20 indirimli! Hemen kampanya kodunu al, indirimi kaçırma!
+                    </p>
+                    <div class="campaign_card__action">
+                        <button class="btn" id="btn_get_code">Kod Al</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Dashboard JavaScript - snake_case convention
+        $(document).ready(function() {
+            
+            // Cache DOM elements
+            var $welcome_banner = $('#welcome_banner');
+            var $close_banner = $('#close_banner');
+            var $action_cards = $('.action_card');
+            
+            // Close notification banner
+            $close_banner.on('click', function() {
+                $welcome_banner.fadeOut(300);
+            });
+            
+            // Action card click handlers
+            $action_cards.on('click', function() {
+                var action = $(this).data('action');
+                handle_action_click(action);
+            });
+            
+            // Handle action card clicks
+            function handle_action_click(action) {
+                switch(action) {
+                    case 'reports':
+                        window.location.href = '/';
+                        break;
+                    case 'offers':
+                        window.location.href = '/';
+                        break;
+                    case 'profile':
+                        window.location.href = '/Profil';
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+            // Button click handlers with double-submit prevention
+            $('#btn_view_offers').on('click', function() {
+                var $btn = $(this);
+                FinTech.set_button_loading($btn, 'Yükleniyor...');
+                
+                // Simulate API call
+                setTimeout(function() {
+                    FinTech.reset_button_loading($btn);
+                    // Navigate to offers
+                }, 1000);
+            });
+            
+            $('#btn_expert_chat').on('click', function() {
+                var $btn = $(this);
+                FinTech.set_button_loading($btn, 'Bağlanıyor...');
+                
+                // Simulate connection
+                setTimeout(function() {
+                    FinTech.reset_button_loading($btn);
+                    FinTech.show_notification('Kredi uzmanı ile bağlantı kurulacak.', 'info');
+                }, 1500);
+            });
+            
+            // Campaign buttons
+            $('#btn_campaign_apply').on('click', function() {
+                window.location.href = '/KrediBasvuru';
+            });
+            
+            $('#btn_get_code').on('click', function() {
+                var $btn = $(this);
+                FinTech.set_button_loading($btn, 'Kod Alınıyor...');
+                
+                setTimeout(function() {
+                    FinTech.reset_button_loading($btn);
+                    FinTech.show_notification('Kampanya Kodunuz: KREDI20 - Bu kodu bir sonraki raporunuzda kullanabilirsiniz.', 'success', 8000);
+                }, 800);
+            });
+            
+            // Animate progress bar on load
+            setTimeout(function() {
+                $('.credit_progress__fill').css('width', '65%');
+            }, 500);
+            
+        });
+    </script>
+}
