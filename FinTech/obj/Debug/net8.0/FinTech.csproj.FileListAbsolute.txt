@@ -33,10 +33,6 @@ C:/Users/bilal/OneDrive/Desktop/FinTech/obj/Debug/net8.0/FinTech.genruntimeconfi
 C:/Users/bilal/OneDrive/Desktop/FinTech/obj/Debug/net8.0/ref/FinTech.dll
 /home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/appsettings.Development.json
 /home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/appsettings.json
-/home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/WebSube-API/.eslintrc.json
-/home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/WebSube-API/package-lock.json
-/home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/WebSube-API/package.json
-/home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/WebSube-API/tsconfig.json
 /home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/FinTech.staticwebassets.runtime.json
 /home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/FinTech
 /home/ryuzaki/Desktop/FinTech/FinTech/bin/Debug/net8.0/FinTech.deps.json
