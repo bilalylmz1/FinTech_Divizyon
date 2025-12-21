@@ -1,11 +1,12 @@
 /**
  * API Client Helper
- * WebSube-API endpoint'lerine istek yapmak için yardımcı fonksiyonlar
+ * WebSube-API proxy üzerinden Azure endpoint'lerine istek yapar
  * snake_case isimlendirme kuralı kullanılmaktadır
  */
 
 var api_client = {
-    base_url: 'http://localhost:3000/api/ep',
+    // WebSube-API proxy base URL
+    base_url: 'http://localhost:3001/api/ep',
     
     /**
      * GET isteği yapar
@@ -51,6 +52,8 @@ var api_client = {
     
     /**
      * Rapor listesini getirir
+     * WebSube-API -> Azure: https://api-idc.azurewebsites.net/api/dummy/report-list
+     * 3 Adet reportId döner
      * @returns {Promise} jQuery AJAX promise
      */
     get_report_list: function() {
@@ -59,6 +62,7 @@ var api_client = {
     
     /**
      * Rapor detayını getirir
+     * WebSube-API -> Azure: https://api-idc.azurewebsites.net/api/GetReportDetail
      * @param {number} report_id - Rapor ID
      * @returns {Promise} jQuery AJAX promise
      */
@@ -79,7 +83,7 @@ var api_client = {
             return xhr.responseJSON.message;
         }
         if (xhr.status === 0) {
-            return 'API sunucusuna bağlanılamıyor. WebSube-API\'nin çalıştığından emin olun (http://localhost:3000)';
+            return 'API sunucusuna bağlanılamıyor. WebSube-API çalıştığından emin olun (http://localhost:3001)';
         }
         if (xhr.status === 404) {
             return 'İstenen kaynak bulunamadı.';
