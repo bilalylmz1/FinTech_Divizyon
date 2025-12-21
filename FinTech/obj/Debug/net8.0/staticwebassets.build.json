@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kYW/OGD3pnx5CW4CVDlPmAbCXi79cofZ5VWQ6NgqafE=",
+  "Hash": "pOAMWfrDsTw+o3xnfBlS18n69JVx7r9MtqOWWMBTfFQ=",
   "Source": "FinTech",
   "BasePath": "_content/FinTech",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FinTech/wwwroot",
       "Source": "FinTech",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/bundle/FinTech.styles.css",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/bundle/FinTech.styles.css",
       "SourceId": "FinTech",
       "SourceType": "Computed",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/FinTech",
       "RelativePath": "FinTech.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/bundle/FinTech.styles.css"
+      "OriginalItemSpec": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/bundle/FinTech.styles.css"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css",
       "SourceId": "FinTech",
       "SourceType": "Computed",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/FinTech",
       "RelativePath": "FinTech.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css"
+      "OriginalItemSpec": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/dashboard.css",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/css/dashboard.css",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "css/dashboard.css",
       "AssetKind": "All",
@@ -74,10 +74,48 @@
       "OriginalItemSpec": "wwwroot/css/dashboard.css"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/site.css",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/css/faq.css",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
+      "BasePath": "_content/FinTech",
+      "RelativePath": "css/faq.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/faq.css"
+    },
+    {
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/css/help_center.css",
+      "SourceId": "FinTech",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
+      "BasePath": "_content/FinTech",
+      "RelativePath": "css/help_center.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/help_center.css"
+    },
+    {
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/css/site.css",
+      "SourceId": "FinTech",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -93,10 +131,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/site.css.map",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/css/site.css.map",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "css/site.css.map",
       "AssetKind": "All",
@@ -112,10 +150,29 @@
       "OriginalItemSpec": "wwwroot/css/site.css.map"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/favicon.ico",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/data/faq_data.json",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
+      "BasePath": "_content/FinTech",
+      "RelativePath": "data/faq_data.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/data/faq_data.json"
+    },
+    {
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/favicon.ico",
+      "SourceId": "FinTech",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -131,10 +188,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-bold.woff2",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/fonts/poppins/poppins-bold.woff2",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "fonts/poppins/poppins-bold.woff2",
       "AssetKind": "All",
@@ -150,10 +207,10 @@
       "OriginalItemSpec": "wwwroot/fonts/poppins/poppins-bold.woff2"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-light.woff2",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/fonts/poppins/poppins-light.woff2",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "fonts/poppins/poppins-light.woff2",
       "AssetKind": "All",
@@ -169,10 +226,10 @@
       "OriginalItemSpec": "wwwroot/fonts/poppins/poppins-light.woff2"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-medium.woff2",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/fonts/poppins/poppins-medium.woff2",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "fonts/poppins/poppins-medium.woff2",
       "AssetKind": "All",
@@ -188,10 +245,10 @@
       "OriginalItemSpec": "wwwroot/fonts/poppins/poppins-medium.woff2"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-regular.woff2",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/fonts/poppins/poppins-regular.woff2",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "fonts/poppins/poppins-regular.woff2",
       "AssetKind": "All",
@@ -207,10 +264,10 @@
       "OriginalItemSpec": "wwwroot/fonts/poppins/poppins-regular.woff2"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-semibold.woff2",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/fonts/poppins/poppins-semibold.woff2",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "fonts/poppins/poppins-semibold.woff2",
       "AssetKind": "All",
@@ -226,10 +283,10 @@
       "OriginalItemSpec": "wwwroot/fonts/poppins/poppins-semibold.woff2"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/.gitkeep",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/.gitkeep",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/.gitkeep",
       "AssetKind": "All",
@@ -245,10 +302,10 @@
       "OriginalItemSpec": "wwwroot/img/.gitkeep"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/1. Light Mode - Desktop - Login Page.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/1. Light Mode - Desktop - Login Page.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/1. Light Mode - Desktop - Login Page.svg",
       "AssetKind": "All",
@@ -264,10 +321,10 @@
       "OriginalItemSpec": "wwwroot/img/1. Light Mode - Desktop - Login Page.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/banner.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/banner.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/banner.svg",
       "AssetKind": "All",
@@ -283,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/img/banner.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/full-bg.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/full-bg.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/full-bg.svg",
       "AssetKind": "All",
@@ -302,10 +359,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/full-bg.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/header-section.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/header-section.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/header-section.svg",
       "AssetKind": "All",
@@ -321,10 +378,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/header-section.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/icon-menu.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/icon-menu.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/icon-menu.svg",
       "AssetKind": "All",
@@ -340,10 +397,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/icon-menu.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/icon-profile.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/icon-profile.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/icon-profile.svg",
       "AssetKind": "All",
@@ -359,10 +416,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/icon-profile.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/logo.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/logo.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/logo.svg",
       "AssetKind": "All",
@@ -378,10 +435,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/logo.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/score-gauge.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/dashboard/score-gauge.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/dashboard/score-gauge.svg",
       "AssetKind": "All",
@@ -397,10 +454,10 @@
       "OriginalItemSpec": "wwwroot/img/dashboard/score-gauge.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/finans_okulu.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/finans_okulu.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/finans_okulu.svg",
       "AssetKind": "All",
@@ -416,10 +473,10 @@
       "OriginalItemSpec": "wwwroot/img/finans_okulu.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/ik_logo.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/ik_logo.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/ik_logo.svg",
       "AssetKind": "All",
@@ -435,10 +492,10 @@
       "OriginalItemSpec": "wwwroot/img/ik_logo.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/login_header.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/login_header.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/login_header.svg",
       "AssetKind": "All",
@@ -454,10 +511,10 @@
       "OriginalItemSpec": "wwwroot/img/login_header.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/login_hero.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/login_hero.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/login_hero.svg",
       "AssetKind": "All",
@@ -473,10 +530,10 @@
       "OriginalItemSpec": "wwwroot/img/login_hero.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/real_sms.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/real_sms.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/real_sms.svg",
       "AssetKind": "All",
@@ -492,10 +549,10 @@
       "OriginalItemSpec": "wwwroot/img/real_sms.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/register_header.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/register_header.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/register_header.svg",
       "AssetKind": "All",
@@ -511,10 +568,10 @@
       "OriginalItemSpec": "wwwroot/img/register_header.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/sms_phone.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/sms_phone.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/sms_phone.svg",
       "AssetKind": "All",
@@ -530,10 +587,10 @@
       "OriginalItemSpec": "wwwroot/img/sms_phone.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/statik_slogan2 1.svg",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/img/statik_slogan2 1.svg",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "img/statik_slogan2 1.svg",
       "AssetKind": "All",
@@ -549,10 +606,48 @@
       "OriginalItemSpec": "wwwroot/img/statik_slogan2 1.svg"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/js/pages/login.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/js/pages/faq.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
+      "BasePath": "_content/FinTech",
+      "RelativePath": "js/pages/faq.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/pages/faq.js"
+    },
+    {
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/js/pages/help_center.js",
+      "SourceId": "FinTech",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
+      "BasePath": "_content/FinTech",
+      "RelativePath": "js/pages/help_center.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/pages/help_center.js"
+    },
+    {
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/js/pages/login.js",
+      "SourceId": "FinTech",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "js/pages/login.js",
       "AssetKind": "All",
@@ -568,10 +663,10 @@
       "OriginalItemSpec": "wwwroot/js/pages/login.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/js/site.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/js/site.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -587,10 +682,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -606,10 +701,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -625,10 +720,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -644,10 +739,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -663,10 +758,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -682,10 +777,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -701,10 +796,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -720,10 +815,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -739,10 +834,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -758,10 +853,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -777,10 +872,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -796,10 +891,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "FinTech",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/",
+      "ContentRoot": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/wwwroot/",
       "BasePath": "_content/FinTech",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

@@ -1,0 +1,487 @@
+// ============================================
+// SSS / REHBER SAYFA STİLLERİ
+// ============================================
+
+// SSS Container
+.faq_container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: $spacing_xl;
+
+    @include respond_to('lg') {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Kategori Sidebar
+.faq_sidebar {
+    background: $color_white;
+    border-radius: $radius_lg;
+    padding: $spacing_lg;
+    border: 1px solid #E5E5E5;
+    height: fit-content;
+    position: sticky;
+    top: calc(64px + 24px); // Header height + padding
+
+    @include respond_to('lg') {
+        position: static;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: $font_weight_semibold;
+        color: $text_muted;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0 0 $spacing_md 0;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        margin-bottom: $spacing_xs;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: $spacing_sm;
+        padding: $spacing_sm $spacing_md;
+        border-radius: $radius_md;
+        text-decoration: none;
+        color: $text_dark;
+        font-size: 14px;
+        @include transition;
+
+        i {
+            width: 20px;
+            text-align: center;
+            color: $text_muted;
+            font-size: 14px;
+            @include transition;
+        }
+
+        &:hover {
+            background: #F5F5F5;
+        }
+
+        &--active {
+            background: rgba($brand_primary, 0.1);
+            color: $brand_primary;
+            font-weight: $font_weight_medium;
+
+            i {
+                color: $brand_primary;
+            }
+        }
+    }
+
+    &__count {
+        margin-left: auto;
+        background: #F0F0F0;
+        color: $text_muted;
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: $radius_circle;
+    }
+
+    &__link--active &__count {
+        background: rgba($brand_primary, 0.2);
+        color: $brand_primary;
+    }
+}
+
+// SSS Ana İçerik
+.faq_content {
+    min-width: 0; // Grid overflow fix
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing_lg;
+        flex-wrap: wrap;
+        gap: $spacing_md;
+    }
+
+    &__title {
+        font-size: $font_size_lg;
+        font-weight: $font_weight_semibold;
+        margin: 0;
+        color: $text_dark;
+    }
+
+    &__count {
+        font-size: $font_size_sm;
+        color: $text_muted;
+    }
+}
+
+// Arama Kutusu (SSS içi)
+.faq_search {
+    display: flex;
+    align-items: center;
+    background: $color_white;
+    border: 1px solid #E5E5E5;
+    border-radius: $radius_md;
+    padding: $spacing_xs $spacing_md;
+    max-width: 300px;
+    @include transition;
+
+    &:focus-within {
+        border-color: $brand_primary;
+        box-shadow: 0 0 0 3px rgba($brand_primary, 0.1);
+    }
+
+    &__icon {
+        color: $text_muted;
+        font-size: 14px;
+        margin-right: $spacing_sm;
+    }
+
+    &__input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: $spacing_sm 0;
+        font-size: 14px;
+        font-family: $font_family_primary;
+        color: $text_dark;
+        outline: none;
+
+        &::placeholder {
+            color: $text_muted;
+        }
+    }
+
+    &__clear {
+        background: none;
+        border: none;
+        color: $text_muted;
+        cursor: pointer;
+        padding: $spacing_xs;
+        @include transition;
+        display: none;
+
+        &:hover {
+            color: $text_dark;
+        }
+
+        &--visible {
+            display: block;
+        }
+    }
+}
+
+// Accordion SSS Listesi
+.faq_list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_md;
+}
+
+// Tek Bir SSS Item (Accordion)
+.faq_item {
+    background: $color_white;
+    border-radius: $radius_lg;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    @include transition;
+
+    &:hover {
+        border-color: #D0D0D0;
+    }
+
+    &--expanded {
+        border-color: $brand_primary;
+        box-shadow: 0 4px 12px rgba($brand_primary, 0.08);
+
+        .faq_item__icon {
+            transform: rotate(180deg);
+            color: $brand_primary;
+        }
+
+        .faq_item__question {
+            color: $brand_primary;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $spacing_lg;
+        cursor: pointer;
+        user-select: none;
+        @include transition;
+
+        &:hover {
+            background: #FAFAFA;
+        }
+    }
+
+    &__question {
+        font-size: 15px;
+        font-weight: $font_weight_medium;
+        color: $text_dark;
+        margin: 0;
+        padding-right: $spacing_md;
+        line-height: $line_height_normal;
+        @include transition;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #F5F5F5;
+        @include flex_center;
+        flex-shrink: 0;
+        color: $text_muted;
+        font-size: 14px;
+        @include transition;
+    }
+
+    &__body {
+        max-height: 0;
+        overflow: hidden;
+        @include transition(max-height, 0.3s, ease-out);
+    }
+
+    &--expanded &__body {
+        max-height: 500px; // Yeterli yükseklik
+    }
+
+    &__answer {
+        padding: 0 $spacing_lg $spacing_lg $spacing_lg;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #555;
+        border-top: 1px solid #F0F0F0;
+        padding-top: $spacing_lg;
+
+        p {
+            margin: 0 0 $spacing_md 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ul, ol {
+            margin: $spacing_md 0;
+            padding-left: $spacing_lg;
+
+            li {
+                margin-bottom: $spacing_xs;
+            }
+        }
+
+        a {
+            color: $brand_link;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        strong {
+            color: $text_dark;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing_xs;
+        margin-top: $spacing_md;
+    }
+
+    &__tag {
+        background: #F5F5F5;
+        color: $text_muted;
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: $radius_circle;
+    }
+}
+
+// Sonuç Bulunamadı
+.faq_empty {
+    background: $color_white;
+    border-radius: $radius_lg;
+    padding: $spacing_xl * 2;
+    text-align: center;
+    border: 1px solid #E5E5E5;
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        background: #F5F5F5;
+        border-radius: 50%;
+        @include flex_center;
+        margin: 0 auto $spacing_lg;
+        font-size: 32px;
+        color: $text_muted;
+    }
+
+    &__title {
+        font-size: $font_size_base;
+        font-weight: $font_weight_semibold;
+        margin: 0 0 $spacing_sm 0;
+        color: $text_dark;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $text_muted;
+        margin: 0 0 $spacing_lg 0;
+    }
+
+    &__button {
+        background: $brand_primary;
+        color: $color_white;
+        border: none;
+        padding: $spacing_md $spacing_lg;
+        border-radius: $radius_md;
+        font-size: 14px;
+        font-weight: $font_weight_medium;
+        text-decoration: none;
+        cursor: pointer;
+        @include transition;
+
+        &:hover {
+            background: $brand_primary_dark;
+        }
+    }
+}
+
+// Cevap Bulamadınız mı? CTA
+.faq_cta {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    border-radius: $radius_lg;
+    padding: $spacing_xl;
+    margin-top: $spacing_xl;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing_lg;
+    color: $color_white;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 200px;
+        height: 200px;
+        background: rgba($color_white, 0.1);
+        border-radius: 50%;
+    }
+
+    @include respond_to('md') {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        h3 {
+            font-size: $font_size_base;
+            font-weight: $font_weight_semibold;
+            margin: 0 0 $spacing_xs 0;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.9;
+        }
+    }
+
+    &__button {
+        background: $color_white;
+        color: #667EEA;
+        border: none;
+        padding: $spacing_md $spacing_lg;
+        border-radius: $radius_md;
+        font-size: 14px;
+        font-weight: $font_weight_semibold;
+        text-decoration: none;
+        cursor: pointer;
+        @include transition;
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// Arama Vurgu (Highlight)
+.search_highlight {
+    background: rgba($color_warning, 0.3);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+// Responsive Kategori Filtresi (Mobil için)
+.faq_mobile_filter {
+    display: none;
+    margin-bottom: $spacing_lg;
+
+    @include respond_to('lg') {
+        display: block;
+    }
+
+    &__select {
+        width: 100%;
+        padding: $spacing_md;
+        border: 1px solid #E5E5E5;
+        border-radius: $radius_md;
+        font-family: $font_family_primary;
+        font-size: 14px;
+        color: $text_dark;
+        background: $color_white;
+        cursor: pointer;
+        outline: none;
+
+        &:focus {
+            border-color: $brand_primary;
+        }
+    }
+}
+
+// Yükleme Animasyonu
+.faq_loading {
+    @include flex_center;
+    padding: $spacing_xl * 2;
+
+    &__spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #F0F0F0;
+        border-top-color: $brand_primary;
+        border-radius: 50%;
+        animation: faq_spin 0.8s linear infinite;
+    }
+}
+
+@keyframes faq_spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
