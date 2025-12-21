@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinTech
 build_property.RootNamespace = FinTech
-build_property.ProjectDir = /home/ryuzaki/Desktop/FinTech/FinTech/
+build_property.ProjectDir = /home/ryuzaki/Desktop/net/FinTech/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/ryuzaki/Desktop/FinTech/FinTech
+build_property.MSBuildProjectDirectory = /home/ryuzaki/Desktop/net/FinTech
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Auth/Login.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Auth/_AuthLayout.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Auth/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9fQXV0aExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Error.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Index.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Privacy.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/_ViewImports.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/_ViewStart.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ryuzaki/Desktop/FinTech/FinTech/Pages/Shared/_Layout.cshtml]
+[/home/ryuzaki/Desktop/net/FinTech/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vb33bovp0j

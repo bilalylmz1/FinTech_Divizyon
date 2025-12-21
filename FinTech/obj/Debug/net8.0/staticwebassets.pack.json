@@ -1,139 +1,139 @@
 {
   "Files": [
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/obj/Debug/net8.0/scopedcss/projectbundle/FinTech.bundle.scp.css",
       "PackagePath": "staticwebassets/FinTech.bundle.scp.css"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/css/site.css",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/css/site.css.map",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/site.css.map",
       "PackagePath": "staticwebassets/css/site.css.map"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/favicon.ico",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-bold.woff2",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-bold.woff2",
       "PackagePath": "staticwebassets/fonts/poppins/poppins-bold.woff2"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-light.woff2",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-light.woff2",
       "PackagePath": "staticwebassets/fonts/poppins/poppins-light.woff2"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-medium.woff2",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-medium.woff2",
       "PackagePath": "staticwebassets/fonts/poppins/poppins-medium.woff2"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-regular.woff2",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-regular.woff2",
       "PackagePath": "staticwebassets/fonts/poppins/poppins-regular.woff2"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/fonts/poppins/poppins-semibold.woff2",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/fonts/poppins/poppins-semibold.woff2",
       "PackagePath": "staticwebassets/fonts/poppins/poppins-semibold.woff2"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/.gitkeep",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/.gitkeep",
       "PackagePath": "staticwebassets/img/.gitkeep"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/1. Light Mode - Desktop - Login Page.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/1. Light Mode - Desktop - Login Page.svg",
       "PackagePath": "staticwebassets/img/1. Light Mode - Desktop - Login Page.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/banner.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/banner.svg",
       "PackagePath": "staticwebassets/img/banner.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/finans_okulu.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/finans_okulu.svg",
       "PackagePath": "staticwebassets/img/finans_okulu.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/ik_logo.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/ik_logo.svg",
       "PackagePath": "staticwebassets/img/ik_logo.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/login_header.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/login_header.svg",
       "PackagePath": "staticwebassets/img/login_header.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/login_hero.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/login_hero.svg",
       "PackagePath": "staticwebassets/img/login_hero.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/real_sms.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/real_sms.svg",
       "PackagePath": "staticwebassets/img/real_sms.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/register_header.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/register_header.svg",
       "PackagePath": "staticwebassets/img/register_header.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/sms_phone.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/sms_phone.svg",
       "PackagePath": "staticwebassets/img/sms_phone.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/img/statik_slogan2 1.svg",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/statik_slogan2 1.svg",
       "PackagePath": "staticwebassets/img/statik_slogan2 1.svg"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/js/pages/login.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/js/pages/login.js",
       "PackagePath": "staticwebassets/js/pages/login.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/js/site.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/home/ryuzaki/Desktop/FinTech/FinTech/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {

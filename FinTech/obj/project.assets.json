@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ryuzaki/Desktop/FinTech/FinTech/FinTech.csproj",
+      "projectUniqueName": "/home/ryuzaki/Desktop/net/FinTech/FinTech.csproj",
       "projectName": "FinTech",
-      "projectPath": "/home/ryuzaki/Desktop/FinTech/FinTech/FinTech.csproj",
+      "projectPath": "/home/ryuzaki/Desktop/net/FinTech/FinTech.csproj",
       "packagesPath": "/home/ryuzaki/.nuget/packages/",
-      "outputPath": "/home/ryuzaki/Desktop/FinTech/FinTech/obj/",
+      "outputPath": "/home/ryuzaki/Desktop/net/FinTech/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ryuzaki/.nuget/NuGet/NuGet.Config"
