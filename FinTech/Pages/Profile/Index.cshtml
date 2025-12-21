@@ -1,0 +1,347 @@
+@page
+@model FinTech.Pages.Profile.IndexModel
+@{
+    ViewData["Title"] = "Profil & Ayarlar";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/profil.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <!-- Right side (Profile placeholder) -->
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Rapor Detayları</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item active">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+
+            <!-- Profil Header Section -->
+            <div class="profil_header">
+                <div class="profil_header__content">
+                    <div class="profil_header__avatar">MG</div>
+                    <div class="profil_header__info">
+                        <h1 class="profil_header__name">Mustafa Gümüş</h1>
+                        <p class="profil_header__subtitle">Profil ve hesap ayarlarınızı buradan yönetebilirsiniz</p>
+                    </div>
+                </div>
+                <div class="profil_header__badge">
+                    <i class="fa-regular fa-clock"></i> Son güncelleme: Bugün 14:30
+                </div>
+            </div>
+
+            <!-- Profil Kartları -->
+            <div class="profil_cards">
+                
+                <!-- Adres / İletişim Bilgileri Kartı -->
+                <div class="profil_card" id="address_card">
+                    <div class="profil_card__header">
+                        <div class="profil_card__title_wrapper">
+                            <div class="profil_card__icon profil_card__icon--address">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h2 class="profil_card__title">Adres / İletişim Bilgileri</h2>
+                                <p class="profil_card__subtitle">İkamet ve iletişim bilgileriniz</p>
+                            </div>
+                        </div>
+                        <button type="button" class="profil_card__edit_btn" id="address_edit_btn" onclick="toggle_edit_mode('address')">
+                            <i class="fa-solid fa-pen"></i> Düzenle
+                        </button>
+                    </div>
+
+                    <!-- View Mode (Görüntüleme) -->
+                    <div class="profil_card__body" id="address_view_mode">
+                        <div class="profil_info">
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">İl</span>
+                                <span class="profil_info__value" id="display_city">İstanbul</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">İlçe</span>
+                                <span class="profil_info__value" id="display_district">Kadıköy</span>
+                            </div>
+                            <div class="profil_info__item profil_info__full">
+                                <span class="profil_info__label">Adres Detayı</span>
+                                <span class="profil_info__value" id="display_address">Caferağa Mah. Moda Cad. No:123 D:4</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">E-posta</span>
+                                <span class="profil_info__value" id="display_email">mustafa.gumus@email.com</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Alternatif Telefon</span>
+                                <span class="profil_info__value" id="display_alt_phone">0 (212) 555 44 33</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Mode (Düzenleme) -->
+                    <div class="profil_card__body" id="address_edit_mode" style="display: none;">
+                        <form id="address_form" class="profil_form">
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="city">İl</label>
+                                <select id="city" name="city" class="profil_input__select" required>
+                                    <option value="">İl Seçiniz</option>
+                                    <option value="istanbul" selected>İstanbul</option>
+                                    <option value="ankara">Ankara</option>
+                                    <option value="izmir">İzmir</option>
+                                    <option value="bursa">Bursa</option>
+                                    <option value="antalya">Antalya</option>
+                                </select>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="district">İlçe</label>
+                                <select id="district" name="district" class="profil_input__select" required>
+                                    <option value="">İlçe Seçiniz</option>
+                                    <option value="kadikoy" selected>Kadıköy</option>
+                                    <option value="besiktas">Beşiktaş</option>
+                                    <option value="sisli">Şişli</option>
+                                    <option value="uskudar">Üsküdar</option>
+                                </select>
+                            </div>
+                            <div class="profil_input profil_form__full">
+                                <label class="profil_input__label profil_input__label--required" for="address_detail">Adres Detayı</label>
+                                <textarea id="address_detail" name="address_detail" class="profil_input__textarea" 
+                                    placeholder="Mahalle, cadde, sokak, bina no, daire no..." required>Caferağa Mah. Moda Cad. No:123 D:4</textarea>
+                                <span class="profil_input__helper">Açık adresinizi eksiksiz giriniz</span>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="email">E-posta</label>
+                                <div class="profil_input__wrapper">
+                                    <i class="fa-regular fa-envelope profil_input__icon"></i>
+                                    <input type="email" id="email" name="email" class="profil_input__field" 
+                                        placeholder="ornek@email.com" value="mustafa.gumus@email.com" required />
+                                </div>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label" for="alt_phone">Alternatif Telefon</label>
+                                <div class="profil_input__wrapper">
+                                    <i class="fa-solid fa-phone profil_input__icon"></i>
+                                    <input type="tel" id="alt_phone" name="alt_phone" class="profil_input__field" 
+                                        placeholder="0 (XXX) XXX XX XX" value="0 (212) 555 44 33" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Footer (Edit mode'da görünür) -->
+                    <div class="profil_card__footer" id="address_footer" style="display: none;">
+                        <button type="button" class="profil_btn profil_btn--secondary" onclick="cancel_edit('address')">
+                            <i class="fa-solid fa-xmark"></i> İptal
+                        </button>
+                        <button type="button" class="profil_btn profil_btn--primary" id="address_save_btn" onclick="save_address()">
+                            <i class="fa-solid fa-check"></i> Kaydet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Meslek & Gelir Bilgileri Kartı -->
+                <div class="profil_card" id="work_card">
+                    <div class="profil_card__header">
+                        <div class="profil_card__title_wrapper">
+                            <div class="profil_card__icon profil_card__icon--work">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <h2 class="profil_card__title">Meslek & Gelir Bilgileri</h2>
+                                <p class="profil_card__subtitle">Çalışma durumu ve gelir bilgileriniz</p>
+                            </div>
+                        </div>
+                        <button type="button" class="profil_card__edit_btn" id="work_edit_btn" onclick="toggle_edit_mode('work')">
+                            <i class="fa-solid fa-pen"></i> Düzenle
+                        </button>
+                    </div>
+
+                    <!-- View Mode (Görüntüleme) -->
+                    <div class="profil_card__body" id="work_view_mode">
+                        <div class="profil_info">
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Meslek Grubu</span>
+                                <span class="profil_info__value" id="display_profession">Mühendis</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Çalışma Durumu</span>
+                                <span class="profil_info__value" id="display_work_status">Tam Zamanlı</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Çalıştığı Kurum</span>
+                                <span class="profil_info__value" id="display_company">ABC Teknoloji A.Ş.</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Aylık Net Gelir</span>
+                                <span class="profil_info__value" id="display_income">45.000 ₺</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Sektör</span>
+                                <span class="profil_info__value" id="display_sector">Bilgi Teknolojileri</span>
+                            </div>
+                            <div class="profil_info__item">
+                                <span class="profil_info__label">Çalışma Süresi</span>
+                                <span class="profil_info__value" id="display_work_duration">3 Yıl+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Mode (Düzenleme) -->
+                    <div class="profil_card__body" id="work_edit_mode" style="display: none;">
+                        <form id="work_form" class="profil_form">
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="profession">Meslek Grubu</label>
+                                <select id="profession" name="profession" class="profil_input__select" required>
+                                    <option value="">Meslek Seçiniz</option>
+                                    <option value="muhendis" selected>Mühendis</option>
+                                    <option value="doktor">Doktor</option>
+                                    <option value="avukat">Avukat</option>
+                                    <option value="ogretmen">Öğretmen</option>
+                                    <option value="muhasebeci">Muhasebeci</option>
+                                    <option value="serbest">Serbest Meslek</option>
+                                    <option value="esnaf">Esnaf</option>
+                                    <option value="diger">Diğer</option>
+                                </select>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="work_status">Çalışma Durumu</label>
+                                <select id="work_status" name="work_status" class="profil_input__select" required>
+                                    <option value="">Çalışma Durumu Seçiniz</option>
+                                    <option value="tam_zamanli" selected>Tam Zamanlı</option>
+                                    <option value="yari_zamanli">Yarı Zamanlı</option>
+                                    <option value="serbest">Serbest Çalışan</option>
+                                    <option value="emekli">Emekli</option>
+                                    <option value="ogrenci">Öğrenci</option>
+                                    <option value="calismayan">Çalışmıyor</option>
+                                </select>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label" for="company">Çalıştığı Kurum</label>
+                                <div class="profil_input__wrapper">
+                                    <i class="fa-solid fa-building profil_input__icon"></i>
+                                    <input type="text" id="company" name="company" class="profil_input__field" 
+                                        placeholder="Kurum/Şirket adı" value="ABC Teknoloji A.Ş." />
+                                </div>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label profil_input__label--required" for="income">Aylık Net Gelir</label>
+                                <div class="profil_input__currency">
+                                    <input type="text" id="income" name="income" class="profil_input__field" 
+                                        placeholder="0" value="45.000" required />
+                                </div>
+                                <span class="profil_input__helper">Aylık net gelirinizi giriniz</span>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label" for="sector">Sektör</label>
+                                <select id="sector" name="sector" class="profil_input__select">
+                                    <option value="">Sektör Seçiniz</option>
+                                    <option value="bilisim" selected>Bilgi Teknolojileri</option>
+                                    <option value="finans">Finans / Bankacılık</option>
+                                    <option value="saglik">Sağlık</option>
+                                    <option value="egitim">Eğitim</option>
+                                    <option value="imalat">İmalat / Üretim</option>
+                                    <option value="perakende">Perakende</option>
+                                    <option value="insaat">İnşaat</option>
+                                    <option value="diger">Diğer</option>
+                                </select>
+                            </div>
+                            <div class="profil_input">
+                                <label class="profil_input__label" for="work_duration">Çalışma Süresi</label>
+                                <select id="work_duration" name="work_duration" class="profil_input__select">
+                                    <option value="">Süre Seçiniz</option>
+                                    <option value="0-1">0-1 Yıl</option>
+                                    <option value="1-3">1-3 Yıl</option>
+                                    <option value="3+" selected>3 Yıl+</option>
+                                    <option value="5+">5 Yıl+</option>
+                                    <option value="10+">10 Yıl+</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Footer (Edit mode'da görünür) -->
+                    <div class="profil_card__footer" id="work_footer" style="display: none;">
+                        <button type="button" class="profil_btn profil_btn--secondary" onclick="cancel_edit('work')">
+                            <i class="fa-solid fa-xmark"></i> İptal
+                        </button>
+                        <button type="button" class="profil_btn profil_btn--primary" id="work_save_btn" onclick="save_work()">
+                            <i class="fa-solid fa-check"></i> Kaydet
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Bildirimi -->
+    <div class="profil_toast" id="toast">
+        <i class="profil_toast__icon fa-solid fa-circle-check"></i>
+        <div class="profil_toast__content">
+            <span class="profil_toast__title" id="toast_title">Başarılı</span>
+            <span class="profil_toast__message" id="toast_message">Bilgileriniz güncellendi</span>
+        </div>
+        <button type="button" class="profil_toast__close" onclick="hide_toast()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/profil.js"></script>
+    
+    <script>
+        // Sidebar toggle
+        const toggleBtn = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+
+        if(toggleBtn){
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('closed');
+                mainContent.classList.toggle('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+
