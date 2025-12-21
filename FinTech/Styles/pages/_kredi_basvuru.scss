@@ -1,2 +1,11 @@
-// Kredi başvuru sayfası stilleri burada tanımlanacak
+// ============================================
+// KREDİ BAŞVURU SAYFA STİLLERİ
+// ============================================
 
+// Kredi başvuru için placeholder
+// İlerleyen aşamalarda doldurulacak
+
+.kredi_basvuru_page {
+    min-height: 100vh;
+    background: $bg_light;
+}

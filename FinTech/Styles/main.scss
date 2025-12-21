@@ -1,2 +1,25 @@
-// Ana SCSS dosyası - Tüm importlar burada yapılacak
+// ============================================
+// ANA SCSS DOSYASI
+// Tüm partial dosyalar burada import edilir
+// ============================================
 
+// 1. Abstracts - Değişkenler ve Mixinler (Çıktı üretmez)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base - Reset ve Typography
+@import 'base/reset';
+@import 'base/typography';
+
+// 3. Components - Yeniden kullanılabilir bileşenler
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/navigation';
+
+// 4. Pages - Sayfaya özel stiller
+@import 'pages/login';
+@import 'pages/dashboard';
+@import 'pages/kredi_basvuru';
+@import 'pages/profil';

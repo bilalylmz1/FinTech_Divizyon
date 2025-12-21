@@ -1,1 +1,5 @@
 WebSube-API/*
+FinTech/WebSube-API/*
+bin/
+obj/
+.vscode/

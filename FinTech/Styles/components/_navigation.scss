@@ -1,1 +1,28 @@
-// Navigasyon stilleri burada tanımlanacak
+// ============================================
+// NAVİGASYON STİLLERİ
+// ============================================
+
+// Dashboard navigasyonu için placeholder
+// İlerleyen aşamalarda doldurulacak
+
+.nav {
+    display: flex;
+    align-items: center;
+    
+    &__item {
+        padding: $spacing_sm $spacing_md;
+    }
+    
+    &__link {
+        color: $text_dark;
+        font-weight: $font_weight_medium;
+        
+        &:hover {
+            color: $brand_primary;
+        }
+        
+        &--active {
+            color: $brand_primary;
+        }
+    }
+}

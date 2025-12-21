@@ -1,1 +1,27 @@
-// Kart stilleri burada tanımlanacak
+// ============================================
+// CARD STİLLERİ
+// ============================================
+
+// Temel kart yapısı
+.card {
+    display: flex;
+    flex-direction: column;
+    background: $color_white;
+    border-radius: $radius_lg;
+    box-shadow: $shadow_sm;
+    overflow: hidden;
+    
+    &__header {
+        padding: $spacing_lg;
+        border-bottom: 1px solid $border_gray;
+    }
+    
+    &__body {
+        padding: $spacing_lg;
+    }
+    
+    &__footer {
+        padding: $spacing_lg;
+        border-top: 1px solid $border_gray;
+    }
+}

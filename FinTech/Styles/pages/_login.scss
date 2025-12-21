@@ -1,2 +1,333 @@
-// Login sayfası stilleri burada tanımlanacak
+// ============================================
+// LOGIN SAYFA STİLLERİ
+// ============================================
 
+// Ana Container - Full Screen Split Layout
+.login_page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    background: $bg_light;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    // Tablet ve altı - dikey layout
+    @media (max-width: $breakpoint_lg) {
+        flex-direction: column;
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+// ============================================
+// SOL PANEL - Görsel Alanı (805/1440 = %55.9)
+// ============================================
+
+.login_hero {
+    position: relative;
+    width: 38%; // 805px / 1440px
+    height: auto;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+    // Tablet - yatay
+    @media (max-width: $breakpoint_lg) {
+        width: 100%;
+        min-height: 45vh;
+    }
+    
+    // Tablet - dikey
+    @media (max-width: $breakpoint_md) {
+        min-height: 35vh;
+    }
+    
+    // Mobil
+    @media (max-width: $breakpoint_sm) {
+        min-height: 30vh;
+    }
+    
+    // Hero görseli
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none; // Reset'teki max-width: 100%'ü override et
+        object-fit: cover;
+        object-position: left top;
+        transform: none;
+    }
+}
+
+// ============================================
+// SAĞ PANEL - Form Alanı
+// ============================================
+
+.login_content {
+    position: relative;
+    width: 44.1%; // 635px / 1440px
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: $bg_light;
+    overflow-y: auto;
+    
+    // Tablet - yatay
+    @media (max-width: $breakpoint_lg) {
+        width: 100%;
+        min-height: auto;
+        padding: 40px 30px;
+        flex-grow: 1;
+    }
+    
+    // Tablet - dikey
+    @media (max-width: $breakpoint_md) {
+        padding: 30px 20px;
+    }
+    
+    // Mobil
+    @media (max-width: $breakpoint_sm) {
+        padding: 24px 16px;
+    }
+}
+
+// ============================================
+// LOGO
+// ============================================
+
+.login_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    
+    &__image {
+        height: 85px;
+        width: auto;
+        max-width: 100%;
+        
+        // Tablet
+        @media (max-width: $breakpoint_lg) {
+            height: 75px;
+        }
+        
+        // Mobil
+        @media (max-width: $breakpoint_md) {
+            height: 65px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            height: 55px;
+        }
+    }
+}
+
+// ============================================
+// BAŞLIK (SVG)
+// ============================================
+
+.login_header {
+    text-align: center;
+    margin-bottom: 20px;
+    
+    &__image {
+        width: auto;
+        height: 67px;
+        max-width: 100%;
+        
+        @media (max-width: $breakpoint_md) {
+            height: 55px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            height: 45px;
+        }
+    }
+}
+
+// ============================================
+// FORM CONTAINER
+// ============================================
+
+.login_form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 15px;
+    width: 100%;
+    max-width: 409px;
+    background: $color_white;
+    backdrop-filter: blur(12px);
+    border-radius: $radius_lg;
+    
+    // Mobil - tam genişlik
+    @media (max-width: $breakpoint_sm) {
+        padding: 20px 16px;
+        border-radius: $radius_md;
+    }
+}
+
+// Form içeriği
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    
+    @media (max-width: $breakpoint_sm) {
+        gap: 12px;
+    }
+}
+
+// ============================================
+// HATIRLA & ŞİFREMİ UNUTTUM SATIRI
+// ============================================
+
+.login_options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    // Çok küçük ekranlarda dikey
+    @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+// ============================================
+// KAYIT OL LİNKİ
+// ============================================
+
+.login_register {
+    text-align: center;
+    width: 100%;
+}
+
+// ============================================
+// TCKN SAYFASI - GERİ LİNKİ
+// ============================================
+
+.login_back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    margin-top: 10px;
+    
+    &__icon {
+        width: 24px;
+        height: 24px;
+        stroke: $brand_link;
+        stroke-width: 2px;
+    }
+    
+    &__text {
+        font-family: $font_family_primary;
+        font-weight: $font_weight_bold;
+        font-size: $font_size_base;
+        line-height: 20px;
+        color: $brand_link;
+        text-decoration: underline;
+        
+        &:hover {
+            color: $brand_primary;
+        }
+    }
+}
+
+// ============================================
+// REGISTER SAYFASI EK STİLLERİ
+// ============================================
+
+.register_form_container {
+    @extend .login_form_container;
+    max-width: 448px;
+}
+
+.register_header {
+    text-align: center;
+    margin-bottom: 24px;
+    
+    &__title {
+        font-family: $font_family_primary;
+        font-weight: $font_weight_semibold;
+        font-size: 32px;
+        line-height: 125%;
+        color: $brand_primary;
+        
+        @media (max-width: $breakpoint_md) {
+            font-size: 26px;
+        }
+        
+        @media (max-width: $breakpoint_sm) {
+            font-size: 22px;
+        }
+    }
+    
+    &__subtitle {
+        font-family: $font_family_primary;
+        font-weight: $font_weight_light;
+        font-size: 16px;
+        color: $text_label;
+        
+        @media (max-width: $breakpoint_sm) {
+            font-size: 14px;
+        }
+    }
+}
+
+// Checkbox listesi
+.register_consents {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+// Zaten üye satırı
+.register_login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+    &__text {
+        font-family: $font_family_primary;
+        font-weight: $font_weight_medium;
+        font-size: $font_size_base;
+        line-height: 20px;
+        color: $brand_primary_dark;
+    }
+}
