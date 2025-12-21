@@ -2,28 +2,167 @@
 @model FinTech.Pages.IndexModel
 @{
     ViewData["Title"] = "Dashboard";
+    Layout = null; 
 }
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İnteraktif Kredi - Web Şube</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for generic icons (sidebar) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <!-- Menu Toggle Button -->
+                <button id="menuToggle" class="menu-toggle-btn">
+                    <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+                </button>
+                <!-- Logo -->
+                <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="sidebar-logo" />
+            </div>
 
-<div class="container-fluid py-5 text-center">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow-sm border-0">
-                <div class="card-body p-5">
-                    <h1 class="display-4 text-primary mb-4">🚀 Dashboard</h1>
-                    <p class="lead text-muted">
-                        Hoşgeldiniz! Giriş işleminiz başarıyla tamamlandı.
-                    </p>
-                    <hr class="my-4">
-                    <div class="alert alert-info">
-                        <strong>Bilgi:</strong> Burası bir placeholder (yer tutucu) sayfadır. 
-                        Diğer ekipler dashboard arayüzünü buraya entegre edecektir.
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="#" class="menu-item active">
+                    <i class="fa-solid fa-house"></i> Dashboard
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-chart-pie"></i> Rapor Detayları
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> Faturalar
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-gift"></i> Kredi Teklifleri
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> Profil & Ayarlar
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> Yardım & Destek
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-mini-profile">
+                    <div class="user-avatar">MG</div>
+                    <div class="user-info-text">
+                        <span class="user-name">Mustafa Gümüş</span>
+                        <span class="user-role">Bireysel Müşteri</span>
                     </div>
-                    <p class="mt-4">
-                        <a href="#" class="btn btn-outline-primary">Profil Ayarları</a>
-                        <a href="#" class="btn btn-primary">Raporlar</a>
-                    </p>
                 </div>
             </div>
-        </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Mobile Header (Visible only on mobile) -->
+            <div class="top-bar">
+                <img src="/img/dashboard/logo.svg" height="30" />
+                <button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Merhaba, <span>Mustafa</span> 👋</h1>
+                    <p>Finansal sağlığın bugün harika görünüyor! Hadi raporlarına göz atalım.</p>
+                </div>
+                <div class="hero-date-badge">
+                    <i class="fa-regular fa-calendar"></i> 16.06.2025
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                
+                <!-- Kredi Skoru Card -->
+                <div class="card col-span-4">
+                    <div class="card-header">
+                        <span class="card-title">Kredi Güven Raporu</span>
+                        <i class="fa-solid fa-ellipsis text-muted"></i>
+                    </div>
+                    <div class="score-container">
+                        <img src="/img/dashboard/score-gauge.svg" alt="Kredi Skoru" class="score-img" />
+                        <div class="score-badge">Durum: Hassas</div>
+                    </div>
+                    <p style="text-align:center; font-size:13px; color:#666;">
+                        Son güncelleme: Bugün 09:41
+                    </p>
+                </div>
+
+                <!-- Tavsiye / Action Card -->
+                <div class="card col-span-8">
+                    <div class="card-header">
+                        <span class="card-title">Genel Kredi Profili Yorumu</span>
+                    </div>
+                    <div class="comment-text">
+                        <p>Genel olarak durumun <span class="highlight">güvenli</span>. Ödemelerini çoğunlukla zamanında yapıyorsun ve gelirine oranla borçlanma limitlerin dengeli.</p>
+                        <p>Onay şansın sınıra yakın; iki hızlı adımla profilini güçlendir, sonra sana uygun tekliflere bakabilirsin.</p>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <a href="#" class="btn-primary">
+                            <i class="fa-solid fa-star" style="margin-right:8px"></i> Teklifleri Gör
+                        </a>
+                        <a href="#" class="btn-outline">
+                            Kredi Uzmanı ile Görüş
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Row -->
+                <div class="card col-span-12">
+                    <div class="card-header">
+                        <span class="card-title">Hızlı İşlemler</span>
+                    </div>
+                    <div class="quick-actions-grid">
+                         <a href="#" class="quick-action-item">
+                            <i class="fa-solid fa-file-invoice qa-icon" style="color:#2E6DF8"></i>
+                            <div class="qa-label">Rapor Görüntüle</div>
+                         </a>
+                         <a href="#" class="quick-action-item">
+                            <i class="fa-solid fa-wallet qa-icon" style="color:#10B981"></i>
+                            <div class="qa-label">Gelir Bilgileri</div>
+                         </a>
+                         <a href="#" class="quick-action-item">
+                            <i class="fa-solid fa-location-dot qa-icon" style="color:#F59E0B"></i>
+                            <div class="qa-label">Adres Güncelle</div>
+                         </a>
+                         <a href="#" class="quick-action-item">
+                            <i class="fa-solid fa-headset qa-icon" style="color:#8B5CF6"></i>
+                            <div class="qa-label">Destek Talebi</div>
+                         </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
-</div>
+
+    <script>
+        const toggleBtn = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+
+        if(toggleBtn){
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('closed');
+                mainContent.classList.toggle('full-width');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/FinTech.bundle.scp.css"
     },
     {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/dashboard.css",
+      "PackagePath": "staticwebassets/css/dashboard.css"
+    },
+    {
       "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
@@ -47,6 +51,30 @@
     {
       "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/banner.svg",
       "PackagePath": "staticwebassets/img/banner.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/full-bg.svg",
+      "PackagePath": "staticwebassets/img/dashboard/full-bg.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/header-section.svg",
+      "PackagePath": "staticwebassets/img/dashboard/header-section.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/icon-menu.svg",
+      "PackagePath": "staticwebassets/img/dashboard/icon-menu.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/icon-profile.svg",
+      "PackagePath": "staticwebassets/img/dashboard/icon-profile.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/logo.svg",
+      "PackagePath": "staticwebassets/img/dashboard/logo.svg"
+    },
+    {
+      "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/dashboard/score-gauge.svg",
+      "PackagePath": "staticwebassets/img/dashboard/score-gauge.svg"
     },
     {
       "Id": "/home/ryuzaki/Desktop/net/FinTech/wwwroot/img/finans_okulu.svg",
