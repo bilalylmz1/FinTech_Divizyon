@@ -1,5 +1,5 @@
 WebSube-API/*
 FinTech/WebSube-API/*
-bin/
-obj/
-.vscode/
+FinTech/bin/*
+FinTech/obj/*
+.vscode/*

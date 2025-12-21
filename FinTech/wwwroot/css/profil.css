@@ -1,0 +1,697 @@
+/* ============================================
+   PROFİL & HESAP AYARLARI SAYFA STİLLERİ
+   Derlenmiş CSS - _profil.scss kaynağından
+   ============================================ */
+
+/* Profil sayfası ana container */
+.profil_page {
+    min-height: 100vh;
+    background: #FCFCFC;
+}
+
+/* ============================================
+   PROFİL HEADER SECTION
+   ============================================ */
+
+.profil_header {
+    background: linear-gradient(135deg, #222854 0%, #0056B3 100%);
+    border-radius: 16px;
+    padding: 32px 40px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 86, 179, 0.15);
+}
+
+@media (max-width: 992px) {
+    .profil_header {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+.profil_header__content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .profil_header__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.profil_header__avatar {
+    width: 72px;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 576px) {
+    .profil_header__avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+}
+
+.profil_header__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profil_header__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+@media (max-width: 576px) {
+    .profil_header__name {
+        font-size: 20px;
+    }
+}
+
+.profil_header__subtitle {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.profil_header__badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 13px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profil_header__badge i {
+    opacity: 0.8;
+}
+
+/* ============================================
+   PROFİL KARTLARI CONTAINER
+   ============================================ */
+
+.profil_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ============================================
+   PROFİL KART YAPISI
+   ============================================ */
+
+.profil_card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #F0F0F0;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.profil_card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Kart Header */
+.profil_card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #F0F0F0;
+    background: #FAFBFC;
+}
+
+@media (max-width: 576px) {
+    .profil_card__header {
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+.profil_card__title_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profil_card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.profil_card__icon--address {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.profil_card__icon--work {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.profil_card__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222854;
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+    .profil_card__title {
+        font-size: 16px;
+    }
+}
+
+.profil_card__subtitle {
+    font-size: 10px;
+    color: #6C757D;
+    margin-top: 2px;
+}
+
+/* Düzenle Butonu */
+.profil_card__edit_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(0, 86, 179, 0.2);
+    border: none;
+    border-radius: 40px;
+    color: #0056B3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profil_card__edit_btn:hover {
+    background: #0056B3;
+    color: #FFFFFF;
+}
+
+.profil_card__edit_btn i {
+    font-size: 12px;
+}
+
+/* Kart Body */
+.profil_card__body {
+    padding: 24px;
+}
+
+@media (max-width: 576px) {
+    .profil_card__body {
+        padding: 16px;
+    }
+}
+
+/* Kart Footer */
+.profil_card__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 24px;
+    border-top: 1px solid #F0F0F0;
+    background: #FAFBFC;
+}
+
+@media (max-width: 576px) {
+    .profil_card__footer {
+        padding: 16px;
+        flex-direction: column;
+    }
+    
+    .profil_card__footer .profil_btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   PROFİL FORM GRID SİSTEMİ
+   ============================================ */
+
+.profil_form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .profil_form {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+.profil_form__full {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .profil_form__full {
+        grid-column: span 1;
+    }
+}
+
+/* ============================================
+   PROFİL INPUT STİLLERİ
+   ============================================ */
+
+.profil_input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profil_input__label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #739FCC;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.profil_input__label--required::after {
+    content: '*';
+    color: #DC3545;
+}
+
+.profil_input__field,
+.profil_input__select,
+.profil_input__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    background: #FFFFFF;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222854;
+    transition: all 0.2s ease;
+}
+
+.profil_input__field::placeholder,
+.profil_input__select::placeholder,
+.profil_input__textarea::placeholder {
+    color: #9CA3AF;
+    font-weight: 400;
+}
+
+.profil_input__field:hover,
+.profil_input__select:hover,
+.profil_input__textarea:hover {
+    border-color: #D1D5DB;
+}
+
+.profil_input__field:focus,
+.profil_input__select:focus,
+.profil_input__textarea:focus {
+    outline: none;
+    border-color: #0056B3;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.profil_input__field:disabled,
+.profil_input__select:disabled,
+.profil_input__textarea:disabled {
+    background: #F9FAFB;
+    color: #6C757D;
+    cursor: not-allowed;
+}
+
+.profil_input__field--readonly {
+    background: #F9FAFB;
+    border-color: transparent;
+    cursor: default;
+}
+
+.profil_input__field--error {
+    border-color: #DC3545;
+}
+
+.profil_input__field--error:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Textarea */
+.profil_input__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Select */
+.profil_input__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M2.5 4.5L6 8l3.5-3.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.profil_input__select:disabled {
+    background-image: none;
+}
+
+/* Input Wrapper (ikon ile) */
+.profil_input__wrapper {
+    position: relative;
+}
+
+.profil_input__wrapper .profil_input__field {
+    padding-left: 44px;
+}
+
+.profil_input__wrapper .profil_input__icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6C757D;
+    font-size: 16px;
+}
+
+/* Currency Wrapper */
+.profil_input__currency {
+    position: relative;
+}
+
+.profil_input__currency .profil_input__field {
+    padding-right: 44px;
+}
+
+.profil_input__currency::after {
+    content: '₺';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6C757D;
+    font-weight: 600;
+}
+
+/* Hata Mesajı */
+.profil_input__error {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #DC3545;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.profil_input__error i {
+    font-size: 12px;
+}
+
+/* Yardımcı Metin */
+.profil_input__helper {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #6C757D;
+}
+
+/* ============================================
+   PROFİL BUTONLARI
+   ============================================ */
+
+.profil_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.profil_btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.profil_btn--primary {
+    background: #0056B3;
+    color: #FFFFFF;
+}
+
+.profil_btn--primary:hover:not(:disabled) {
+    background: #003F75;
+}
+
+.profil_btn--secondary {
+    background: transparent;
+    color: #222854;
+    border: 1px solid #E5E7EB;
+}
+
+.profil_btn--secondary:hover:not(:disabled) {
+    background: #F3F4F6;
+    border-color: #D1D5DB;
+}
+
+.profil_btn--danger {
+    background: rgba(220, 53, 69, 0.1);
+    color: #DC3545;
+}
+
+.profil_btn--danger:hover:not(:disabled) {
+    background: #DC3545;
+    color: #FFFFFF;
+}
+
+.profil_btn--loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.profil_btn--loading::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid transparent;
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: profil_spin 0.8s linear infinite;
+}
+
+.profil_btn--secondary.profil_btn--loading::after {
+    border-top-color: #222854;
+}
+
+@keyframes profil_spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   BİLGİ GÖSTERİMİ (View Mode)
+   ============================================ */
+
+.profil_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .profil_info {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profil_info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+    background: #F9FAFB;
+    border-radius: 8px;
+}
+
+.profil_info__label {
+    font-size: 10px;
+    font-weight: 500;
+    color: #739FCC;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profil_info__value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222854;
+}
+
+.profil_info__value--empty {
+    color: #6C757D;
+    font-style: italic;
+}
+
+.profil_info__full {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .profil_info__full {
+        grid-column: span 1;
+    }
+}
+
+/* ============================================
+   TOAST BİLDİRİMLERİ
+   ============================================ */
+
+.profil_toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.profil_toast--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.profil_toast--success {
+    border-left: 4px solid #28A745;
+}
+
+.profil_toast--success .profil_toast__icon {
+    color: #28A745;
+}
+
+.profil_toast--error {
+    border-left: 4px solid #DC3545;
+}
+
+.profil_toast--error .profil_toast__icon {
+    color: #DC3545;
+}
+
+.profil_toast__icon {
+    font-size: 20px;
+}
+
+.profil_toast__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.profil_toast__title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222854;
+}
+
+.profil_toast__message {
+    font-size: 10px;
+    color: #6C757D;
+}
+
+.profil_toast__close {
+    background: none;
+    border: none;
+    color: #6C757D;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 8px;
+}
+
+.profil_toast__close:hover {
+    color: #222854;
+}
+
+/* ============================================
+   SKELETON LOADER
+   ============================================ */
+
+.profil_skeleton {
+    background: linear-gradient(90deg, #F0F0F0 25%, #E8E8E8 50%, #F0F0F0 75%);
+    background-size: 200% 100%;
+    animation: profil_shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+
+.profil_skeleton--text {
+    height: 20px;
+    width: 60%;
+}
+
+.profil_skeleton--input {
+    height: 48px;
+    width: 100%;
+}
+
+.profil_skeleton--avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+}
+
+@keyframes profil_shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/ryuzaki/.nuget/packages/": {}
+    "/Users/ozkantalha33icloud.com/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ryuzaki/Desktop/net/FinTech/FinTech.csproj",
+      "projectUniqueName": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
       "projectName": "FinTech",
-      "projectPath": "/home/ryuzaki/Desktop/net/FinTech/FinTech.csproj",
-      "packagesPath": "/home/ryuzaki/.nuget/packages/",
-      "outputPath": "/home/ryuzaki/Desktop/net/FinTech/obj/",
+      "projectPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
+      "packagesPath": "/Users/ozkantalha33icloud.com/.nuget/packages/",
+      "outputPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ryuzaki/.nuget/NuGet/NuGet.Config"
+        "/Users/ozkantalha33icloud.com/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,6 +38,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
