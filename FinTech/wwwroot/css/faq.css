@@ -1,0 +1,529 @@
+/* ============================================
+   SSS / REHBER SAYFA STİLLERİ
+   Derlenmiş CSS - _faq.scss'den
+   ============================================ */
+
+/* SSS Container */
+.faq_container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .faq_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Kategori Sidebar */
+.faq_sidebar {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #E5E5E5;
+    height: fit-content;
+    position: sticky;
+    top: 88px;
+}
+
+@media (max-width: 992px) {
+    .faq_sidebar {
+        display: none;
+    }
+}
+
+.faq_sidebar__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6C757D;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 15px 0;
+}
+
+.faq_sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq_sidebar__item {
+    margin-bottom: 5px;
+}
+
+.faq_sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222854;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.faq_sidebar__link i {
+    width: 20px;
+    text-align: center;
+    color: #6C757D;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.faq_sidebar__link:hover {
+    background: #F5F5F5;
+}
+
+.faq_sidebar__link--active {
+    background: rgba(0, 86, 179, 0.1);
+    color: #0056B3;
+    font-weight: 500;
+}
+
+.faq_sidebar__link--active i {
+    color: #0056B3;
+}
+
+.faq_sidebar__count {
+    margin-left: auto;
+    background: #F0F0F0;
+    color: #6C757D;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.faq_sidebar__link--active .faq_sidebar__count {
+    background: rgba(0, 86, 179, 0.2);
+    color: #0056B3;
+}
+
+/* SSS Ana İçerik */
+.faq_content {
+    min-width: 0;
+}
+
+.faq_content__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.faq_content__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #222854;
+}
+
+.faq_content__count {
+    font-size: 12px;
+    color: #6C757D;
+}
+
+/* Arama Kutusu (SSS içi) */
+.faq_search {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    padding: 5px 15px;
+    max-width: 300px;
+    transition: all 0.2s ease;
+}
+
+.faq_search:focus-within {
+    border-color: #0056B3;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.faq_search__icon {
+    color: #6C757D;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.faq_search__input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #222854;
+    outline: none;
+}
+
+.faq_search__input::placeholder {
+    color: #6C757D;
+}
+
+.faq_search__clear {
+    background: none;
+    border: none;
+    color: #6C757D;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+.faq_search__clear:hover {
+    color: #222854;
+}
+
+.faq_search__clear--visible {
+    display: block;
+}
+
+/* Accordion SSS Listesi */
+.faq_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Tek Bir SSS Item (Accordion) */
+.faq_item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq_item:hover {
+    border-color: #D0D0D0;
+}
+
+.faq_item--expanded {
+    border-color: #0056B3;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.08);
+}
+
+.faq_item--expanded .faq_item__icon {
+    transform: rotate(180deg);
+    color: #0056B3;
+}
+
+.faq_item--expanded .faq_item__question {
+    color: #0056B3;
+}
+
+.faq_item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.faq_item__header:hover {
+    background: #FAFAFA;
+}
+
+.faq_item__question {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222854;
+    margin: 0;
+    padding-right: 15px;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+}
+
+.faq_item__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #6C757D;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.faq_item__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq_item--expanded .faq_item__body {
+    max-height: 500px;
+}
+
+.faq_item__answer {
+    padding: 0 24px 24px 24px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    border-top: 1px solid #F0F0F0;
+    padding-top: 24px;
+}
+
+.faq_item__answer p {
+    margin: 0 0 15px 0;
+}
+
+.faq_item__answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq_item__answer ul,
+.faq_item__answer ol {
+    margin: 15px 0;
+    padding-left: 24px;
+}
+
+.faq_item__answer li {
+    margin-bottom: 5px;
+}
+
+.faq_item__answer a {
+    color: #2E6DF8;
+    text-decoration: none;
+}
+
+.faq_item__answer a:hover {
+    text-decoration: underline;
+}
+
+.faq_item__answer strong {
+    color: #222854;
+}
+
+.faq_item__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.faq_item__tag {
+    background: #F5F5F5;
+    color: #6C757D;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* Sonuç Bulunamadı */
+.faq_empty {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 60px;
+    text-align: center;
+    border: 1px solid #E5E5E5;
+}
+
+.faq_empty__icon {
+    width: 80px;
+    height: 80px;
+    background: #F5F5F5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 24px;
+    font-size: 32px;
+    color: #6C757D;
+}
+
+.faq_empty__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #222854;
+}
+
+.faq_empty__text {
+    font-size: 14px;
+    color: #6C757D;
+    margin: 0 0 24px 0;
+}
+
+.faq_empty__button {
+    background: #0056B3;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.faq_empty__button:hover {
+    background: #003F75;
+}
+
+/* Cevap Bulamadınız mı? CTA */
+.faq_cta {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq_cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .faq_cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.faq_cta__content {
+    position: relative;
+    z-index: 1;
+}
+
+.faq_cta__content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.faq_cta__content p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.faq_cta__button {
+    background: #FFFFFF;
+    color: #667EEA;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+}
+
+.faq_cta__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Arama Vurgu (Highlight) */
+.search_highlight {
+    background: rgba(255, 193, 7, 0.3);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Responsive Kategori Filtresi (Mobil için) */
+.faq_mobile_filter {
+    display: none;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+    .faq_mobile_filter {
+        display: block;
+    }
+}
+
+.faq_mobile_filter__select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #222854;
+    background: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.faq_mobile_filter__select:focus {
+    border-color: #0056B3;
+}
+
+/* Yükleme Animasyonu */
+.faq_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.faq_loading__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #F0F0F0;
+    border-top-color: #0056B3;
+    border-radius: 50%;
+    animation: faq_spin 0.8s linear infinite;
+}
+
+@keyframes faq_spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .faq_content__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .faq_search {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .faq_item__header {
+        padding: 16px;
+    }
+    
+    .faq_item__answer {
+        padding: 0 16px 16px 16px;
+        padding-top: 16px;
+    }
+    
+    .faq_empty {
+        padding: 40px 20px;
+    }
+}
+

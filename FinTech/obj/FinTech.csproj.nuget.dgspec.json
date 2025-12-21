@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {}
+    "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {}
   },
   "projects": {
-    "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {
+    "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
+        "projectUniqueName": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
         "projectName": "FinTech",
-        "projectPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
-        "packagesPath": "/Users/ozkantalha33icloud.com/.nuget/packages/",
-        "outputPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/obj/",
+        "projectPath": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
+        "packagesPath": "/Users/umutcan/.nuget/packages/",
+        "outputPath": "/Users/umutcan/Desktop/FinTech_Divizyon/FinTech/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ozkantalha33icloud.com/.nuget/NuGet/NuGet.Config"
+          "/Users/umutcan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
