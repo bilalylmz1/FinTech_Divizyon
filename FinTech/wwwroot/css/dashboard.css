@@ -1,0 +1,178 @@
+/* Dashboard Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.dashboard-container {
+    max-width: 480px; /* Mobile View similar to Figma width 393px but flexible */
+    width: 100%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    min-height: 100vh;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E6F7FF;
+}
+
+.header-logo img {
+    height: 30px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #FFFFFF;
+    /* border: 1px solid #E6F7FF; */
+}
+
+/* Banner Section */
+.hero-banner {
+    background: url('/img/banner_bg.png') no-repeat center center; /* Fallback or generated */
+    background-size: cover;
+    background-color: #222854; /* Dark fallback */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.hero-title {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.hero-info {
+    text-align: right;
+}
+
+.hero-date {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.hero-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Score Section */
+.score-section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.score-text {
+    background-color: #E6F7FF;
+    color: #0056B3;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.gauge-container {
+    margin: 20px auto;
+    width: 90%;
+}
+.gauge-container img {
+    width: 100%;
+}
+
+/* Action Section */
+.action-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.action-msg {
+    color: #222854;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-primary-custom {
+    background: #0056B3;
+    color: white;
+    border-radius: 40px;
+    padding: 12px 30px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 86, 179, 0.3);
+    margin-bottom: 15px;
+    min-width: 200px;
+}
+
+.btn-action-link {
+    display: block;
+    color: #0056B3;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* Comment Card */
+.comment-card {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comment-title {
+    color: #222854;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.comment-text {
+    color: #222854;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #0056B3;
+    font-weight: 500;
+}
+
+.btn-secondary-custom {
+    background: #0056B3;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 25px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}

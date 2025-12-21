@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinTech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a1ec25f18d5bdafe50bb81366e06de471428b47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a655b58c1da8b539b1ef4c927e5cff8ab39960b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinTech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinTech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,28 +2,78 @@
 @model FinTech.Pages.IndexModel
 @{
     ViewData["Title"] = "Dashboard";
+    Layout = null; /* Standalone layout for full control */
 }
-
-<div class="container-fluid py-5 text-center">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow-sm border-0">
-                <div class="card-body p-5">
-                    <h1 class="display-4 text-primary mb-4">🚀 Dashboard</h1>
-                    <p class="lead text-muted">
-                        Hoşgeldiniz! Giriş işleminiz başarıyla tamamlandı.
-                    </p>
-                    <hr class="my-4">
-                    <div class="alert alert-info">
-                        <strong>Bilgi:</strong> Burası bir placeholder (yer tutucu) sayfadır. 
-                        Diğer ekipler dashboard arayüzünü buraya entegre edecektir.
-                    </div>
-                    <p class="mt-4">
-                        <a href="#" class="btn btn-outline-primary">Profil Ayarları</a>
-                        <a href="#" class="btn btn-primary">Raporlar</a>
-                    </p>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kredi Güven Raporu</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="header-logo">
+                <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" />
+            </div>
+            <div class="header-actions">
+                <div class="action-btn">
+                    <img src="/img/dashboard/icon-profile.svg" alt="Profil" />
+                </div>
+                <div class="action-btn">
+                     <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
                 </div>
             </div>
         </div>
+
+        <!-- Hero Banner -->
+        <div class="hero-banner" style="background: linear-gradient(90deg, #222854 0%, #0056B3 100%);">
+            <div class="hero-title">Kredi Güven Raporu</div>
+            <div class="hero-info">
+                <div class="hero-date">16.06.2025</div> <!-- Static date as per design -->
+                <div class="hero-name">Mustafa Gümüş</div>
+            </div>
+        </div>
+
+        <!-- Score Section -->
+        <div class="score-section">
+            <div class="gauge-container">
+                <!-- Using the SVG for the gauge -->
+                <img src="/img/dashboard/score-gauge.svg" alt="Kredi Skoru Göstergesi" />
+            </div>
+            
+            <div class="score-text">
+                Mevcut Durumun : <strong>Hassas</strong>
+            </div>
+        </div>
+
+        <!-- Action Section -->
+        <div class="action-section">
+            <p class="action-msg">
+                Onay şansın sınıra yakın; iki hızlı adımla profilini<br>
+                güçlendir, sonra sana uygun tekliflere bak.
+            </p>
+            
+            <a href="#" class="btn-primary-custom">Teklifleri Gör</a>
+            <a href="#" class="btn-action-link">aksiyon planı</a>
+        </div>
+
+        <!-- Comment Card -->
+        <div class="comment-card">
+            <div class="comment-title">Genel Kredi Profili Yorumu</div>
+            <div class="comment-text">
+                Genel olarak durumun <span class="highlight">güvenli</span>. Ödemelerini çoğunlukla zamanında yapıyorsun ve gelirine oranla borçlanma limitlerin dengeli. Hemen bir kredi uzmanı ile çalışarak istediğin krediye ulaşabilirsin.
+            </div>
+            <div style="text-align: center;">
+                <a href="#" class="btn-secondary-custom">Kredi Uzmanı ile Görüş</a>
+            </div>
+        </div>
+
     </div>
-</div>
+</body>
+</html>
