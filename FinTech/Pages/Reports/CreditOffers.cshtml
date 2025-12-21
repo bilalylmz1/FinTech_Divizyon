@@ -1,0 +1,188 @@
+@page
+@model FinTech.Pages.Reports.CreditOffersModel
+@{
+    ViewData["Title"] = "Kredi Teklifleri";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/report_center.css" />
+    <link rel="stylesheet" href="~/css/credit_offers.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="/Reports/ReportCenter" class="menu-item active">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Raporlar</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb__item">Dashboard</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <a href="/Reports/ReportCenter" class="breadcrumb__item">Rapor Detayları</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <span class="breadcrumb__item breadcrumb__item--active">Kredi Teklifleri</span>
+            </nav>
+
+            <!-- Header Section -->
+            <div class="offers_header">
+                <div class="offers_header__content">
+                    <h1 class="offers_header__title">Size Özel Kredi Teklifleri</h1>
+                    <p class="offers_header__subtitle">Profilinize göre hazırlanmış en uygun kredi fırsatları</p>
+                </div>
+                
+                <!-- Filtreler -->
+                <div class="offers_filters">
+                    <div class="offers_filter_group">
+                        <label class="offers_filter_label">Kredi Türü</label>
+                        <select class="offers_filter_select" id="offer_type_filter">
+                            <option value="all">Tümü</option>
+                            <option value="ihtiyac">İhtiyaç Kredisi</option>
+                            <option value="konut">Konut Kredisi</option>
+                            <option value="tasit">Taşıt Kredisi</option>
+                        </select>
+                    </div>
+                    <div class="offers_filter_group">
+                        <label class="offers_filter_label">Sıralama</label>
+                        <select class="offers_filter_select" id="offer_sort">
+                            <option value="recommended">Önerilen</option>
+                            <option value="rate_asc">Faiz (Düşük-Yüksek)</option>
+                            <option value="rate_desc">Faiz (Yüksek-Düşük)</option>
+                            <option value="amount_desc">Tutar (Yüksek-Düşük)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Öne Çıkan Teklif -->
+            <div class="featured_offer" id="featured_offer">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+
+            <!-- Yükleme Animasyonu -->
+            <div class="offers_loading" id="offers_loading">
+                <div class="offers_loading__spinner"></div>
+            </div>
+
+            <!-- Teklif Kartları Grid -->
+            <div class="offers_grid" id="offers_grid">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+
+            <!-- Sonuç Bulunamadı -->
+            <div class="offers_empty" id="offers_empty" style="display: none;">
+                <div class="offers_empty__icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h3 class="offers_empty__title">Teklif Bulunamadı</h3>
+                <p class="offers_empty__text">Seçtiğiniz kriterlere uygun kredi teklifi bulunmuyor.</p>
+                <button class="offers_empty__button" id="offers_reset_filter">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Filtreleri Temizle
+                </button>
+            </div>
+
+            <!-- Bilgilendirme Bölümü -->
+            <div class="offers_info">
+                <div class="offers_info__card">
+                    <div class="offers_info__icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="offers_info__title">Güvenli Başvuru</h4>
+                    <p class="offers_info__text">Tüm başvurularınız 256-bit SSL şifreleme ile korunur</p>
+                </div>
+                <div class="offers_info__card">
+                    <div class="offers_info__icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h4 class="offers_info__title">Hızlı Onay</h4>
+                    <p class="offers_info__text">Başvurunuz ortalama 24 saat içinde değerlendirilir</p>
+                </div>
+                <div class="offers_info__card">
+                    <div class="offers_info__icon">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h4 class="offers_info__title">Uygun Faiz</h4>
+                    <p class="offers_info__text">Profilinize özel en avantajlı faiz oranları</p>
+                </div>
+            </div>
+
+            <!-- Uzman Desteği CTA -->
+            <div class="offers_cta">
+                <div class="offers_cta__content">
+                    <div class="offers_cta__icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="offers_cta__text">
+                        <h4>Hangi kredi size uygun?</h4>
+                        <p>Uzmanlarımız size en uygun kredi seçeneğini bulmanıza yardımcı olabilir</p>
+                    </div>
+                </div>
+                <a href="#" class="offers_cta__button">
+                    <i class="fa-solid fa-phone"></i> Uzmanla Görüş
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/credit_offers.js"></script>
+    <script>
+        // Sidebar Toggle
+        var $menu_toggle = $('#menuToggle');
+        var $sidebar = $('#sidebar');
+        var $main_content = $('#mainContent');
+
+        if ($menu_toggle.length) {
+            $menu_toggle.on('click', function() {
+                $sidebar.toggleClass('closed');
+                $main_content.toggleClass('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+

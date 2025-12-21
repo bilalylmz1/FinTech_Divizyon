@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {}
+    "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech_Divizyon\\FinTech\\FinTech.csproj": {}
   },
   "projects": {
-    "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj": {
+    "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech_Divizyon\\FinTech\\FinTech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
+        "projectUniqueName": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech_Divizyon\\FinTech\\FinTech.csproj",
         "projectName": "FinTech",
-        "projectPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/FinTech.csproj",
-        "packagesPath": "/Users/ozkantalha33icloud.com/.nuget/packages/",
-        "outputPath": "/Users/ozkantalha33icloud.com/Desktop/FinTech_Divizyon/FinTech/obj/",
+        "projectPath": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech_Divizyon\\FinTech\\FinTech.csproj",
+        "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bilal\\OneDrive\\Desktop\\FinTech_Divizyon\\FinTech\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ozkantalha33icloud.com/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +39,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -61,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

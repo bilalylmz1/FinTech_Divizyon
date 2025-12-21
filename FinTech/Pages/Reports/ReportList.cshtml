@@ -1,0 +1,197 @@
+@page
+@model FinTech.Pages.Reports.ReportListModel
+@{
+    ViewData["Title"] = "Rapor Listesi";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/report_center.css" />
+    <link rel="stylesheet" href="~/css/report_list.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="/Reports/ReportCenter" class="menu-item active">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Raporlar</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb__item">Dashboard</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <a href="/Reports/ReportCenter" class="breadcrumb__item">Rapor Detayları</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <span class="breadcrumb__item breadcrumb__item--active">Rapor Listesi</span>
+            </nav>
+
+            <!-- Rapor Listesi Container -->
+            <div class="report_list_container">
+                
+                <!-- Kategori Sidebar -->
+                <aside class="report_sidebar">
+                    <h4 class="report_sidebar__title">Rapor Türleri</h4>
+                    <ul class="report_sidebar__list" id="report_category_list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </ul>
+
+                    <!-- Özet Bilgi Kutusu -->
+                    <div class="report_sidebar__summary">
+                        <h5 class="report_sidebar__summary_title">
+                            <i class="fa-solid fa-chart-simple"></i> Rapor Özeti
+                        </h5>
+                        <div class="report_sidebar__summary_item">
+                            <span class="label">Toplam Rapor</span>
+                            <span class="value" id="sidebar_total_reports">-</span>
+                        </div>
+                        <div class="report_sidebar__summary_item">
+                            <span class="label">Son Güncelleme</span>
+                            <span class="value" id="sidebar_last_update">-</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Ana İçerik -->
+                <div class="report_content">
+                    
+                    <!-- Header -->
+                    <div class="report_content__header">
+                        <div>
+                            <h1 class="report_content__title">Rapor Listesi</h1>
+                            <span class="report_content__count" id="report_count">Yükleniyor...</span>
+                        </div>
+                        
+                        <!-- Arama ve Filtre -->
+                        <div class="report_filters">
+                            <div class="report_search">
+                                <i class="fa-solid fa-magnifying-glass report_search__icon"></i>
+                                <input 
+                                    type="text" 
+                                    class="report_search__input" 
+                                    id="report_search_input"
+                                    placeholder="Rapor ara..." 
+                                    autocomplete="off"
+                                />
+                                <button class="report_search__clear" id="report_search_clear">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="report_sort">
+                                <select class="report_sort__select" id="report_sort">
+                                    <option value="date_desc">En Yeni</option>
+                                    <option value="date_asc">En Eski</option>
+                                    <option value="name_asc">A-Z</option>
+                                    <option value="name_desc">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobil Kategori Filtresi -->
+                    <div class="report_mobile_filter">
+                        <select class="report_mobile_filter__select" id="report_mobile_category">
+                            <option value="all">Tüm Raporlar</option>
+                            <!-- JavaScript ile doldurulacak -->
+                        </select>
+                    </div>
+
+                    <!-- Yükleme Animasyonu -->
+                    <div class="report_loading" id="report_loading">
+                        <div class="report_loading__spinner"></div>
+                    </div>
+
+                    <!-- Rapor Listesi -->
+                    <div class="report_list" id="report_list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </div>
+
+                    <!-- Sonuç Bulunamadı -->
+                    <div class="report_empty" id="report_empty" style="display: none;">
+                        <div class="report_empty__icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h3 class="report_empty__title">Rapor Bulunamadı</h3>
+                        <p class="report_empty__text">Arama kriterlerinize uygun rapor bulunamadı.</p>
+                        <button class="report_empty__button" id="report_reset_search">
+                            <i class="fa-solid fa-arrow-rotate-left"></i> Aramayı Temizle
+                        </button>
+                    </div>
+
+                    <!-- Rapor İndirme CTA -->
+                    <div class="report_cta">
+                        <div class="report_cta__content">
+                            <h3>Detaylı Finansal Analiz İster misiniz?</h3>
+                            <p>Uzman ekibimizden kişiye özel detaylı rapor talep edebilirsiniz</p>
+                        </div>
+                        <a href="#" class="report_cta__button">
+                            <i class="fa-solid fa-file-circle-plus"></i> Rapor Talep Et
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/report_list.js"></script>
+    <script>
+        // Sidebar Toggle
+        var $menu_toggle = $('#menuToggle');
+        var $sidebar = $('#sidebar');
+        var $main_content = $('#mainContent');
+
+        if ($menu_toggle.length) {
+            $menu_toggle.on('click', function() {
+                $sidebar.toggleClass('closed');
+                $main_content.toggleClass('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+

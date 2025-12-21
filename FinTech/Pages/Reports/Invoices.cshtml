@@ -1,0 +1,238 @@
+@page
+@model FinTech.Pages.Reports.InvoicesModel
+@{
+    ViewData["Title"] = "Faturalar";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/report_center.css" />
+    <link rel="stylesheet" href="~/css/invoices.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="/Reports/ReportCenter" class="menu-item active">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Raporlar</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb__item">Dashboard</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <a href="/Reports/ReportCenter" class="breadcrumb__item">Rapor Detayları</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <span class="breadcrumb__item breadcrumb__item--active">Faturalar</span>
+            </nav>
+
+            <!-- Özet Kartları -->
+            <div class="invoice_summary">
+                <div class="invoice_summary__card invoice_summary__card--total">
+                    <div class="invoice_summary__icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div class="invoice_summary__content">
+                        <span class="invoice_summary__label">Toplam Fatura</span>
+                        <span class="invoice_summary__value" id="total_invoices">-</span>
+                    </div>
+                </div>
+                <div class="invoice_summary__card invoice_summary__card--paid">
+                    <div class="invoice_summary__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="invoice_summary__content">
+                        <span class="invoice_summary__label">Ödenen</span>
+                        <span class="invoice_summary__value" id="paid_invoices">-</span>
+                    </div>
+                </div>
+                <div class="invoice_summary__card invoice_summary__card--pending">
+                    <div class="invoice_summary__icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="invoice_summary__content">
+                        <span class="invoice_summary__label">Bekleyen</span>
+                        <span class="invoice_summary__value" id="pending_invoices_count">-</span>
+                    </div>
+                </div>
+                <div class="invoice_summary__card invoice_summary__card--amount">
+                    <div class="invoice_summary__icon">
+                        <i class="fa-solid fa-turkish-lira-sign"></i>
+                    </div>
+                    <div class="invoice_summary__content">
+                        <span class="invoice_summary__label">Bekleyen Tutar</span>
+                        <span class="invoice_summary__value" id="pending_amount">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header ve Filtreler -->
+            <div class="invoice_header">
+                <div class="invoice_header__content">
+                    <h1 class="invoice_header__title">Faturalar</h1>
+                    <span class="invoice_header__count" id="invoice_count">Yükleniyor...</span>
+                </div>
+                
+                <div class="invoice_filters">
+                    <div class="invoice_search">
+                        <i class="fa-solid fa-magnifying-glass invoice_search__icon"></i>
+                        <input 
+                            type="text" 
+                            class="invoice_search__input" 
+                            id="invoice_search_input"
+                            placeholder="Fatura no veya açıklama ara..." 
+                            autocomplete="off"
+                        />
+                        <button class="invoice_search__clear" id="invoice_search_clear">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    
+                    <select class="invoice_filter_select" id="invoice_status_filter">
+                        <option value="all">Tüm Durumlar</option>
+                        <option value="paid">Ödendi</option>
+                        <option value="pending">Bekliyor</option>
+                        <option value="overdue">Gecikmiş</option>
+                    </select>
+                    
+                    <select class="invoice_filter_select" id="invoice_date_filter">
+                        <option value="all">Tüm Tarihler</option>
+                        <option value="this_month">Bu Ay</option>
+                        <option value="last_month">Geçen Ay</option>
+                        <option value="last_3_months">Son 3 Ay</option>
+                        <option value="last_6_months">Son 6 Ay</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Yükleme Animasyonu -->
+            <div class="invoice_loading" id="invoice_loading">
+                <div class="invoice_loading__spinner"></div>
+            </div>
+
+            <!-- Fatura Tablosu -->
+            <div class="invoice_table_wrapper" id="invoice_table_wrapper">
+                <table class="invoice_table">
+                    <thead>
+                        <tr>
+                            <th class="invoice_table__th">Fatura No</th>
+                            <th class="invoice_table__th">Açıklama</th>
+                            <th class="invoice_table__th">Tarih</th>
+                            <th class="invoice_table__th">Vade</th>
+                            <th class="invoice_table__th">Tutar</th>
+                            <th class="invoice_table__th">Durum</th>
+                            <th class="invoice_table__th">İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice_table_body">
+                        <!-- JavaScript ile doldurulacak -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobil Kart Görünümü -->
+            <div class="invoice_cards" id="invoice_cards">
+                <!-- JavaScript ile doldurulacak -->
+            </div>
+
+            <!-- Sonuç Bulunamadı -->
+            <div class="invoice_empty" id="invoice_empty" style="display: none;">
+                <div class="invoice_empty__icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <h3 class="invoice_empty__title">Fatura Bulunamadı</h3>
+                <p class="invoice_empty__text">Seçtiğiniz kriterlere uygun fatura bulunmuyor.</p>
+                <button class="invoice_empty__button" id="invoice_reset_filter">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Filtreleri Temizle
+                </button>
+            </div>
+
+            <!-- Sayfalama -->
+            <div class="invoice_pagination" id="invoice_pagination">
+                <button class="invoice_pagination__btn" id="prev_page" disabled>
+                    <i class="fa-solid fa-chevron-left"></i> Önceki
+                </button>
+                <span class="invoice_pagination__info" id="pagination_info">Sayfa 1 / 1</span>
+                <button class="invoice_pagination__btn" id="next_page">
+                    Sonraki <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Otomatik Ödeme CTA -->
+            <div class="invoice_cta">
+                <div class="invoice_cta__content">
+                    <div class="invoice_cta__icon">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <div class="invoice_cta__text">
+                        <h4>Otomatik Ödeme Talimatı</h4>
+                        <p>Faturalarınızı her ay otomatik olarak ödeyin, gecikme yaşamayın</p>
+                    </div>
+                </div>
+                <a href="#" class="invoice_cta__button">
+                    <i class="fa-solid fa-gear"></i> Talimat Oluştur
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/invoices.js"></script>
+    <script>
+        // Sidebar Toggle
+        var $menu_toggle = $('#menuToggle');
+        var $sidebar = $('#sidebar');
+        var $main_content = $('#mainContent');
+
+        if ($menu_toggle.length) {
+            $menu_toggle.on('click', function() {
+                $sidebar.toggleClass('closed');
+                $main_content.toggleClass('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+

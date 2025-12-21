@@ -1,0 +1,153 @@
+{
+    "featured_offer": {
+        "id": 1,
+        "bank_name": "İnteraktif Banka",
+        "type": "ihtiyac",
+        "type_label": "İhtiyaç Kredisi",
+        "title": "Yılsonu Özel Kredi Fırsatı",
+        "interest_rate": 2.89,
+        "max_amount": 250000,
+        "max_term": 36,
+        "monthly_payment": 8750,
+        "is_featured": true,
+        "badge": "En Avantajlı"
+    },
+    "offers": [
+        {
+            "id": 2,
+            "bank_name": "Finans Bank",
+            "bank_icon": "fa-solid fa-building-columns",
+            "type": "ihtiyac",
+            "type_label": "İhtiyaç Kredisi",
+            "title": "Anında İhtiyaç Kredisi",
+            "interest_rate": 3.15,
+            "max_amount": 150000,
+            "max_term": 36,
+            "monthly_payment": 5200,
+            "badge": "new",
+            "badge_label": "Yeni",
+            "features": [
+                "Anında onay",
+                "Masrafsız kullandırım",
+                "3 ay erteleme seçeneği"
+            ],
+            "is_active": true
+        },
+        {
+            "id": 3,
+            "bank_name": "Kredi Plus",
+            "bank_icon": "fa-solid fa-coins",
+            "type": "ihtiyac",
+            "type_label": "İhtiyaç Kredisi",
+            "title": "Esnek Ödeme Kredisi",
+            "interest_rate": 3.29,
+            "max_amount": 100000,
+            "max_term": 48,
+            "monthly_payment": 2850,
+            "badge": "popular",
+            "badge_label": "Popüler",
+            "features": [
+                "Esnek ödeme planı",
+                "Online başvuru",
+                "7/24 destek"
+            ],
+            "is_active": true
+        },
+        {
+            "id": 4,
+            "bank_name": "Ev Kredisi Merkezi",
+            "bank_icon": "fa-solid fa-house",
+            "type": "konut",
+            "type_label": "Konut Kredisi",
+            "title": "Uygun Faizli Konut Kredisi",
+            "interest_rate": 1.89,
+            "max_amount": 2000000,
+            "max_term": 120,
+            "monthly_payment": 22500,
+            "badge": "limited",
+            "badge_label": "Sınırlı",
+            "features": [
+                "En düşük faiz oranı",
+                "120 aya varan vade",
+                "Ücretsiz ekspertiz"
+            ],
+            "is_active": true
+        },
+        {
+            "id": 5,
+            "bank_name": "Otomobil Finans",
+            "bank_icon": "fa-solid fa-car",
+            "type": "tasit",
+            "type_label": "Taşıt Kredisi",
+            "title": "Sıfır Araç Kredisi",
+            "interest_rate": 2.49,
+            "max_amount": 500000,
+            "max_term": 60,
+            "monthly_payment": 10800,
+            "badge": "new",
+            "badge_label": "Yeni",
+            "features": [
+                "Sıfır km araçlara özel",
+                "Kasko dahil",
+                "Hızlı değerlendirme"
+            ],
+            "is_active": true
+        },
+        {
+            "id": 6,
+            "bank_name": "Dijital Kredi",
+            "bank_icon": "fa-solid fa-mobile-screen",
+            "type": "ihtiyac",
+            "type_label": "İhtiyaç Kredisi",
+            "title": "Dijital Hızlı Kredi",
+            "interest_rate": 3.45,
+            "max_amount": 75000,
+            "max_term": 24,
+            "monthly_payment": 3650,
+            "badge": null,
+            "badge_label": null,
+            "features": [
+                "5 dakikada onay",
+                "Tamamen dijital süreç",
+                "Şubeye gitmeye gerek yok"
+            ],
+            "is_active": true
+        },
+        {
+            "id": 7,
+            "bank_name": "Güven Finans",
+            "bank_icon": "fa-solid fa-shield-halved",
+            "type": "konut",
+            "type_label": "Konut Kredisi",
+            "title": "Güvenli Konut Kredisi",
+            "interest_rate": 1.99,
+            "max_amount": 1500000,
+            "max_term": 180,
+            "monthly_payment": 14200,
+            "badge": null,
+            "badge_label": null,
+            "features": [
+                "180 ay vade imkanı",
+                "Sabit faiz garantisi",
+                "Sigorta avantajı"
+            ],
+            "is_active": true
+        }
+    ],
+    "filters": {
+        "types": [
+            { "value": "all", "label": "Tümü" },
+            { "value": "ihtiyac", "label": "İhtiyaç Kredisi" },
+            { "value": "konut", "label": "Konut Kredisi" },
+            { "value": "tasit", "label": "Taşıt Kredisi" }
+        ],
+        "sort_options": [
+            { "value": "recommended", "label": "Önerilen" },
+            { "value": "rate_asc", "label": "Faiz (Düşük-Yüksek)" },
+            { "value": "rate_desc", "label": "Faiz (Yüksek-Düşük)" },
+            { "value": "amount_desc", "label": "Tutar (Yüksek-Düşük)" }
+        ]
+    },
+    "last_update": "2025-12-20T10:00:00"
+}
+
