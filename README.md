@@ -1,8 +1,6 @@
 <div align="center">
 
-  <img src="wwwroot/statik_slogan2 1.png" alt="FinTech Logo" width="200" />
-
-  # FinTech Divizyon
+  # İnteraktif Kredi
   **Next-Generation Financial Technology Solution / 次世代金融テクノロジーソリューション**
 
   [![.NET 8.0](https://img.shields.io/badge/.NET-8.0-purple?style=for-the-badge&logo=dotnet)](https://dotnet.microsoft.com/)
