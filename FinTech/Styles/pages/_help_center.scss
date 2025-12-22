@@ -1,0 +1,395 @@
+// ============================================
+// YARDIM & DESTEK MERKEZİ STİLLERİ
+// ============================================
+
+// Hero Section - Arama Alanı
+.help_hero {
+    background: linear-gradient(135deg, $brand_primary 0%, $brand_primary_dark 100%);
+    border-radius: $radius_lg;
+    padding: $spacing_xl * 2;
+    margin-bottom: $spacing_lg;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    // Dekoratif arka plan deseni
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 400px;
+        height: 400px;
+        background: rgba($color_white, 0.05);
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 300px;
+        height: 300px;
+        background: rgba($color_white, 0.03);
+        border-radius: 50%;
+    }
+
+    &__title {
+        color: $color_white;
+        font-size: $font_size_lg;
+        font-weight: $font_weight_semibold;
+        margin: 0 0 $spacing_sm 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__subtitle {
+        color: rgba($color_white, 0.85);
+        font-size: $font_size_base;
+        margin: 0 0 $spacing_lg 0;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Arama Kutusu
+.help_search {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        background: $color_white;
+        border-radius: $radius_full;
+        padding: $spacing_xs;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    &__icon {
+        padding: 0 $spacing_md;
+        color: $text_muted;
+        font-size: 18px;
+    }
+
+    &__input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: $spacing_md 0;
+        font-size: $font_size_base;
+        font-family: $font_family_primary;
+        color: $text_dark;
+        outline: none;
+
+        &::placeholder {
+            color: $text_muted;
+        }
+    }
+
+    &__button {
+        background: $brand_primary;
+        color: $color_white;
+        border: none;
+        padding: $spacing_md $spacing_lg;
+        border-radius: $radius_full;
+        font-size: $font_size_sm;
+        font-weight: $font_weight_medium;
+        cursor: pointer;
+        @include transition;
+
+        &:hover {
+            background: $brand_primary_dark;
+        }
+    }
+}
+
+// Kategori Kartları Grid
+.help_categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing_lg;
+    margin-bottom: $spacing_xl;
+
+    @include respond_to('lg') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond_to('md') {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Kategori Kartı
+.help_card {
+    background: $color_white;
+    border-radius: $radius_lg;
+    padding: $spacing_xl;
+    border: 1px solid #E5E5E5;
+    text-decoration: none;
+    color: $text_dark;
+    @include transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $brand_primary;
+        box-shadow: 0 8px 24px rgba($brand_primary, 0.12);
+        transform: translateY(-4px);
+
+        .help_card__icon {
+            transform: scale(1.1);
+        }
+    }
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+        border-radius: $radius_lg;
+        @include flex_center;
+        margin-bottom: $spacing_md;
+        font-size: 28px;
+        @include transition;
+
+        // Renk varyasyonları
+        &--blue {
+            background: rgba($brand_link, 0.1);
+            color: $brand_link;
+        }
+
+        &--green {
+            background: rgba($color_success, 0.1);
+            color: $color_success;
+        }
+
+        &--purple {
+            background: rgba(#8B5CF6, 0.1);
+            color: #8B5CF6;
+        }
+
+        &--orange {
+            background: rgba(#F59E0B, 0.1);
+            color: #F59E0B;
+        }
+    }
+
+    &__title {
+        font-size: $font_size_base;
+        font-weight: $font_weight_semibold;
+        margin: 0 0 $spacing_xs 0;
+    }
+
+    &__description {
+        font-size: $font_size_sm;
+        color: $text_muted;
+        margin: 0;
+        line-height: $line_height_relaxed;
+    }
+
+    &__arrow {
+        margin-top: $spacing_md;
+        color: $brand_primary;
+        font-size: 14px;
+        opacity: 0;
+        transform: translateX(-10px);
+        @include transition;
+    }
+
+    &:hover &__arrow {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Popüler Sorular Bölümü
+.popular_questions {
+    background: $color_white;
+    border-radius: $radius_lg;
+    padding: $spacing_xl;
+    border: 1px solid #E5E5E5;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing_lg;
+    }
+
+    &__title {
+        font-size: $font_size_base;
+        font-weight: $font_weight_semibold;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: $spacing_sm;
+
+        i {
+            color: $brand_primary;
+        }
+    }
+
+    &__see_all {
+        color: $brand_link;
+        text-decoration: none;
+        font-size: $font_size_sm;
+        font-weight: $font_weight_medium;
+        @include transition;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        padding: $spacing_md 0;
+        border-bottom: 1px solid #F0F0F0;
+        display: flex;
+        align-items: center;
+        gap: $spacing_md;
+        cursor: pointer;
+        @include transition;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            padding-left: $spacing_sm;
+
+            .popular_questions__item_icon {
+                background: $brand_primary;
+                color: $color_white;
+            }
+        }
+    }
+
+    &__item_icon {
+        width: 32px;
+        height: 32px;
+        border-radius: $radius_md;
+        background: rgba($brand_primary, 0.1);
+        color: $brand_primary;
+        @include flex_center;
+        font-size: 14px;
+        flex-shrink: 0;
+        @include transition;
+    }
+
+    &__item_text {
+        font-size: 14px;
+        color: $text_dark;
+    }
+}
+
+// İletişim Bandı (Contact Banner)
+.contact_banner {
+    background: linear-gradient(90deg, #F0F7FF 0%, #E6F0FF 100%);
+    border-radius: $radius_lg;
+    padding: $spacing_xl;
+    margin-top: $spacing_xl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing_lg;
+
+    @include respond_to('md') {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: $spacing_lg;
+
+        @include respond_to('md') {
+            flex-direction: column;
+        }
+    }
+
+    &__icon {
+        width: 56px;
+        height: 56px;
+        background: $brand_primary;
+        border-radius: 50%;
+        @include flex_center;
+        color: $color_white;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    &__text {
+        h4 {
+            font-size: $font_size_base;
+            font-weight: $font_weight_semibold;
+            margin: 0 0 $spacing_xs 0;
+            color: $text_dark;
+        }
+
+        p {
+            font-size: $font_size_sm;
+            color: $text_muted;
+            margin: 0;
+        }
+    }
+
+    &__button {
+        background: $brand_primary;
+        color: $color_white;
+        border: none;
+        padding: $spacing_md $spacing_lg;
+        border-radius: $radius_md;
+        font-size: 14px;
+        font-weight: $font_weight_medium;
+        text-decoration: none;
+        cursor: pointer;
+        @include transition;
+        white-space: nowrap;
+
+        &:hover {
+            background: $brand_primary_dark;
+        }
+    }
+}
+
+// Breadcrumb
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: $spacing_sm;
+    margin-bottom: $spacing_lg;
+    font-size: $font_size_sm;
+
+    &__item {
+        color: $text_muted;
+        text-decoration: none;
+        @include transition;
+
+        &:hover {
+            color: $brand_primary;
+        }
+
+        &--active {
+            color: $text_dark;
+            font-weight: $font_weight_medium;
+        }
+    }
+
+    &__separator {
+        color: $text_muted;
+        font-size: 10px;
+    }
+}
+

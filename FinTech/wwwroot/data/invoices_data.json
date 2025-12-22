@@ -1,0 +1,160 @@
+{
+    "summary": {
+        "total": 12,
+        "paid": 9,
+        "pending": 2,
+        "overdue": 1,
+        "pending_amount": 7850.00
+    },
+    "invoices": [
+        {
+            "id": 1,
+            "invoice_no": "FTR-2025-0012",
+            "description": "İhtiyaç Kredisi - Aralık Taksiti",
+            "date": "2025-12-01",
+            "due_date": "2025-12-25",
+            "amount": 3500.00,
+            "status": "pending",
+            "type": "kredi_taksit"
+        },
+        {
+            "id": 2,
+            "invoice_no": "FTR-2025-0011",
+            "description": "Kredi Kartı Asgari Ödeme",
+            "date": "2025-12-05",
+            "due_date": "2025-12-20",
+            "amount": 4350.00,
+            "status": "pending",
+            "type": "kredi_karti"
+        },
+        {
+            "id": 3,
+            "invoice_no": "FTR-2025-0010",
+            "description": "İhtiyaç Kredisi - Kasım Taksiti",
+            "date": "2025-11-01",
+            "due_date": "2025-11-25",
+            "amount": 3500.00,
+            "status": "paid",
+            "paid_date": "2025-11-23",
+            "type": "kredi_taksit"
+        },
+        {
+            "id": 4,
+            "invoice_no": "FTR-2025-0009",
+            "description": "Kredi Kartı Ekstre - Kasım",
+            "date": "2025-11-05",
+            "due_date": "2025-11-20",
+            "amount": 5200.00,
+            "status": "paid",
+            "paid_date": "2025-11-18",
+            "type": "kredi_karti"
+        },
+        {
+            "id": 5,
+            "invoice_no": "FTR-2025-0008",
+            "description": "İhtiyaç Kredisi - Ekim Taksiti",
+            "date": "2025-10-01",
+            "due_date": "2025-10-25",
+            "amount": 3500.00,
+            "status": "paid",
+            "paid_date": "2025-10-24",
+            "type": "kredi_taksit"
+        },
+        {
+            "id": 6,
+            "invoice_no": "FTR-2025-0007",
+            "description": "Kredi Kartı Ekstre - Ekim",
+            "date": "2025-10-05",
+            "due_date": "2025-10-20",
+            "amount": 4800.00,
+            "status": "paid",
+            "paid_date": "2025-10-19",
+            "type": "kredi_karti"
+        },
+        {
+            "id": 7,
+            "invoice_no": "FTR-2025-0006",
+            "description": "Dosya Masrafı",
+            "date": "2025-09-15",
+            "due_date": "2025-09-30",
+            "amount": 850.00,
+            "status": "overdue",
+            "type": "masraf"
+        },
+        {
+            "id": 8,
+            "invoice_no": "FTR-2025-0005",
+            "description": "İhtiyaç Kredisi - Eylül Taksiti",
+            "date": "2025-09-01",
+            "due_date": "2025-09-25",
+            "amount": 3500.00,
+            "status": "paid",
+            "paid_date": "2025-09-22",
+            "type": "kredi_taksit"
+        },
+        {
+            "id": 9,
+            "invoice_no": "FTR-2025-0004",
+            "description": "Kredi Kartı Ekstre - Eylül",
+            "date": "2025-09-05",
+            "due_date": "2025-09-20",
+            "amount": 3950.00,
+            "status": "paid",
+            "paid_date": "2025-09-18",
+            "type": "kredi_karti"
+        },
+        {
+            "id": 10,
+            "invoice_no": "FTR-2025-0003",
+            "description": "İhtiyaç Kredisi - Ağustos Taksiti",
+            "date": "2025-08-01",
+            "due_date": "2025-08-25",
+            "amount": 3500.00,
+            "status": "paid",
+            "paid_date": "2025-08-20",
+            "type": "kredi_taksit"
+        },
+        {
+            "id": 11,
+            "invoice_no": "FTR-2025-0002",
+            "description": "Kredi Kullandırım Masrafı",
+            "date": "2025-08-15",
+            "due_date": "2025-08-30",
+            "amount": 1250.00,
+            "status": "paid",
+            "paid_date": "2025-08-28",
+            "type": "masraf"
+        },
+        {
+            "id": 12,
+            "invoice_no": "FTR-2025-0001",
+            "description": "Kredi Kartı Yıllık Ücreti",
+            "date": "2025-07-01",
+            "due_date": "2025-07-15",
+            "amount": 450.00,
+            "status": "paid",
+            "paid_date": "2025-07-10",
+            "type": "masraf"
+        }
+    ],
+    "filters": {
+        "status_options": [
+            { "value": "all", "label": "Tüm Durumlar" },
+            { "value": "paid", "label": "Ödendi" },
+            { "value": "pending", "label": "Bekliyor" },
+            { "value": "overdue", "label": "Gecikmiş" }
+        ],
+        "date_options": [
+            { "value": "all", "label": "Tüm Tarihler" },
+            { "value": "this_month", "label": "Bu Ay" },
+            { "value": "last_month", "label": "Geçen Ay" },
+            { "value": "last_3_months", "label": "Son 3 Ay" },
+            { "value": "last_6_months", "label": "Son 6 Ay" }
+        ]
+    },
+    "pagination": {
+        "items_per_page": 10,
+        "total_pages": 2
+    }
+}
+

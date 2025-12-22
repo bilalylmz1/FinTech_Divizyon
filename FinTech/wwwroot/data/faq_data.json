@@ -1,0 +1,117 @@
+{
+    "categories": [
+        {
+            "id": "genel",
+            "name": "Genel",
+            "icon": "fa-solid fa-circle-info",
+            "description": "Genel sorular ve platform hakkında bilgiler"
+        },
+        {
+            "id": "kredi",
+            "name": "Kredi İşlemleri",
+            "icon": "fa-solid fa-credit-card",
+            "description": "Kredi başvurusu, hesaplama ve onay süreçleri"
+        },
+        {
+            "id": "hesap",
+            "name": "Hesap Yönetimi",
+            "icon": "fa-solid fa-user-gear",
+            "description": "Hesap ayarları, profil ve güvenlik"
+        },
+        {
+            "id": "guvenlik",
+            "name": "Güvenlik",
+            "icon": "fa-solid fa-shield-halved",
+            "description": "Şifre, PIN ve güvenlik önlemleri"
+        },
+        {
+            "id": "rapor",
+            "name": "Raporlar",
+            "icon": "fa-solid fa-chart-line",
+            "description": "Kredi skoru, raporlar ve finansal analiz"
+        }
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "category_id": "genel",
+            "question": "İnteraktif Kredi nedir?",
+            "answer": "<p>İnteraktif Kredi, bireysel finansal ihtiyaçlarınız için dijital kredi çözümleri sunan modern bir platformdur.</p><p>Platformumuz üzerinden:</p><ul><li>Kredi skorunuzu anlık olarak görebilirsiniz</li><li>Size özel kredi tekliflerini inceleyebilirsiniz</li><li>Kredi başvurunuzu tamamen dijital ortamda tamamlayabilirsiniz</li><li>Finansal durumunuzu raporlar ile takip edebilirsiniz</li></ul>",
+            "tags": ["platform", "tanıtım", "hizmetler"],
+            "is_popular": true
+        },
+        {
+            "id": 2,
+            "category_id": "kredi",
+            "question": "Kredi başvurusu nasıl yapılır?",
+            "answer": "<p>Kredi başvurunuzu birkaç adımda kolayca tamamlayabilirsiniz:</p><ol><li><strong>Giriş yapın:</strong> TCKN ve telefon numaranızla sisteme giriş yapın</li><li><strong>Profil bilgilerinizi güncelleyin:</strong> Gelir, meslek ve adres bilgilerinizin güncel olduğundan emin olun</li><li><strong>Kredi tekliflerini inceleyin:</strong> Size özel hazırlanan teklifleri karşılaştırın</li><li><strong>Başvuruyu tamamlayın:</strong> Seçtiğiniz teklif için başvuru formunu doldurun</li></ol><p>Başvurunuz <strong>ortalama 24 saat</strong> içinde değerlendirilir ve sonucu SMS ile bildirilir.</p>",
+            "tags": ["başvuru", "adımlar", "süreç"],
+            "is_popular": true
+        },
+        {
+            "id": 3,
+            "category_id": "kredi",
+            "question": "Kredi onay süreci ne kadar sürer?",
+            "answer": "<p>Kredi onay süreçleri genellikle <strong>24-48 saat</strong> içinde tamamlanır. Ancak bu süre bazı faktörlere göre değişebilir:</p><ul><li><strong>Başvuru saati:</strong> Mesai saatleri içinde yapılan başvurular daha hızlı değerlendirilir</li><li><strong>Belge eksiği:</strong> Eksik belge durumunda süre uzayabilir</li><li><strong>Kredi tutarı:</strong> Yüksek tutarlı krediler ek inceleme gerektirebilir</li></ul><p>Başvurunuzun durumunu <strong>Dashboard</strong> ekranından anlık olarak takip edebilirsiniz.</p>",
+            "tags": ["onay", "süre", "bekleme"],
+            "is_popular": true
+        },
+        {
+            "id": 4,
+            "category_id": "hesap",
+            "question": "Profil bilgilerimi nasıl güncellerim?",
+            "answer": "<p>Profil bilgilerinizi güncellemek için:</p><ol><li>Sol menüden <strong>Profil & Ayarlar</strong> bölümüne gidin</li><li>Güncellemek istediğiniz bilgi kategorisini seçin (Adres, Meslek, Gelir)</li><li>Gerekli değişiklikleri yapın</li><li><strong>Kaydet</strong> butonuna tıklayın</li></ol><p><strong>Not:</strong> Gelir bilgisi güncellemeleri, maaş bordrosu veya SGK dökümü ile doğrulanabilir.</p>",
+            "tags": ["profil", "güncelleme", "bilgiler"],
+            "is_popular": false
+        },
+        {
+            "id": 5,
+            "category_id": "guvenlik",
+            "question": "Şifremi unuttum, ne yapmalıyım?",
+            "answer": "<p>Şifrenizi unuttuysanız aşağıdaki adımları takip edin:</p><ol><li>Giriş ekranında <strong>Şifremi Unuttum</strong> bağlantısına tıklayın</li><li>TCKN ve kayıtlı telefon numaranızı girin</li><li>Telefonunuza gelen <strong>6 haneli doğrulama kodunu</strong> girin</li><li>Yeni şifrenizi oluşturun</li></ol><p><strong>Güvenlik İpucu:</strong> Şifrenizi kimseyle paylaşmayın ve tahmin edilmesi zor, güçlü şifreler tercih edin.</p>",
+            "tags": ["şifre", "unutma", "sıfırlama"],
+            "is_popular": true
+        },
+        {
+            "id": 6,
+            "category_id": "guvenlik",
+            "question": "Hesabım neden bloke oldu?",
+            "answer": "<p>Hesabınız aşağıdaki durumlarda güvenlik amacıyla bloke edilebilir:</p><ul><li><strong>Yanlış şifre:</strong> 5 kez art arda yanlış şifre girilmesi</li><li><strong>Şüpheli aktivite:</strong> Farklı lokasyonlardan olağandışı giriş denemeleri</li><li><strong>Güvenlik tehdidi:</strong> Dolandırıcılık şüphesi tespit edilmesi</li></ul><p>Hesabınızın blokesini kaldırmak için <strong>müşteri hizmetleri</strong> ile iletişime geçin veya <a href='#'>Destek Talebi</a> oluşturun.</p>",
+            "tags": ["bloke", "hesap", "güvenlik"],
+            "is_popular": false
+        },
+        {
+            "id": 7,
+            "category_id": "rapor",
+            "question": "Kredi skorum neden düşük?",
+            "answer": "<p>Kredi skorunuz birçok faktöre bağlı olarak hesaplanır:</p><ul><li><strong>Ödeme geçmişi:</strong> Gecikmeli ödemeler skoru düşürür</li><li><strong>Borç/Gelir oranı:</strong> Gelirinize göre yüksek borçlanma negatif etki yapar</li><li><strong>Kredi geçmişi süresi:</strong> Kısa kredi geçmişi düşük skora neden olabilir</li><li><strong>Başvuru sıklığı:</strong> Kısa sürede çok fazla kredi başvurusu skoru etkiler</li></ul><p><strong>Skorunuzu yükseltmek için:</strong> Ödemelerinizi zamanında yapın, borç/gelir oranınızı düşük tutun.</p>",
+            "tags": ["skor", "düşük", "neden"],
+            "is_popular": true
+        },
+        {
+            "id": 8,
+            "category_id": "rapor",
+            "question": "Raporlarımı nasıl indirebilirim?",
+            "answer": "<p>Finansal raporlarınızı PDF formatında indirmek için:</p><ol><li>Sol menüden <strong>Rapor Detayları</strong> bölümüne gidin</li><li><strong>Rapor Listesi</strong> sekmesinden ilgili raporu bulun</li><li>Raporun sağındaki <strong>indirme simgesine</strong> tıklayın</li><li>Rapor PDF olarak cihazınıza indirilecektir</li></ol><p><strong>Not:</strong> Son 12 aya ait raporlarınıza erişebilirsiniz.</p>",
+            "tags": ["rapor", "indirme", "PDF"],
+            "is_popular": false
+        },
+        {
+            "id": 9,
+            "category_id": "kredi",
+            "question": "Kredi limitim nasıl belirleniyor?",
+            "answer": "<p>Kredi limitiniz aşağıdaki kriterlere göre otomatik olarak hesaplanır:</p><ul><li><strong>Aylık gelir:</strong> Net maaşınız ve düzenli geliriniz</li><li><strong>Mevcut borçlar:</strong> Devam eden kredi ve kredi kartı borçları</li><li><strong>Kredi skoru:</strong> Genel finansal güvenilirlik puanınız</li><li><strong>İstihdam durumu:</strong> Çalışma süresi ve iş güvencesi</li></ul><p>Limitinizi artırmak için gelir belgenizi güncelleyebilir veya mevcut borçlarınızı kapatabilirsiniz.</p>",
+            "tags": ["limit", "hesaplama", "kredi"],
+            "is_popular": false
+        },
+        {
+            "id": 10,
+            "category_id": "genel",
+            "question": "Müşteri hizmetlerine nasıl ulaşabilirim?",
+            "answer": "<p>Bize aşağıdaki kanallardan ulaşabilirsiniz:</p><ul><li><strong>Telefon:</strong> 0850 XXX XX XX (Hafta içi 09:00-18:00)</li><li><strong>E-posta:</strong> destek@interaktifkredi.com</li><li><strong>Canlı Destek:</strong> Uygulama içi sohbet (7/24)</li><li><strong>Destek Talebi:</strong> Bu sayfa üzerinden form doldurarak</li></ul><p>Acil durumlar için <strong>Canlı Destek</strong> en hızlı yanıt alacağınız kanaldır.</p>",
+            "tags": ["iletişim", "destek", "müşteri hizmetleri"],
+            "is_popular": true
+        }
+    ]
+}
+

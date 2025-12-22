@@ -1,0 +1,171 @@
+@page
+@model FinTech.Pages.Help.FaqModel
+@{
+    ViewData["Title"] = "SSS / Rehber";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/help_center.css" />
+    <link rel="stylesheet" href="~/css/faq.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="/Reports/ReportCenter" class="menu-item">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Raporlar</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item active">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb__item">Dashboard</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <a href="/Help/HelpCenter" class="breadcrumb__item">Yardım & Destek</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <span class="breadcrumb__item breadcrumb__item--active">SSS / Rehber</span>
+            </nav>
+
+            <!-- SSS Container -->
+            <div class="faq_container">
+                
+                <!-- Kategori Sidebar -->
+                <aside class="faq_sidebar">
+                    <h4 class="faq_sidebar__title">Kategoriler</h4>
+                    <ul class="faq_sidebar__list" id="faq_category_list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </ul>
+                </aside>
+
+                <!-- Ana İçerik -->
+                <div class="faq_content">
+                    
+                    <!-- Header -->
+                    <div class="faq_content__header">
+                        <div>
+                            <h1 class="faq_content__title">Sıkça Sorulan Sorular</h1>
+                            <span class="faq_content__count" id="faq_count">Yükleniyor...</span>
+                        </div>
+                        
+                        <!-- Arama -->
+                        <div class="faq_search">
+                            <i class="fa-solid fa-magnifying-glass faq_search__icon"></i>
+                            <input 
+                                type="text" 
+                                class="faq_search__input" 
+                                id="faq_search_input"
+                                placeholder="Sorularda ara..." 
+                                autocomplete="off"
+                            />
+                            <button class="faq_search__clear" id="faq_search_clear">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mobil Kategori Filtresi -->
+                    <div class="faq_mobile_filter">
+                        <select class="faq_mobile_filter__select" id="faq_mobile_category">
+                            <option value="all">Tüm Kategoriler</option>
+                            <!-- JavaScript ile doldurulacak -->
+                        </select>
+                    </div>
+
+                    <!-- Yükleme Animasyonu -->
+                    <div class="faq_loading" id="faq_loading">
+                        <div class="faq_loading__spinner"></div>
+                    </div>
+
+                    <!-- SSS Listesi -->
+                    <div class="faq_list" id="faq_list">
+                        <!-- JavaScript ile doldurulacak -->
+                    </div>
+
+                    <!-- Sonuç Bulunamadı -->
+                    <div class="faq_empty" id="faq_empty" style="display: none;">
+                        <div class="faq_empty__icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="faq_empty__title">Sonuç Bulunamadı</h3>
+                        <p class="faq_empty__text">Arama kriterlerinize uygun soru bulunamadı. Farklı kelimelerle tekrar deneyin.</p>
+                        <button class="faq_empty__button" id="faq_reset_search">
+                            <i class="fa-solid fa-arrow-rotate-left"></i> Aramayı Temizle
+                        </button>
+                    </div>
+
+                    <!-- Cevap Bulamadınız mı? CTA -->
+                    <div class="faq_cta">
+                        <div class="faq_cta__content">
+                            <h3>Cevabı bulamadınız mı?</h3>
+                            <p>Müşteri temsilcilerimiz size yardımcı olmak için hazır</p>
+                        </div>
+                        <a href="#" class="faq_cta__button">
+                            <i class="fa-solid fa-headset"></i> Bize Ulaşın
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/faq.js"></script>
+    <script>
+        // Sidebar Toggle
+        var $menu_toggle = $('#menuToggle');
+        var $sidebar = $('#sidebar');
+        var $main_content = $('#mainContent');
+
+        if ($menu_toggle.length) {
+            $menu_toggle.on('click', function() {
+                $sidebar.toggleClass('closed');
+                $main_content.toggleClass('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+

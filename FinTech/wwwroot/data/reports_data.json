@@ -1,0 +1,213 @@
+{
+    "categories": [
+        {
+            "id": "kredi_skoru",
+            "name": "Kredi Skoru",
+            "icon": "fa-solid fa-gauge-high",
+            "description": "Kredi skorunuz ve değişim geçmişi"
+        },
+        {
+            "id": "finansal_analiz",
+            "name": "Finansal Analiz",
+            "icon": "fa-solid fa-chart-line",
+            "description": "Gelir-gider analizi ve finansal durum"
+        },
+        {
+            "id": "kredi_gecmisi",
+            "name": "Kredi Geçmişi",
+            "icon": "fa-solid fa-clock-rotate-left",
+            "description": "Geçmiş kredi başvuruları ve ödemeleri"
+        },
+        {
+            "id": "aylik_ozet",
+            "name": "Aylık Özet",
+            "icon": "fa-solid fa-calendar-days",
+            "description": "Aylık finansal özet raporları"
+        }
+    ],
+    "reports": [
+        {
+            "id": 1,
+            "category_id": "kredi_skoru",
+            "title": "Kredi Skoru Raporu - Aralık 2025",
+            "date": "2025-12-15",
+            "icon_type": "score",
+            "summary": {
+                "score": 720,
+                "change": "+15",
+                "status": "İyi"
+            },
+            "description": "Bu rapor, kredi skorunuzun detaylı analizini ve son dönemdeki değişimlerini içerir. Skorunuz geçen aya göre 15 puan artış göstermiştir.",
+            "details": {
+                "previous_score": 705,
+                "max_score": 850,
+                "category": "İyi",
+                "factors": [
+                    "Zamanında ödeme geçmişi (+)",
+                    "Düşük kredi kullanım oranı (+)",
+                    "Kısa kredi geçmişi (-)"
+                ]
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 2,
+            "category_id": "kredi_skoru",
+            "title": "Kredi Skoru Raporu - Kasım 2025",
+            "date": "2025-11-15",
+            "icon_type": "score",
+            "summary": {
+                "score": 705,
+                "change": "+8",
+                "status": "İyi"
+            },
+            "description": "Kasım ayı kredi skoru raporu. Düzenli ödemeleriniz skorunuzu olumlu etkilemeye devam ediyor.",
+            "details": {
+                "previous_score": 697,
+                "max_score": 850,
+                "category": "İyi",
+                "factors": [
+                    "Zamanında ödeme geçmişi (+)",
+                    "Yeni kredi başvurusu yok (+)"
+                ]
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 3,
+            "category_id": "finansal_analiz",
+            "title": "Finansal Durum Analizi - Q4 2025",
+            "date": "2025-12-01",
+            "icon_type": "analysis",
+            "summary": {
+                "income": "25.000 ₺",
+                "expense": "18.500 ₺",
+                "status": "Pozitif"
+            },
+            "description": "2025 yılı son çeyrek finansal durum analizi. Gelir-gider dengeniz pozitif seyretmektedir.",
+            "details": {
+                "savings_rate": "%26",
+                "debt_ratio": "%32",
+                "recommendation": "Tasarruf oranınızı artırmanız önerilir"
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 4,
+            "category_id": "finansal_analiz",
+            "title": "Harcama Kategorileri Analizi",
+            "date": "2025-12-10",
+            "icon_type": "analysis",
+            "summary": {
+                "top_category": "Konut",
+                "percentage": "%35",
+                "status": "Normal"
+            },
+            "description": "Aylık harcamalarınızın kategori bazlı dağılımı ve önceki dönemlerle karşılaştırması.",
+            "details": {
+                "categories": {
+                    "konut": "%35",
+                    "ulasim": "%15",
+                    "market": "%20",
+                    "diger": "%30"
+                }
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 5,
+            "category_id": "kredi_gecmisi",
+            "title": "Kredi Başvuru Geçmişi",
+            "date": "2025-12-18",
+            "icon_type": "history",
+            "summary": {
+                "total_applications": 3,
+                "approved": 2,
+                "status": "%67 Onay"
+            },
+            "description": "Son 12 ay içindeki tüm kredi başvurularınız ve sonuçları.",
+            "details": {
+                "applications": [
+                    {
+                        "type": "İhtiyaç Kredisi",
+                        "amount": "50.000 ₺",
+                        "status": "Onaylandı",
+                        "date": "2025-08-15"
+                    },
+                    {
+                        "type": "Kredi Kartı Limiti",
+                        "amount": "20.000 ₺",
+                        "status": "Onaylandı",
+                        "date": "2025-06-10"
+                    },
+                    {
+                        "type": "Taşıt Kredisi",
+                        "amount": "150.000 ₺",
+                        "status": "Reddedildi",
+                        "date": "2025-03-20"
+                    }
+                ]
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 6,
+            "category_id": "kredi_gecmisi",
+            "title": "Ödeme Performans Raporu",
+            "date": "2025-12-05",
+            "icon_type": "history",
+            "summary": {
+                "on_time": 24,
+                "late": 1,
+                "status": "%96 Başarı"
+            },
+            "description": "Son 12 aydaki tüm kredi ödemelerinizin performans analizi.",
+            "details": {
+                "total_payments": 25,
+                "on_time_payments": 24,
+                "late_payments": 1,
+                "average_delay": "2 gün"
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 7,
+            "category_id": "aylik_ozet",
+            "title": "Aralık 2025 Aylık Özet",
+            "date": "2025-12-20",
+            "icon_type": "monthly",
+            "summary": {
+                "income": "25.000 ₺",
+                "expense": "19.200 ₺",
+                "status": "Pozitif"
+            },
+            "description": "Aralık 2025 ayına ait gelir, gider ve tasarruf özeti.",
+            "details": {
+                "net_savings": "5.800 ₺",
+                "credit_payments": "3.500 ₺",
+                "upcoming_payments": "3.500 ₺"
+            },
+            "is_downloadable": true
+        },
+        {
+            "id": 8,
+            "category_id": "aylik_ozet",
+            "title": "Kasım 2025 Aylık Özet",
+            "date": "2025-11-20",
+            "icon_type": "monthly",
+            "summary": {
+                "income": "25.000 ₺",
+                "expense": "17.800 ₺",
+                "status": "Pozitif"
+            },
+            "description": "Kasım 2025 ayına ait gelir, gider ve tasarruf özeti.",
+            "details": {
+                "net_savings": "7.200 ₺",
+                "credit_payments": "3.500 ₺"
+            },
+            "is_downloadable": true
+        }
+    ],
+    "last_update": "2025-12-20T14:30:00"
+}
+

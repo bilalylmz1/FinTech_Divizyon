@@ -1,0 +1,214 @@
+@page
+@model FinTech.Pages.Reports.ReportCenterModel
+@{
+    ViewData["Title"] = "Rapor Detayları";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İnteraktif Kredi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/report_center.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header (Fixed) -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle-btn">
+                <img src="/img/dashboard/icon-menu.svg" alt="Menü" />
+            </button>
+            <img src="/img/dashboard/logo.svg" alt="İnteraktif Kredi" class="header-logo" />
+        </div>
+        <div class="user-mini-profile" style="font-size: 14px; gap:8px;">
+            <div class="user-avatar" style="width:32px; height:32px; font-size:12px;">MG</div>
+            <span class="user-name">Mustafa Gümüş</span>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-category">Ana Menü</div>
+                <a href="/" class="menu-item">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="/Reports/ReportCenter" class="menu-item active">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Raporlar</span>
+                </a>
+
+                <div class="menu-category">Hesap</div>
+                <a href="/Profile" class="menu-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profil & Ayarlar</span>
+                </a>
+                <a href="/Help/HelpCenter" class="menu-item">
+                    <i class="fa-solid fa-circle-question"></i> <span>Yardım & Destek</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb__item">Dashboard</a>
+                <i class="fa-solid fa-chevron-right breadcrumb__separator"></i>
+                <span class="breadcrumb__item breadcrumb__item--active">Rapor Detayları</span>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="report_hero">
+                <div class="report_hero__content">
+                    <h1 class="report_hero__title">Finansal Raporlarınız</h1>
+                    <p class="report_hero__subtitle">Kredi raporlarınızı, tekliflerinizi ve faturalarınızı tek bir yerden yönetin</p>
+                </div>
+                <div class="report_hero__stats">
+                    <div class="report_hero__stat">
+                        <span class="report_hero__stat_value" id="total_reports">-</span>
+                        <span class="report_hero__stat_label">Toplam Rapor</span>
+                    </div>
+                    <div class="report_hero__stat">
+                        <span class="report_hero__stat_value" id="active_offers">-</span>
+                        <span class="report_hero__stat_label">Aktif Teklif</span>
+                    </div>
+                    <div class="report_hero__stat">
+                        <span class="report_hero__stat_value" id="pending_invoices">-</span>
+                        <span class="report_hero__stat_label">Bekleyen Fatura</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Kartları -->
+            <div class="report_categories">
+                <!-- Rapor Listesi -->
+                <a href="/Reports/ReportList" class="report_card">
+                    <div class="report_card__icon report_card__icon--blue">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div class="report_card__content">
+                        <h3 class="report_card__title">Rapor Listesi</h3>
+                        <p class="report_card__description">
+                            Kredi skorunuz, finansal analizler ve detaylı raporlarınız
+                        </p>
+                        <div class="report_card__meta">
+                            <span class="report_card__count" id="report_list_count">
+                                <i class="fa-solid fa-file"></i> - rapor
+                            </span>
+                            <span class="report_card__date" id="report_list_date">
+                                <i class="fa-solid fa-clock"></i> -
+                            </span>
+                        </div>
+                    </div>
+                    <span class="report_card__arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                </a>
+
+                <!-- Kredi Teklifleri -->
+                <a href="/Reports/CreditOffers" class="report_card">
+                    <div class="report_card__icon report_card__icon--green">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div class="report_card__content">
+                        <h3 class="report_card__title">Kredi Teklifleri</h3>
+                        <p class="report_card__description">
+                            Size özel hazırlanmış avantajlı kredi fırsatları
+                        </p>
+                        <div class="report_card__meta">
+                            <span class="report_card__count" id="credit_offers_count">
+                                <i class="fa-solid fa-tag"></i> - teklif
+                            </span>
+                            <span class="report_card__badge report_card__badge--new" id="new_offers_badge" style="display:none;">
+                                YENİ
+                            </span>
+                        </div>
+                    </div>
+                    <span class="report_card__arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                </a>
+
+                <!-- Faturalar -->
+                <a href="/Reports/Invoices" class="report_card">
+                    <div class="report_card__icon report_card__icon--orange">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <div class="report_card__content">
+                        <h3 class="report_card__title">Faturalar</h3>
+                        <p class="report_card__description">
+                            Ödeme geçmişiniz ve bekleyen faturalarınız
+                        </p>
+                        <div class="report_card__meta">
+                            <span class="report_card__count" id="invoices_count">
+                                <i class="fa-solid fa-receipt"></i> - fatura
+                            </span>
+                            <span class="report_card__badge report_card__badge--warning" id="pending_badge" style="display:none;">
+                                <i class="fa-solid fa-exclamation"></i> Bekleyen
+                            </span>
+                        </div>
+                    </div>
+                    <span class="report_card__arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Son Aktiviteler -->
+            <div class="recent_activities">
+                <div class="recent_activities__header">
+                    <h3 class="recent_activities__title">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Son Aktiviteler
+                    </h3>
+                </div>
+
+                <div class="recent_activities__list" id="recent_activities_list">
+                    <!-- JavaScript ile doldurulacak -->
+                </div>
+            </div>
+
+            <!-- Hızlı Erişim Bandı -->
+            <div class="quick_access_banner">
+                <div class="quick_access_banner__content">
+                    <div class="quick_access_banner__icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="quick_access_banner__text">
+                        <h4>Hızlı Kredi Hesaplama</h4>
+                        <p>Kredi tutarı ve vade seçerek aylık taksitinizi hemen öğrenin</p>
+                    </div>
+                </div>
+                <a href="#" class="quick_access_banner__button">
+                    <i class="fa-solid fa-calculator"></i> Hesapla
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pages/report_center.js"></script>
+    <script>
+        // Sidebar Toggle
+        var $menu_toggle = $('#menuToggle');
+        var $sidebar = $('#sidebar');
+        var $main_content = $('#mainContent');
+
+        if ($menu_toggle.length) {
+            $menu_toggle.on('click', function() {
+                $sidebar.toggleClass('closed');
+                $main_content.toggleClass('full-width');
+            });
+        }
+    </script>
+</body>
+</html>
+
